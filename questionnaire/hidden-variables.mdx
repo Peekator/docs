@@ -1,0 +1,57 @@
+---
+title: "Hidden variables and substitutions in Peekator"
+sidebarTitle: "Hidden Variables"
+description: "Pass hidden data into your Peekator survey via the URL and dynamically insert values into question text using substitutions."
+---
+
+Hidden variables let you pass data into a survey through the URL without respondents seeing it. Substitutions let you insert those values dynamically into question text, so you can personalise the experience or track where respondents come from.
+
+## What hidden variables are
+
+A hidden variable is a piece of data appended to the survey link, such as a respondent ID, source tag, or panel identifier. Respondents never see this data, but it is stored with their responses for analysis and integration.
+
+## What substitutions are
+
+Substitutions let you insert hidden variable values directly into question text. For example, you can address a respondent by name or reference a product code without asking the respondent to enter it.
+
+## Set up a hidden variable
+
+<Steps>
+  <Step title="Add a hidden variable question">
+    Open the **Add questions** popup and select the **HiddenVariableQuestion** type.
+  </Step>
+  <Step title="Name the variable">
+    Give the variable a clear name, such as `respondent_id` or `source`.
+  </Step>
+  <Step title="Append it to the link">
+    When distributing the survey, add the variable and value to the URL query string.
+  </Step>
+</Steps>
+
+<Note>
+  **Needs product verification:** exact steps for adding a hidden variable and setting substitution syntax.
+</Note>
+
+## Use substitutions in question text
+
+Once a hidden variable is defined, you can reference it inside question text so the value appears to the respondent. This is useful for:
+
+- Tracking the source or panel that sent the respondent
+- Personalising greetings or scenario descriptions
+- Integrating with external systems that pass identifiers through the link
+
+## When to use hidden variables and substitutions
+
+- **Tracking sources:** distinguish between email, social, or panel traffic
+- **Personalising text:** insert names, codes, or references without asking
+- **Panel integration:** pass panel respondent IDs seamlessly into response data
+
+## Test before launch
+
+Always test hidden variables and substitutions with a **test link** before launching. Verify that values pass correctly and appear as expected in question text. If a variable is missing from the URL, check how the survey behaves and whether a default value is shown.
+
+## Related guides
+
+- [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Panel distribution](/distribution/panel)

@@ -1,27 +1,28 @@
 ---
-title: "Quadrant matrix questions in Peekator"
+title: "Quadrant Matrix question in Peekator"
 sidebarTitle: "Quadrant Matrix"
-description: "Let respondents plot items on a two-axis matrix in Peekator. Configure axis labels, axis ranges, and the items to position on the grid."
+description: "Learn how to add a Quadrant Matrix question so respondents place items on a 2x2 grid in Peekator surveys."
 ---
 
-Quadrant matrix questions present respondents with a two-axis grid and ask them to drag items to the position that best matches their perception. Use this type for importance vs. satisfaction mapping, risk vs. impact assessments, or brand positioning exercises.
+A Quadrant Matrix question presents a two-by-two grid with labelled axes and asks respondents to drag items into the quadrant that best represents their view. This is a visual and intuitive way to map perceptions, priorities, or positioning, such as importance versus satisfaction or price versus quality.
 
-Results display the average position of each item across all respondents as a perceptual map.
+## When to use this question type
 
-## Add a quadrant matrix question
+- You want to visualise how respondents perceive trade-offs between two dimensions.
+- You need a perceptual map of brands, features, or statements from the respondent's point of view.
+- You want an engaging, interactive question that produces immediately chartable data.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Quadrant Matrix**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter question text">
-    Write the prompt respondents see, for example: `Plot each feature on the matrix based on how you feel about it.`
+  <Step>
+    Select **Quadrant Matrix** from the popup.
   </Step>
-  <Step title="Label the axes">
-    Set labels for each end of both axes (left, right, top, bottom).
-  </Step>
-  <Step title="Add items to plot">
-    Add each item as a sub-question. Respondents will drag each item onto the matrix.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and define the axes, labels, and items to place.
   </Step>
 </Steps>
 
@@ -29,24 +30,41 @@ Results display the average position of each item across all respondents as a pe
 
 | Setting | Description |
 | --- | --- |
-| **X-axis left label** | Label for the left end of the horizontal axis. |
-| **X-axis right label** | Label for the right end of the horizontal axis. |
-| **Y-axis bottom label** | Label for the bottom end of the vertical axis. |
-| **Y-axis top label** | Label for the top end of the vertical axis. |
-| **X minimum / X maximum** | Numeric range for the horizontal axis. |
-| **Y minimum / Y maximum** | Numeric range for the vertical axis. |
-| **Items** | The items respondents position on the matrix. Add as sub-questions. |
+| Question text | The label respondents see. |
+| Horizontal axis label | The label for the left-right dimension, for example, "Low price" to "High price". |
+| Vertical axis label | The label for the bottom-top dimension, for example, "Low quality" to "High quality". |
+| Items to place | The list of items respondents drag onto the grid, for example, brand names or features. |
+| Mandatory | Requires all items to be placed before the respondent can continue. |
+| Randomise items | Shuffles the order of items for each respondent. |
+| Allow multiple items per quadrant | Lets respondents place more than one item in the same quadrant. |
 
 <Note>
-  The default instruction shown to respondents is: "Plot on the matrix how you feel between both dimensions."
+  **Needs product verification:** Confirm whether "Snap to grid" and "Show axis midpoints" settings exist for this question type.
 </Note>
 
-<Tip>
-  Use a clear axis label pair that makes the trade-off obvious, for example "Important" vs "Not important" on one axis and "Satisfied" vs "Unsatisfied" on the other.
-</Tip>
+## What respondents see
 
-## Related pages
+Respondents see a square grid with axis labels on the edges and a list of draggable items beside it. They drag each item into one of the four quadrants. If mandatory, they must place all items before continuing. The interface may show a counter of remaining items.
 
-- [MaxDiff](/questionnaire/maxdiff)
-- [Constant sum](/questionnaire/constant-sum)
+<Warning>
+  Quadrant Matrix questions involve drag-and-drop interaction and axis validation. Always preview and test the full questionnaire before launching to ensure items, axes, and placement rules behave correctly across devices.
+</Warning>
+
+## Logic and piping
+
+You can use the quadrant placement of specific items in logic to show or hide later questions. For example, if a respondent places your brand in the "High price, Low quality" quadrant, you can branch to a diagnostic question. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results appear as an aggregate perceptual map showing the percentage of respondents who placed each item in each quadrant. Individual placements are available in exports. This makes it easy to identify consensus positions and outlier perceptions.
+
+## Example use case
+
+A consumer goods company asks respondents to place five competing brands on a quadrant with "Low price" to "High price" on the horizontal axis and "Low quality" to "High quality" on the vertical axis. The results reveal that most respondents place the company's brand in the "High price, High quality" quadrant, supporting a premium positioning strategy.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Grid question](/questionnaire/grid)
+- [Ranking question](/questionnaire/ranking)

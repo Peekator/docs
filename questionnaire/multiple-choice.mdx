@@ -1,26 +1,28 @@
 ---
-title: "Multiple choice questions in Peekator"
+title: "Multiple Choice question in Peekator"
 sidebarTitle: "Multiple Choice"
-description: "Configure multiple choice questions in Peekator with Other option, shuffle, columns, min/max selection limits, points, and conditional rules."
+description: "Learn how to add and configure a Multiple Choice question so respondents select one or more options in Peekator surveys."
 ---
 
-Multiple choice questions let respondents select one or more answers from a predefined list. Use this type when you want to allow several valid answers, such as selecting all products a customer uses or all challenges they face.
+A Multiple Choice question lets respondents select one or more answers from a list of options. Use this type when you want to capture all relevant choices, such as products used, features liked, or interests held.
 
-<Tip>
-  Use multiple choice when more than one answer can reasonably apply. Use [single choice](/questionnaire/single-choice) when exactly one answer is correct or expected.
-</Tip>
+## When to use this question type
 
-## Add a multiple choice question
+- You want respondents to select every option that applies, not just one.
+- You need to understand combinations of preferences or behaviours.
+- You plan to analyse overlap between choices, such as which features are used together.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Multiple Choice**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter question text">
-    Type your question. For example: `Which of the following products do you currently use?`
+  <Step>
+    Select **Multiple Choice** from the popup.
   </Step>
-  <Step title="Add answer options">
-    Click **Add option** for each answer choice.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and edit the text and options.
   </Step>
 </Steps>
 
@@ -28,22 +30,38 @@ Multiple choice questions let respondents select one or more answers from a pred
 
 | Setting | Description |
 | --- | --- |
-| **Include "Other"** | Adds a free-text "Other (please specify):" option at the end of the list. |
-| **Screenout on "Other"** | Respondents who select Other are screened out. Only available when Include "Other" is enabled. |
-| **Shuffle answers** | Randomizes the order of answer options on each load to prevent position bias. |
-| **Number of columns** | Display options across multiple columns. Default is `1`. |
-| **Limit answer count** | Restrict how many options a respondent can select. Set **Minimum required answers** and **Maximum allowed answers**. For example, set maximum to `3` for "Choose your top 3". |
-| **Show results as percentage** | Display results as percentages instead of absolute counts in reporting. |
-| **Answers are events** | Treat each answer selection as an event for tracking purposes. |
-| **Assign points** | Assign a point value to each answer option for scoring or weighting. |
-| **Conditional rule on answers** | Apply conditional logic based on the answers selected. |
+| Question text | The label respondents see. |
+| Answer options | The list of choices. Click to add, reorder, or remove options. |
+| Allow "Other" option | Adds an "Other" choice with a free-text field. |
+| Mandatory | Requires at least one selection before the respondent can continue. |
+| Randomise options | Shuffles the order of choices for each respondent. |
+| Minimum selections | Sets the lowest number of options a respondent must choose. |
+| Maximum selections | Sets the highest number of options a respondent can choose. |
+| Exclusive option | Marks one choice (for example, "None of the above") so selecting it deselects all other choices. |
 
 <Note>
-  The default instruction shown to respondents is: "Select all that apply."
+  **Needs product verification:** Confirm whether "Allow not sure" and "Display as dropdown" settings exist for this question type.
 </Note>
 
-## Related pages
+## What respondents see
 
-- [Single choice](/questionnaire/single-choice)
-- [Logic and branching](/questionnaire/logic-and-branching)
+Respondents see a vertical list of checkboxes or tiles. They can tick multiple options. If minimum or maximum limits are set, a counter shows how many they have selected. The "Next" button remains disabled until the mandatory requirement is met.
+
+## Logic and piping
+
+You can use Multiple Choice answers in logic to show or hide later questions based on whether a specific option was selected. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results appear as a stacked bar chart or table showing the count and percentage for each option. Respondents can select multiple options, so percentages typically sum to more than 100 per cent. Overlap between choices can be analysed in cross-tabulations.
+
+## Example use case
+
+A streaming service asks, "Which of the following genres do you watch at least once a week?" with options for Drama, Comedy, Documentary, Reality, and Other. The results reveal which genres are most popular and which combinations are common.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Single Choice question](/questionnaire/single-choice)
+- [Ranking question](/questionnaire/ranking)

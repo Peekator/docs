@@ -1,25 +1,28 @@
 ---
-title: "Numeric grid questions in Peekator"
+title: "Numeric Grid question in Peekator"
 sidebarTitle: "Numeric Grid"
-description: "Use numeric grid questions in Peekator to collect number inputs across multiple items and columns. Configure totals, mandatory answers, shuffle, and mobile layout."
+description: "Learn how to add and configure a Numeric Grid question so respondents enter numbers for multiple items in Peekator surveys."
 ---
 
-Numeric grid questions display a table where each cell receives a numeric input. Respondents type a number for each row/column combination. Use this type for budget allocation, volume estimates, or any multi-item numeric data collection.
+A Numeric Grid question presents a matrix where respondents enter a number for each row. This is useful for collecting quantities, percentages, or scores across several items in a compact format, such as units purchased or hours spent.
 
-## Add a numeric grid question
+## When to use this question type
+
+- You need numeric input for multiple related items in one question.
+- You want to collect quantities, percentages, or scores that can be summed or averaged.
+- You prefer a compact layout instead of separate numeric entry questions.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Numeric Grid**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter question text">
-    Type the prompt for the grid.
+  <Step>
+    Select **Numeric Grid** from the popup.
   </Step>
-  <Step title="Add rows">
-    Add the items to rate as rows (sub-questions), for example: product names, budget categories, or time periods.
-  </Step>
-  <Step title="Add columns">
-    Add the numeric dimensions as columns (answers), for example: estimated units or allocated budget.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and add rows, set validation rules, and define the input format.
   </Step>
 </Steps>
 
@@ -27,24 +30,43 @@ Numeric grid questions display a table where each cell receives a numeric input.
 
 | Setting | Description |
 | --- | --- |
-| **Shuffle rows** | Randomly order the rows for each respondent. |
-| **Shuffle answers** | Randomly order the column headers for each respondent. |
-| **Show total per row** | Display a running sum at the end of each row. Enabled by default. |
-| **Show total per column** | Display a running sum at the bottom of each column. |
-| **Mandatory answers** | Require a numeric value in every cell before the respondent can proceed. |
-| **Always show as mobile version** | Force the compact mobile layout regardless of the device used. |
-| **Conditional rule on answers** | Apply conditional logic based on the values entered in individual cells. |
+| Question text | The label respondents see above the grid. |
+| Rows | The items respondents provide numbers for. |
+| Column label | The header for the numeric input column. |
+| Minimum value | The lowest number a respondent can enter. |
+| Maximum value | The highest number a respondent can enter. |
+| Decimal places | Whether to allow decimals and how many. |
+| Mandatory | Requires a value for every row before the respondent can continue. |
+| Randomise rows | Shuffles the order of rows for each respondent. |
+| Sum to total | Requires all row values to add up to a specified total. |
 
 <Note>
-  The default instruction shown to respondents is: "Type a number in each box."
+  **Needs product verification:** Confirm whether "Prefix/suffix" (for example, currency symbols or "%") and "Allow negative numbers" settings exist for this question type.
 </Note>
 
-<Tip>
-  If your survey requires respondents to distribute a fixed total across items, consider using a [Constant sum](/questionnaire/constant-sum) question instead. It enforces a predefined total automatically.
-</Tip>
+## What respondents see
 
-## Related pages
+Respondents see a table with rows on the left and a single numeric input column. They type a number into each cell. Input may be restricted by minimum, maximum, or decimal rules. If the question is mandatory, they must fill every row before continuing.
 
-- [Grid](/questionnaire/grid)
-- [Constant sum](/questionnaire/constant-sum)
+<Warning>
+  Numeric Grid questions involve multiple validation rules. Always preview and test the full questionnaire before launching to ensure limits, totals, and mandatory rules behave correctly.
+</Warning>
+
+## Logic and piping
+
+You can use values from individual rows in logic to show or hide later questions. For example, if a respondent enters zero for a product, you can skip follow-up questions about that product. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results appear as a table with average, minimum, maximum, and total values for each row. If "Sum to total" is enabled, the total is also shown. Data can be exported for further statistical analysis.
+
+## Example use case
+
+A beverage company asks, "How many units of each drink did you purchase last month?" with rows for Cola, Lemonade, and Energy Drink. Respondents enter whole numbers. The company uses the totals to estimate market share.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Numeric Entry question](/questionnaire/numeric-entry)
+- [Grid question](/questionnaire/grid)

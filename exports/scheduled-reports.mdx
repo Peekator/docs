@@ -1,57 +1,61 @@
 ---
-title: "Survey data export formats"
-sidebarTitle: "Export Formats"
-description: "Export your Peekator survey data in CSV, Excel, SPSS, or PowerPoint format. Learn what each format includes and when to use each one."
+title: "Export your survey data from Peekator"
+sidebarTitle: "Exports"
+description: "Download survey results in CSV, Excel, SPSS, PowerPoint, or PDF. Choose the right format for analysis, presentations, or statistical software."
 ---
 
-Peekator supports multiple export formats so you can work with your data in the tools your team already uses. Exports are available from the survey's reporting section once responses have been collected.
+Peekator lets you export your survey data in several formats so you can analyse results in external tools, share findings with stakeholders, or archive your research. You can access exports from the dashboard or from the **Export** button in the questionnaire header.
+
+<Note>
+  **Needs product verification:** whether all export formats are available from a single export menu and what filters apply to CSV exports
+</Note>
 
 ## Available export formats
 
-| Format | Best for |
+### CSV
+
+CSV exports contain response-level data in a plain text format suitable for spreadsheets and data pipelines. Variants may include:
+
+- With or without respondent IDs
+- Filtered results only, if you have applied dashboard filters before exporting
+
+Use CSV when you need raw data for custom analysis or import into another system.
+
+### Excel
+
+Excel exports include calculated results and cross-tabulations in a formatted workbook. This is ideal when you want summaries and pivot-ready tables without building them yourself.
+
+Use Excel for quick summaries and when you need to share structured results with colleagues who prefer spreadsheets.
+
+### SPSS
+
+SPSS exports are provided as `.sav` or `.zip` files compatible with statistical software such as IBM SPSS Statistics. Variable labels and value labels are preserved where possible.
+
+Use SPSS when you need to perform advanced statistical analysis on your survey data.
+
+### PowerPoint
+
+PowerPoint exports generate a chart deck using the visuals from your dashboard. Each question typically becomes a slide with its corresponding chart.
+
+Use PowerPoint when you need to present findings to stakeholders or include charts in a slide deck.
+
+### PDF
+
+PDF exports produce a formatted report of your survey results, including charts and tables, in a single document.
+
+Use PDF for sharing a clean, read-only report that does not require any special software to open.
+
+## How to choose an export format
+
+| Goal | Recommended format |
 | --- | --- |
-| **CSV** | Raw response data for custom analysis in any tool. Lightweight and universal. |
-| **Excel** | Calculated results with question labels. Pre-formatted tables and summary statistics ready for stakeholders. |
-| **SPSS** | Statistical analysis in IBM SPSS. Includes variable labels, value labels, and a `.sav` or zipped file. |
-| **PowerPoint** | Visual presentation of results with charts. Ready to share with clients or present to stakeholders. |
-| **PDF** | Print-ready report of the dashboard view. |
+| Raw data for custom analysis | CSV |
+| Summarised results with calculations | Excel |
+| Statistical modelling | SPSS |
+| Presentation to stakeholders | PowerPoint |
+| Shareable read-only report | PDF |
 
-## CSV export
+## Related guides
 
-The CSV export contains one row per respondent and one column per question/answer. Options:
-
-- **Include IDs**: adds GUID columns for questions and answers (useful for programmatic processing)
-- **Include panel IDs**: adds columns for third-party panel respondent IDs and panel name
-- **Filter by given answers**: export only the responses that match an active filter
-- **Select questions**: export only the questions you need
-
-## Excel export
-
-The Excel export produces a formatted workbook with calculated results. It includes:
-
-- Question labels and answer labels
-- Response counts and percentages per answer
-- Summary statistics for numeric questions
-- Applied filters reflected in the data
-
-## SPSS export
-
-The SPSS export generates a `.sav` file (or a `.zip` file if the dataset is large) suitable for import into IBM SPSS or compatible tools. It includes:
-
-- Variable labels mapped to question text
-- Value labels mapped to answer text
-- Numeric codes for all categorical answers
-
-## PowerPoint export
-
-The PowerPoint export creates a slide deck with one slide per question showing the results as charts. Use it to quickly build a client-ready presentation from your survey data.
-
-## PDF export
-
-The PDF export captures the current dashboard view as a print-ready document.
-
-## Related pages
-
+- [Crosstabs in Peekator](/exports/crosstabs)
 - [Dashboard overview](/analytics/overview)
-- [Crosstabs](/exports/crosstabs)
-- [Filters and segments](/analytics/filters-and-segments)

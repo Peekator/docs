@@ -1,0 +1,52 @@
+---
+title: "Randomisation and rotations in Peekator"
+sidebarTitle: "Randomisation"
+description: "Reduce order bias in Peekator by rotating question groups and randomising answer options within questions."
+---
+
+Randomisation helps reduce order bias by presenting questions or answer options in a different sequence for each respondent. Peekator supports group rotation and answer option randomisation to support unbiased research design.
+
+## Group rotation
+
+Group rotation lets you rotate entire blocks of questions so respondents see them in a different order. Use the **GroupQuestion** (Add group) type to create a group, then apply rotation settings.
+
+### How to set up group rotation
+
+<Steps>
+  <Step title="Create a group">
+    Add a **GroupQuestion** to the canvas and place the questions you want to rotate inside it.
+  </Step>
+  <Step title="Enable rotation">
+    Configure the group to rotate the order of questions for each respondent.
+  </Step>
+  <Step title="Test the order">
+    Use the **test link** to verify that question order changes across sessions.
+  </Step>
+</Steps>
+
+<Note>
+  **Needs product verification:** exact steps for setting up group rotation and confirming which question types support answer option randomisation.
+</Note>
+
+## Answer option randomisation
+
+Many question types let you randomise the order of answer options within a single question. This is configured in the question settings and is useful for reducing primacy or recency bias in choice-based questions.
+
+## When to use randomisation
+
+- **Reducing primacy or recency bias:** prevent first or last options from being selected more often
+- **Monadic tests:** ensure each concept or stimulus is seen equally often in each position
+- **Balanced designs:** support statistical fairness across respondent groups
+
+## Test before launch
+
+Always test rotation logic with the **test link** before launching. Open the survey in multiple sessions and confirm that:
+
+- Group question order varies across respondents
+- Answer option order changes where enabled
+- No questions or options are dropped or duplicated
+
+## Related guides
+
+- [Structure your questionnaire](/questionnaire/structure-your-questionnaire)
+- [Logic and branching](/questionnaire/logic-and-branching)

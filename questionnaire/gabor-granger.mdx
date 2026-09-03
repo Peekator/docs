@@ -1,24 +1,28 @@
 ---
-title: "Gabor Granger questions in Peekator"
-sidebarTitle: "Gabor Granger"
-description: "Test willingness to pay at different price points in Peekator. Add price points as sub-questions and see the demand curve and revenue-maximizing price in results."
+title: "Gabor-Granger question in Peekator"
+sidebarTitle: "Gabor-Granger"
+description: "Learn how to add a Gabor-Granger question to measure price sensitivity and demand curves in Peekator surveys."
 ---
 
-Gabor Granger tests willingness to pay by presenting a fixed question with different price points to respondents, each answering Yes or No. Aggregating responses across respondents produces a demand curve showing what percentage would pay at each price level.
+A Gabor-Granger question tests price sensitivity by asking respondents whether they would buy a product at a specific price. The price is adjusted up or down based on their answer, producing a demand curve that shows the percentage of respondents willing to buy at each price point. This is a direct method for estimating optimal pricing.
 
-Use Gabor Granger when you need quantifiable pricing data for a product with a defined feature set.
+## When to use this question type
 
-## Add a Gabor Granger question
+- You want to estimate demand at different price points for a single product.
+- You need a simple, direct measure of price sensitivity without complex trade-offs.
+- You want to identify the price at which willingness to buy drops sharply.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Gabor Granger**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Review the default question text">
-    Peekator pre-fills: `Would you pay this much for this product / service?` Edit this to reference your specific product.
+  <Step>
+    Select **Gabor-Granger** from the popup.
   </Step>
-  <Step title="Add price points">
-    Add each price point as a sub-question. Each sub-question represents one price level shown to respondents.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and define the product description, price range, and step intervals.
   </Step>
 </Steps>
 
@@ -26,19 +30,40 @@ Use Gabor Granger when you need quantifiable pricing data for a product with a d
 
 | Setting | Description |
 | --- | --- |
-| **Price points** | The price levels to test. Add one sub-question per price point (for example: €5, €10, €15, €20). |
-| **Answers** | Fixed: **Yes** (willing to pay) and **No** (not willing to pay). These cannot be changed. |
+| Product description | The text or image describing the product respondents evaluate. |
+| Starting price | The first price shown to respondents. |
+| Price range | The minimum and maximum prices to test. |
+| Price step | The increment or decrement between price points, for example, £5. |
+| Question text | The purchase intent question, typically "Would you buy this product at [price]?" |
+| Response options | The answers, typically "Yes" and "No". |
 
 <Note>
-  The default instruction shown to respondents is: "Select Yes or No."
+  **Needs product verification:** Confirm whether "Randomise starting price" and "Allow "Maybe" response" settings exist for this question type.
 </Note>
 
-## How results work
+## What respondents see
 
-Peekator calculates the percentage of respondents who answered Yes at each price point. As price increases, the percentage willing to pay decreases. Multiplying the Yes percentage by the price at each point gives an estimated revenue index, helping identify the revenue-maximizing price.
+Respondents see the product description and a price, followed by a yes/no question about their willingness to buy. If they say yes, the price increases by the step amount. If they say no, the price decreases. This continues until a maximum, minimum, or indifference point is reached.
 
-## Related pages
+<Warning>
+  Gabor-Granger questions involve sequential logic and price adjustment rules. Always preview and test the full questionnaire before launching to ensure prices step correctly and the flow behaves as expected.
+</Warning>
 
-- [Van Westendorp](/questionnaire/van-westendorp)
-- [Conjoint analysis](/questionnaire/conjoint-analysis)
+## Logic and piping
+
+You can use the final accepted or rejected price in logic to show or hide later questions. For example, if a respondent rejects all prices, you can ask what price would be acceptable. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results show a demand curve chart with price on the horizontal axis and the percentage of respondents willing to buy on the vertical axis. Revenue curves may also be calculated by multiplying price by demand. The optimal price is identified where revenue or demand is maximised.
+
+## Example use case
+
+A snack food brand tests a new protein bar starting at £2.00 with £0.50 steps up to £4.00. The demand curve shows 80 per cent willing to buy at £2.00, dropping to 30 per cent at £3.50. The revenue curve peaks at £2.50, suggesting the optimal launch price.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Van Westendorp question](/questionnaire/van-westendorp)
+- [Conjoint Analysis question](/questionnaire/conjoint-analysis)

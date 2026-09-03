@@ -1,59 +1,34 @@
 ---
-title: "Analyze data with crosstabs"
+title: "Crosstabs in Peekator"
 sidebarTitle: "Crosstabs"
-description: "Learn how to create cross-tabulation tables in Peekator to see how answers to one question break down by answers to another, and export the results."
+description: "Use crosstabs to compare how different groups answered each question. Ideal for demographic breakdowns and audience segment analysis."
 ---
 
-Crosstabs (cross-tabulations) let you compare how different groups of respondents answered your survey questions. By placing one question on the rows and another on the columns, you can immediately see whether responses vary by segment, such as satisfaction scores by age group or NPS by product tier.
+Crosstabs, or cross-tabulation tables, show how different groups of respondents answered each question in your survey. Instead of viewing overall results, you can break responses down by a demographic or segment to spot differences in behaviour, preference, or opinion across groups.
 
-## What a crosstab shows
+## When to use crosstabs
 
-A crosstab table displays the relationship between two questions. For example:
+Use crosstabs when you need to compare results across respondent groups. Common use cases include:
 
-|  | Very satisfied | Satisfied | Neutral | Dissatisfied |
-| --- | --- | --- | --- | --- |
-| 18-24 | 32% | 41% | 18% | 9% |
-| 25-34 | 28% | 45% | 20% | 7% |
-| 35-44 | 35% | 38% | 15% | 12% |
+- **Demographic breakdowns**: see how age groups, regions, or genders differ in their answers
+- **Audience segment comparison**: compare responses from customers vs non-customers, or from different campaign channels
+- **Quality control**: check whether certain segments are skewing your overall results
 
-The row variable is "What is your age group?" and the column variable is "How satisfied are you with our service?"
+<Note>
+  **Needs product verification:** how to access crosstabs, how to configure rows and columns, and whether crosstabs can be exported
+</Note>
 
-## Create a crosstab
+## How crosstabs are structured
 
-<Steps>
-  <Step title="Open the Crosstabs section">
-    Go to your survey's **Exports** tab and click **Crosstabs**.
-  </Step>
-  <Step title="Select the row variable">
-    Choose the question whose answers will form the rows of the table. This is typically a demographic or segmentation question such as age group, region, or product used.
-  </Step>
-  <Step title="Select the column variable">
-    Choose the question whose answers will form the columns. This is typically the outcome you want to analyze, such as satisfaction score or NPS.
-  </Step>
-  <Step title="Click Generate">
-    Click **Generate crosstab**. Peekator calculates the table and displays it below.
-  </Step>
-</Steps>
+A crosstab table typically places:
 
-## Crosstab options
+- **Rows**: the answer options for a survey question
+- **Columns**: the groups you are comparing, such as a demographic variable or segment
+- **Cells**: the count or percentage of respondents in each group who selected each answer
 
-| Option | Description |
-| --- | --- |
-| **Show counts** | Display the raw number of respondents in each cell. |
-| **Show percentages** | Display the percentage of each row that selected each column answer. Row percentages sum to 100%. |
-| **Show both** | Display counts and percentages together in each cell. |
-| **Highlight significant differences** | Color-code cells where a segment's response rate differs significantly from the overall average. |
+This layout makes it easy to scan across columns and compare how each group responded to the same question.
 
-## Export a crosstab
+## Related guides
 
-Click **Export** on the crosstab view to download the table as a CSV or Excel file. The exported file includes the same counts and percentages shown on screen.
-
-<Tip>
-  Use crosstabs to find patterns across audience segments before your client presentation. Comparing NPS by customer tier or satisfaction by tenure often surfaces the most actionable insights.
-</Tip>
-
-## Related pages
-
-- [Export formats](/exports/export-formats)
-- [Filters and segments](/analytics/filters-and-segments)
-- [Dashboard overview](/analytics/overview)
+- [Filter and segment your survey results](/analytics/filters-and-segments)
+- [Export your survey data](/exports/scheduled-reports)

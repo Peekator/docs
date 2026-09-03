@@ -1,26 +1,28 @@
 ---
-title: "Single choice questions in Peekator"
+title: "Single Choice question in Peekator"
 sidebarTitle: "Single Choice"
-description: "Configure single choice questions in Peekator with radio buttons or dropdown, Other option, shuffle, columns, points, and conditional rules."
+description: "Learn how to add and configure a Single Choice question so respondents select one option from a list in Peekator surveys."
 ---
 
-Single choice questions let respondents select exactly one answer from a list. Use this type for questions with one correct or definitive answer, such as selecting a country, confirming a yes/no response, or choosing a single preference.
+A Single Choice question asks respondents to pick exactly one answer from a list of options. This is one of the most common question types in Peekator and works well for demographic questions, brand preference, or any scenario where you need a clear, mutually exclusive selection.
 
-<Tip>
-  Use single choice when only one answer is valid or expected. Use [multiple choice](/questionnaire/multiple-choice) when respondents may reasonably select more than one answer.
-</Tip>
+## When to use this question type
 
-## Add a single choice question
+- You need respondents to select one answer only, such as a primary brand or favourite feature.
+- You want clean, easy-to-analyse data without overlap between choices.
+- You plan to use the answer as a condition for logic or branching later in the questionnaire.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Single Choice**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter question text">
-    Type your question. For example: `How did you hear about us?`
+  <Step>
+    Select **Single Choice** from the popup.
   </Step>
-  <Step title="Add answer options">
-    Click **Add option** for each answer choice.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and edit the text and options.
   </Step>
 </Steps>
 
@@ -28,23 +30,36 @@ Single choice questions let respondents select exactly one answer from a list. U
 
 | Setting | Description |
 | --- | --- |
-| **Include "Other"** | Adds a free-text "Other (please specify):" option at the end of the list. Disabled when Display style is set to Dropdown. |
-| **Screenout on "Other"** | Respondents who select Other are screened out of the survey. Only available when Include "Other" is enabled. |
-| **Shuffle answers** | Randomizes the order of answer options on each survey load to reduce position bias. |
-| **Number of columns** | Display options across multiple columns. Default is `1`. |
-| **Display style** | **Radio buttons** (default) or **Dropdown**. Use Dropdown for long option lists. When Dropdown is active, Include "Other" is disabled. |
-| **Show results as percentage** | Display results as percentages instead of absolute counts in reporting. |
-| **Answers are events** | Treat each answer selection as an event for tracking purposes. |
-| **Assign points** | Assign a point value to each answer option for scoring or weighting. |
-| **Conditional rule on answers** | Apply conditional logic based on the answer selected. |
-| **Pipe answers from question** | Inherit answer options dynamically from another question in the survey. |
+| Question text | The label respondents see. |
+| Answer options | The list of choices. Click to add, reorder, or remove options. |
+| Allow "Other" option | Adds an "Other" choice with a free-text field. |
+| Mandatory | Requires a selection before the respondent can continue. |
+| Randomise options | Shuffles the order of choices for each respondent. |
+| Exclusive option | Marks one choice (for example, "None of the above") so selecting it deselects all other choices. |
 
 <Note>
-  The default instruction shown to respondents is: "Select one answer."
+  **Needs product verification:** Confirm whether "Allow not sure" and "Display as dropdown" settings exist for this question type.
 </Note>
 
-## Related pages
+## What respondents see
 
-- [Multiple choice](/questionnaire/multiple-choice)
-- [Logic and branching](/questionnaire/logic-and-branching)
+Respondents see a vertical list of radio buttons or tiles. They click one option. If "Other" is enabled, a text box appears when that option is selected. The "Next" button remains disabled until a choice is made if the question is mandatory.
+
+## Logic and piping
+
+Single Choice answers are ideal for logic and branching. You can show or hide later questions based on which option a respondent selects. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results appear as a bar chart or pie chart showing the count and percentage for each option. If "Other" responses were collected, they are listed in a separate table or exported for manual review.
+
+## Example use case
+
+A consumer electronics brand asks, "Which smartphone brand do you currently use?" with options: Apple, Samsung, Google, Other. The answer is used later to branch to brand-specific follow-up questions.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Multiple Choice question](/questionnaire/multiple-choice)
+- [Open End question](/questionnaire/open-end)

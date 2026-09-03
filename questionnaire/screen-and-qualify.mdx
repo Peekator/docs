@@ -1,0 +1,52 @@
+---
+title: "Screen and qualify respondents in Peekator"
+sidebarTitle: "Screeners"
+description: "Use screenout questions in Peekator to filter respondents who do not meet your criteria and end their survey early."
+---
+
+Screening lets you end a survey early for respondents who do not meet your qualifying criteria. In Peekator, you do this with the **ScreenoutQuestion** type, which checks conditions and redirects ineligible respondents to a screenout message.
+
+## How screening works
+
+When a respondent answers a screenout question, Peekator evaluates the conditions you set. If the respondent does not match, the survey ends immediately and the respondent sees the **OnScreenoutText** configured in survey settings.
+
+## Add a screenout question
+
+<Steps>
+  <Step title="Open Add questions">
+    Click **Add questions** in the questionnaire menu to open the question type selector.
+  </Step>
+  <Step title="Select Screenout">
+    Choose the **ScreenoutQuestion** type (Filter respondents) and place it on the canvas.
+  </Step>
+  <Step title="Set the conditions">
+    Define which answers qualify the respondent to continue. Respondents who select other answers will be screened out.
+  </Step>
+  <Step title="Review the screenout text">
+    Confirm the **OnScreenoutText** in survey settings says what you want ineligible respondents to see.
+  </Step>
+</Steps>
+
+<Note>
+  **Needs product verification:** exact flow for setting screenout conditions and whether advanced quota-based screenouts exist.
+</Note>
+
+## When to use screenouts
+
+- **Qualifying demographics:** ensure only target age groups, regions, or roles proceed
+- **Removing ineligible respondents:** filter out those who do not use a product or meet a behaviour criterion
+- **Protecting sample quality:** stop unqualified responses from entering your data set
+
+## Test before launch
+
+Always test screening logic before launching. Use the **test link** to walk through every answer path and confirm that:
+
+- Qualifying answers let the respondent continue
+- Non-qualifying answers trigger the screenout message
+- The screenout text displays correctly
+
+## Related guides
+
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Quotas](/questionnaire/quotas)
+- [Survey settings](/survey-settings/overview)

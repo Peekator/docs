@@ -1,19 +1,28 @@
 ---
-title: "Open-end questions in Peekator"
-sidebarTitle: "Open-End"
-description: "Add free-text questions in Peekator to collect qualitative answers. Configure single-line input, mandatory response, answer validation, and audio recording."
+title: "Open End question in Peekator"
+sidebarTitle: "Open End"
+description: "Learn how to add and configure an Open End question so respondents type free-text answers in Peekator surveys."
 ---
 
-Open-end questions give respondents a text field to answer in their own words. Use this format to capture qualitative insights, detailed feedback, and unscripted opinions that structured questions cannot provide.
+An Open End question gives respondents a single-line text field to type a free-text answer. Use this type when you want unfiltered, qualitative responses in the respondent's own words, such as feedback, explanations, or spontaneous brand recall.
 
-## Add an open-end question
+## When to use this question type
+
+- You want verbatim responses rather than pre-defined options.
+- You need to capture reasons, opinions, or suggestions in the respondent's own words.
+- You want to identify themes or use AI auto-coding to categorise open-ended responses.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Open-End**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter question text">
-    Write a prompt that invites a free-text response, for example: `What could we do to improve your experience?`
+  <Step>
+    Select **Open End** from the popup.
+  </Step>
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and edit the question text and validation rules.
   </Step>
 </Steps>
 
@@ -21,23 +30,37 @@ Open-end questions give respondents a text field to answer in their own words. U
 
 | Setting | Description |
 | --- | --- |
-| **Mandatory answer** | Require a response before the respondent can proceed. Enabled by default. |
-| **Show as single line** | Display a single-line text box instead of a multi-line textarea. Useful for short, focused answers like names or codes. |
-| **Answer validation** | Validate the response against a list of allowed values. Enter one acceptable answer per line in the validation field. |
-| **Show large transcribe design** | Show an expanded transcription interface for longer audio-to-text workflows. |
-| **Save audio files** | Record and save the respondent's audio input alongside the text response. |
+| Question text | The label respondents see. |
+| Placeholder text | Hint text shown inside the empty input field. |
+| Mandatory | Requires text input before the respondent can continue. |
+| Minimum characters | Sets the shortest acceptable response length. |
+| Maximum characters | Sets the longest acceptable response length. |
+| Validate as email | Restricts input to a valid email format. |
+| Validate as URL | Restricts input to a valid URL format. |
 
 <Note>
-  The default instruction shown to respondents is: "Please type your answer below."
+  **Needs product verification:** Confirm whether "Multi-line textarea" and "Spell check" settings exist for this question type.
 </Note>
 
-<Tip>
-  Open-end responses are processed by Peekator's AI Analysis features, which identify recurring themes, sentiment, and key topics across all submissions. See [AI Analysis](/ai-analysis/overview).
-</Tip>
+## What respondents see
 
-## Related pages
+Respondents see a single-line text input field below the question text. They type their answer. If minimum or maximum character limits are set, a counter may show progress. The "Next" button remains disabled until the mandatory requirement and any validation rules are met.
 
-- [Multiple link open-end](/questionnaire/multiple-link-open-end)
-- [Conversational AI](/questionnaire/conversational-ai)
-- [AI Analysis](/ai-analysis/overview)
+## Logic and piping
+
+You can use the presence or content of an open-ended response in logic to show or hide later questions. For example, if a respondent leaves the field empty, you can skip a follow-up. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Responses appear as a list of verbatim answers. You can filter, search, and export them for qualitative analysis. If AI auto-coding is enabled, responses are automatically categorised into named themes with counts and percentages.
+
+## Example use case
+
+A cosmetics brand asks, "What is the first word that comes to mind when you think of our brand?" The verbatim responses are auto-coded by AI into themes such as "Natural", "Luxury", and "Expensive" to guide messaging strategy.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Multiple Link Open End question](/questionnaire/multiple-link-open-end)
+- [Conversational AI question](/questionnaire/conversational-ai)

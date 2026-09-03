@@ -1,37 +1,65 @@
 ---
-title: "Multiple line open-end questions in Peekator"
-sidebarTitle: "Multiple Line Open-End"
-description: "Create a grouped open-end question in Peekator with multiple labeled text fields. Collect several related free-text answers under a single question."
+title: "Multiple Link Open End question in Peekator"
+sidebarTitle: "Multiple Link Open End"
+description: "Learn how to add and configure a Multiple Link Open End question for several free-text fields in Peekator surveys."
 ---
 
-Multiple line open-end questions group several open-ended text fields under a single question. Each field is a separate sub-question, making it easy to collect multiple related free-text answers in one place without creating separate questions.
+A Multiple Link Open End question presents respondents with several linked text fields in a single question. Use this type when you want to collect multiple related free-text answers together, such as strengths and weaknesses, or first, second, and third associations with a brand.
 
-Use this type when you want respondents to list several reasons, examples, or details, for example: "List three reasons for your choice."
+## When to use this question type
 
-## Add a multiple link open-end question
+- You need several related open-ended responses in one compact question.
+- You want to keep the questionnaire short while collecting multiple verbatim answers.
+- You plan to compare or code related themes across the linked fields.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Multiple Line Open-End**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter question text">
-    Write a prompt that explains what respondents should provide across the fields.
+  <Step>
+    Select **Multiple Link Open End** from the popup.
   </Step>
-  <Step title="Add sub-questions">
-    Add each text field as a sub-question with its own label, for example: "Reason 1", "Reason 2", "Reason 3".
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and add or edit the linked text fields.
   </Step>
 </Steps>
 
 ## Settings
 
-There are no additional settings beyond the sub-questions themselves. Each sub-question is an individual open-text field. Add, edit, remove, or reorder sub-questions in the question editor.
+| Setting | Description |
+| --- | --- |
+| Question text | The main label respondents see. |
+| Text fields | The individual input fields, each with its own label or prompt. |
+| Mandatory | Requires input in every field before the respondent can continue. |
+| Minimum characters per field | Sets the shortest acceptable response for each field. |
+| Maximum characters per field | Sets the longest acceptable response for each field. |
+| Randomise fields | Shuffles the order of fields for each respondent. |
 
 <Note>
-  The default instruction shown to respondents is: "Enter one suggestion per line."
+  **Needs product verification:** Confirm whether "Validate as email/URL per field" and "Allow empty fields" settings exist for this question type.
 </Note>
 
-## Related pages
+## What respondents see
 
-- [Open-end](/questionnaire/open-end)
-- [Conversational AI](/questionnaire/conversational-ai)
+Respondents see a single question with multiple text input fields stacked vertically, each with its own label. They type an answer into each field. If mandatory, all fields must be completed before they can continue. Character counters may show if limits are set.
+
+## Logic and piping
+
+You can use the presence or content of responses from individual fields in logic to show or hide later questions. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Responses appear as a table with one column per text field. Each column can be filtered, searched, and exported for qualitative analysis. If AI auto-coding is enabled, each field can be coded separately or together to identify themes.
+
+## Example use case
+
+An automotive brand asks, "What are the top three reasons you chose our brand?" with three linked fields labelled "Reason 1", "Reason 2", and "Reason 3". The responses are auto-coded to identify the most common purchase drivers.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Open End question](/questionnaire/open-end)
+- [Conversational AI question](/questionnaire/conversational-ai)

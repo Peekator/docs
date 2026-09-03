@@ -1,69 +1,49 @@
 ---
-title: "Charts and data visualizations"
+title: "Charts and visuals in the Peekator dashboard"
 sidebarTitle: "Charts"
-description: "Peekator auto-generates charts for every question type. Learn how to switch chart types, customize colors, and download visuals for reports and presentations."
+description: "Explore auto-generated charts and visuals for each survey question in Peekator. Understand chart types and how to interact with your data."
 ---
 
-Peekator automatically generates a chart for every question in your survey based on the question type. You can switch chart types, adjust colors, toggle labels, and download any chart as a PNG or SVG for use in reports and presentations.
+Peekator generates charts automatically for every question in your survey dashboard. These visuals update in real time as new responses arrive, giving you an immediate picture of how respondents are answering without needing to build a report manually.
 
-## Default chart types by question type
+## Available chart types
 
-| Question type | Default chart | Alternative options |
-| --- | --- | --- |
-| Multiple choice | Bar chart (horizontal) | Pie chart, donut chart |
-| Single choice | Bar chart (vertical) | Pie chart, donut chart |
-| Rating scale | Histogram | Bar chart, average score card |
-| Open-ended | Word cloud | Response list, sentiment chart |
-| Matrix | Stacked bar chart | Grouped bar chart, heat map |
-| Ranking | Stacked bar chart | Average rank table |
-| Dropdown | Bar chart | Pie chart |
-| NPS | NPS gauge | Bar chart (0-10 distribution) |
-| File upload | Response count card | (no chart) |
-| Date and time | Timeline chart | Calendar heat map |
+Charts are generated based on the question type you used in the questionnaire. This means the visual format is chosen to represent the data clearly.
 
-## Switch the chart type
+<Note>
+  **Needs product verification:** full list of chart types per question type
+</Note>
 
-<Steps>
-  <Step title="Open your survey dashboard">
-    Go to the survey's analytics view and scroll to the question chart you want to change.
-  </Step>
-  <Step title="Click the chart menu">
-    Click the **more options** icon (three dots) in the top-right corner of the chart card.
-  </Step>
-  <Step title="Select a chart type">
-    Choose from the available alternatives in the dropdown. The chart re-renders immediately.
-  </Step>
-</Steps>
+Common chart types include:
 
-## Customize chart appearance
+- **Bar charts**: used for single choice and multiple choice questions to show the distribution of selected options
+- **Tables**: used for grid or matrix questions where respondents rated several items on the same scale
+- **Pie or donut charts**: may be used for single choice questions with a small number of options
+- **Line or area charts**: may appear in timeline or trend views showing responses over time
 
-Click the chart menu and select **Edit chart** to open the chart settings panel:
+## How to interact with charts
 
-- **Colors**: change the color of each data series to match your brand palette.
-- **Data labels**: toggle values shown directly on bars, slices, or data points.
-- **Legend**: show or hide the chart legend.
-- **Title**: edit the chart title displayed above the visualization.
+You can explore the charts directly in the dashboard to dig into the data.
 
-<Tip>
-  Use your brand colors consistently across all charts before exporting for a client presentation. Set the primary color once and Peekator applies it across all charts in the survey.
-</Tip>
+<Note>
+  **Needs product verification:** exact chart interactions available
+</Note>
 
-## Download a chart
+- Hover over chart segments to see exact counts and percentages
+- Click on a segment to filter the entire dashboard by that answer, if filtering by chart selection is supported
+- Scroll through the dashboard to review each question's chart in sequence
 
-<Steps>
-  <Step title="Open the chart menu">
-    Click the **more options** icon in the top-right corner of the chart card.
-  </Step>
-  <Step title="Click Download">
-    Select **Download as PNG** for a raster image suitable for documents and slides, or **Download as SVG** for a vector format that scales cleanly at any size.
-  </Step>
-  <Step title="Save the file">
-    Your browser saves the file to your default downloads folder.
-  </Step>
-</Steps>
+## Exporting charts
 
-## Related pages
+If you need to include charts in a presentation or share them outside Peekator, you may be able to export individual charts or the full dashboard.
 
-- [Response data](/analytics/response-data)
-- [Filters and segments](/analytics/filters-and-segments)
-- [Export your data](/exports/overview)
+<Note>
+  **Needs product verification:** whether individual chart export is available
+</Note>
+
+For a complete export of all charts and data, use the export options described in [Export your survey data](/exports/scheduled-reports).
+
+## Related guides
+
+- [Filter and segment your survey results](/analytics/filters-and-segments)
+- [Export your survey data](/exports/scheduled-reports)

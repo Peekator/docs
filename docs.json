@@ -20,44 +20,50 @@
     ],
     "tabs": [
       {
-        "tab": "Getting Started",
+        "tab": "Start Here",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Start Here",
             "icon": "rocket",
             "pages": [
               "index",
               "quickstart",
-              "getting-started/account-setup"
+              "getting-started/account-setup",
+              "getting-started/add-users"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Projects",
+        "groups": [
           {
             "group": "Projects",
             "icon": "folder",
             "pages": [
               "projects/overview",
               "projects/create-project",
+              "projects/add-survey-or-interview",
               "projects/manage-projects"
-            ]
-          },
-          {
-            "group": "Campaigns",
-            "icon": "paper-plane",
-            "pages": [
-              "campaigns/overview"
             ]
           }
         ]
       },
       {
-        "tab": "Setup",
+        "tab": "Build",
         "groups": [
           {
             "group": "Questionnaire",
             "icon": "clipboard-list",
             "pages": [
               "questionnaire/overview",
-              "questionnaire/question-types",
+              "questionnaire/question-types"
+            ]
+          },
+          {
+            "group": "Standard Question Types",
+            "icon": "list",
+            "pages": [
               "questionnaire/single-choice",
               "questionnaire/multiple-choice",
               "questionnaire/grid",
@@ -68,13 +74,37 @@
               "questionnaire/open-end",
               "questionnaire/multiple-link-open-end",
               "questionnaire/date",
-              "questionnaire/information-screen",
-              "questionnaire/language-single-choice",
-              "questionnaire/conversational-ai",
+              "questionnaire/information-screen"
+            ]
+          },
+          {
+            "group": "Translation Question Types",
+            "icon": "language",
+            "pages": [
+              "questionnaire/language-single-choice"
+            ]
+          },
+          {
+            "group": "AI Question Types",
+            "icon": "sparkles",
+            "pages": [
+              "questionnaire/conversational-ai"
+            ]
+          },
+          {
+            "group": "UX Research Question Types",
+            "icon": "eye",
+            "pages": [
               "questionnaire/five-second-test",
               "questionnaire/click-test",
-              "questionnaire/website-test",
               "questionnaire/card-sort",
+              "questionnaire/website-test"
+            ]
+          },
+          {
+            "group": "Market Research Question Types",
+            "icon": "chart-bar",
+            "pages": [
               "questionnaire/maxdiff",
               "questionnaire/conjoint-analysis",
               "questionnaire/constant-sum",
@@ -82,20 +112,27 @@
               "questionnaire/pairwise-comparison",
               "questionnaire/upload-file",
               "questionnaire/gabor-granger",
-              "questionnaire/van-westendorp",
-              "questionnaire/interview-topic",
-              "questionnaire/logic-and-branching"
+              "questionnaire/van-westendorp"
             ]
           },
           {
-            "group": "Distribution",
-            "icon": "share-nodes",
+            "group": "Interview Question Types",
+            "icon": "microphone",
             "pages": [
-              "distribution/overview",
-              "distribution/link-sharing",
-              "distribution/campaigns",
-              "distribution/panel",
-              "distribution/launch-checklist"
+              "questionnaire/interview-topic"
+            ]
+          },
+          {
+            "group": "Structure and Logic",
+            "icon": "sitemap",
+            "pages": [
+              "questionnaire/structure-your-questionnaire",
+              "questionnaire/logic-and-branching",
+              "questionnaire/hidden-variables",
+              "questionnaire/screen-and-qualify",
+              "questionnaire/quotas",
+              "questionnaire/randomisation",
+              "questionnaire/translations"
             ]
           },
           {
@@ -108,20 +145,43 @@
         ]
       },
       {
-        "tab": "Reporting",
+        "tab": "Distribute",
+        "groups": [
+          {
+            "group": "Distribute and Launch",
+            "icon": "share-nodes",
+            "pages": [
+              "distribution/overview",
+              "distribution/link-sharing",
+              "distribution/campaigns",
+              "distribution/panel",
+              "distribution/launch-checklist"
+            ]
+          },
+          {
+            "group": "Campaign Hub",
+            "icon": "paper-plane",
+            "pages": [
+              "campaigns/overview"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Analyse",
         "groups": [
           {
             "group": "Dashboard",
             "icon": "chart-bar",
             "pages": [
               "analytics/overview",
-              "analytics/response-data",
+              "analytics/charts-and-visuals",
               "analytics/filters-and-segments",
-              "analytics/charts-and-visuals"
+              "analytics/response-data"
             ]
           },
           {
-            "group": "Crosstabs & Exports",
+            "group": "Exports",
             "icon": "table-columns",
             "pages": [
               "exports/crosstabs",
@@ -133,23 +193,10 @@
             "icon": "sparkles",
             "pages": [
               "ai-analysis/overview",
+              "ai-analysis/chat-with-results",
+              "ai-analysis/auto-coding",
               "ai-analysis/sentiment-analysis",
-              "ai-analysis/theme-detection",
               "ai-analysis/ai-summary"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Account",
-        "groups": [
-          {
-            "group": "Account & Settings",
-            "icon": "gear",
-            "pages": [
-              "settings/overview",
-              "getting-started/team-and-permissions",
-              "settings/billing"
             ]
           }
         ]

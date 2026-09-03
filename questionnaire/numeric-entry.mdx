@@ -1,47 +1,66 @@
 ---
-title: "Numeric entry questions in Peekator"
+title: "Numeric Entry question in Peekator"
 sidebarTitle: "Numeric Entry"
-description: "Collect numeric answers in Peekator using five display modes: number input, digit code, slider, star rating, or dropdown. Configure range, currency, and validation."
+description: "Learn how to add and configure a Numeric Entry question so respondents type a number in Peekator surveys."
 ---
 
-Numeric entry collects a single number from the respondent. Choose from five display modes to match the data you need, from a simple number field to a star rating or slider.
+A Numeric Entry question asks respondents to type a number into a single input field. Use this type when you need exact quantities, such as age, income, number of employees, or units purchased, rather than a pre-defined list of ranges.
 
-## Display modes
+## When to use this question type
 
-Peekator offers five modes for numeric questions:
+- You need an exact numeric value rather than a range or category.
+- You want to calculate averages, totals, or perform statistical analysis on the raw data.
+- You need to validate input within a specific range or format.
 
-| Mode | Description |
-| --- | --- |
-| **Numeric** (default) | Standard number input field. |
-| **Digits** | Fixed-length digit input, for example a 4-digit PIN or code. |
-| **Slider** | Range slider with configurable min, max, step, and start value. |
-| **Stars** | Star rating control. **Maximum value** sets the number of stars (for example, `5` for a 5-star scale). |
-| **Dropdown** | Dropdown list of numbers generated from min, max, and step values. |
+## How to add it
+
+<Steps>
+  <Step>
+    In the questionnaire builder, click **Add questions**.
+  </Step>
+  <Step>
+    Select **Numeric Entry** from the popup.
+  </Step>
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and set the label, limits, and format.
+  </Step>
+</Steps>
 
 ## Settings
 
 | Setting | Description |
 | --- | --- |
-| **Display mode** | Choose between Numeric, Digits, Slider, Stars, or Dropdown. |
-| **Minimum value** | Lowest accepted number. |
-| **Maximum value** | Highest accepted number. Also sets the number of stars in Stars mode. |
-| **Screenout if out of range** | Screen out respondents who enter a value outside the min/max range. |
-| **Currency** | Display a currency symbol next to the value. |
-| **Decimal places** | Number of decimal places allowed. Default is `2`. |
-| **Digits** | Number of digits required. Applies to Digits mode only. |
-| **Step** | Increment per tick or step. Applies to Slider and Dropdown modes. |
-| **Start value** | Initial position of the slider. Applies to Slider mode only. |
+| Question text | The label respondents see. |
+| Minimum value | The lowest number a respondent can enter. |
+| Maximum value | The highest number a respondent can enter. |
+| Decimal places | Whether to allow decimals and how many. |
+| Prefix | A symbol or text shown before the input, for example, a currency symbol. |
+| Suffix | A symbol or text shown after the input, for example, "%" or "kg". |
+| Mandatory | Requires a value before the respondent can continue. |
 
 <Note>
-  The default instruction shown to respondents is: "Please enter a number."
+  **Needs product verification:** Confirm whether "Allow negative numbers" and "Slider display" settings exist for this question type.
 </Note>
 
-<Tip>
-  Use **Screenout if out of range** to automatically disqualify respondents who enter values outside your target range, keeping your data clean without manual review.
-</Tip>
+## What respondents see
 
-## Related pages
+Respondents see a single text input field, often with a prefix or suffix. They type a number. The field may reject non-numeric characters or values outside the set range. If the question is mandatory, the "Next" button remains disabled until a valid number is entered.
 
-- [Constant sum](/questionnaire/constant-sum)
-- [Numeric grid](/questionnaire/numeric-grid)
+## Logic and piping
+
+You can use the numeric value in logic to show or hide later questions. For example, if a respondent enters an age below 18, you can branch to a different set of questions. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results appear as descriptive statistics: average, median, minimum, maximum, and standard deviation. A histogram shows the distribution of responses. Raw values are available in exports for further analysis.
+
+## Example use case
+
+A B2B software company asks, "How many employees does your organisation have?" with a minimum of 1 and no maximum. The raw numbers let them segment results by company size in analysis.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Numeric Grid question](/questionnaire/numeric-grid)
+- [Open End question](/questionnaire/open-end)

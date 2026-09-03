@@ -1,26 +1,28 @@
 ---
-title: "Ranking questions in Peekator"
+title: "Ranking question in Peekator"
 sidebarTitle: "Ranking"
-description: "Use ranking questions in Peekator so respondents drag items into their preferred order. Configure items to rank, min/max limits, and an Other option."
+description: "Learn how to add and configure a Ranking question so respondents order items by preference or priority in Peekator surveys."
 ---
 
-Ranking questions ask respondents to arrange a list of items in order of preference by dragging and dropping. Use this when you need to understand relative priorities, not just whether an option is preferred.
+A Ranking question asks respondents to arrange a list of items in order of preference, importance, or priority. This reveals not just which items are liked, but how they compare to one another, giving you richer preference data than a simple multiple choice question.
 
-<Tip>
-  Keep ranking lists to 7 or fewer items to avoid cognitive fatigue and improve data quality.
-</Tip>
+## When to use this question type
 
-## Add a ranking question
+- You want to understand the relative priority of features, brands, or messages.
+- You need to identify a winner when multiple options are popular.
+- You want to force trade-offs rather than letting respondents select everything.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Ranking**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter question text">
-    Type your question. For example: `Please rank the following features from most to least important.`
+  <Step>
+    Select **Ranking** from the popup.
   </Step>
-  <Step title="Add items to rank">
-    Add each item as a sub-question. You can edit, remove, or reorder the list at any time.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and add the items to be ranked.
   </Step>
 </Steps>
 
@@ -28,16 +30,36 @@ Ranking questions ask respondents to arrange a list of items in order of prefere
 
 | Setting | Description |
 | --- | --- |
-| **Items to rank** | Add, edit, remove, or reorder the list of items shown to respondents. Each item is a sub-question. |
-| **Include "Other"** | Add an open-text "Other (please specify):" item that respondents can also rank. |
-| **Limit ranked items** | Restrict how many items the respondent must rank. Set **Minimum options** and **Maximum options**. For example, "Rank your top 3" uses a maximum of `3`. |
+| Question text | The label respondents see. |
+| Items to rank | The list of options respondents will order. |
+| Mandatory | Requires all items to be ranked before the respondent can continue. |
+| Randomise items | Shuffles the order of items for each respondent. |
+| Rank all | Requires respondents to rank every item, not just a subset. |
+| Number to rank | Limits ranking to a specific number of items if not all need to be ranked. |
 
 <Note>
-  The default instruction shown to respondents is: "Please rank the following options by dragging and dropping them into the desired order. Your top choice should be at the top of the list, and your least preferred choice should be at the bottom."
+  **Needs product verification:** Confirm whether "Reverse rank" and "Tie allowed" settings exist for this question type.
 </Note>
 
-## Related pages
+## What respondents see
 
-- [Multiple choice](/questionnaire/multiple-choice)
-- [MaxDiff](/questionnaire/maxdiff)
+Respondents see a list of items, often with drag handles or numbered positions. They drag items into order or select a rank for each item. If "Rank all" is enabled, every item must be placed before they can continue. A counter may show progress.
+
+## Logic and piping
+
+You can use the top-ranked item or the rank of a specific item in logic to show or hide later questions. For example, if a respondent ranks "Price" first, you can branch to a price sensitivity question. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results appear as a ranking table showing the average rank, first-place count, and distribution of positions for each item. A chart may show the percentage of respondents who ranked each item in each position. This makes it easy to identify clear winners and losers.
+
+## Example use case
+
+A retailer asks, "Please rank the following factors in order of importance when choosing an online store: Price, Delivery speed, Product range, Return policy, Customer reviews." The results show that Delivery speed and Price are the top two drivers for most customers.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Multiple Choice question](/questionnaire/multiple-choice)
+- [MaxDiff question](/questionnaire/maxdiff)

@@ -1,72 +1,51 @@
 ---
-title: "Filter and segment survey results"
+title: "Filter and segment your survey results"
 sidebarTitle: "Filters"
-description: "Learn how to filter Peekator survey results by answer, date, or completion status, and how to save filter sets as named segments for reuse and comparison."
+description: "Narrow your Peekator dashboard results by answer value, date, or respondent attribute. Learn when to use filters versus crosstabs."
 ---
 
-Filters let you narrow your survey results to a specific subset of responses. Segments let you save a filter set and reuse it across sessions or compare it side by side with other groups. Both filters and segments apply across the dashboard charts, summary stats, and exports.
+Filters let you narrow the data shown in the Peekator dashboard so you can focus on a specific subset of responses. You can filter by answer value, date range, or respondent attributes. This is useful when you want to see how a particular group answered, or when you need to exclude incomplete or test responses from your view.
 
-## Apply a filter
+## How filters work
 
-<Steps>
-  <Step title="Open the dashboard for your survey">
-    Go to the survey's analytics view in Peekator.
-  </Step>
-  <Step title="Click Filters">
-    Click the **Filters** button at the top of the dashboard. The filters panel opens on the right side.
-  </Step>
-  <Step title="Add a filter condition">
-    Click **Add filter** and choose a filter type:
-
-    - **Answer to a question**: show only responses where a specific question has a specific answer.
-    - **Date range**: limit results to responses submitted within a chosen date window.
-    - **Completion status**: show only complete or only incomplete responses.
-    - **Respondent metadata**: filter by channel (email, link, embed) or other metadata if collected.
-  </Step>
-  <Step title="Set the condition values">
-    Select the question, condition (equals, contains, is greater than, etc.), and the value to filter by.
-  </Step>
-  <Step title="Apply the filter">
-    Click **Apply**. The dashboard instantly refreshes to show only the matching responses.
-  </Step>
-</Steps>
+When you apply a filter, the entire dashboard updates to show only the responses that match your criteria. Charts, counts, and completion rates all recalculate automatically based on the filtered set.
 
 <Note>
-  Filters are applied across the entire dashboard: summary stats, all charts, and the responses table all update to reflect the filtered subset. When you export data, active filters carry over to the export.
+  **Needs product verification:** exact filter and segment configuration steps, whether saved segments are supported
 </Note>
 
-## Combine multiple filters
+## How to add a filter
 
-You can stack multiple filter conditions. By default, all conditions must be true (AND logic). Add as many conditions as you need to narrow your results to a precise segment.
-
-## Save a segment
+To apply a filter to your survey results:
 
 <Steps>
-  <Step title="Set up your filters">
-    Apply one or more filter conditions as described above.
+  <Step title="Open the dashboard">
+    Navigate to the **Reporting** tab inside your survey and select the dashboard view.
   </Step>
-  <Step title="Click Save as segment">
-    Click **Save as segment** in the filters panel and give the segment a name, such as `Detractors - Q3` or `EMEA Respondents`.
+  <Step title="Open the filter panel">
+    Locate the filter controls, usually near the top of the dashboard.
   </Step>
-  <Step title="Use the segment later">
-    Saved segments appear in the **Segments** dropdown at the top of the dashboard. Select one to apply it instantly without rebuilding the filter conditions.
+  <Step title="Choose your filter criteria">
+    Select the question, date range, or respondent attribute you want to filter by, then pick the values to include.
+  </Step>
+  <Step title="Apply the filter">
+    Confirm your selection. The dashboard refreshes to show only matching responses.
   </Step>
 </Steps>
 
-## Compare segments side by side
+## Filters vs crosstabs
 
-<Tip>
-  Use segments to compare different audience groups. For example, compare NPS scores between customers who rated ease of use highly and those who rated it poorly to surface what drives loyalty.
-</Tip>
+Filters and crosstabs both help you break down your data, but they serve different purposes.
 
-To compare two segments, open the segments panel, select a second segment, and enable **Compare mode**. The dashboard shows both segments in parallel, with charts split by segment.
+| Use filters when... | Use crosstabs when... |
+| --- | --- |
+| You want to explore one group at a time | You want to compare multiple groups side by side |
+| You are preparing a filtered export | You need a cross-tabulation table for statistical review |
+| You want to temporarily hide certain responses | You want to see how every question varies across a demographic |
 
-## Remove a filter or segment
+For side-by-side comparisons, see [Crosstabs in Peekator](/exports/crosstabs).
 
-To clear all active filters, click **Clear all** in the filters panel. To delete a saved segment, open the segments list, hover over the segment name, and click the delete icon.
+## Related guides
 
-## Related pages
-
-- [Response data](/analytics/response-data)
-- [Charts and visuals](/analytics/charts-and-visuals)
-- [Export your data](/exports/overview)
+- [Explore response data in Peekator](/analytics/response-data)
+- [Crosstabs in Peekator](/exports/crosstabs)

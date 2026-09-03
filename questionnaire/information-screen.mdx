@@ -1,22 +1,29 @@
 ---
-title: "Information screen questions in Peekator"
+title: "Information Screen question in Peekator"
 sidebarTitle: "Information Screen"
-description: "Add a non-question screen in Peekator to show HTML content, instructions, or consent statements to respondents. No data is collected on this screen."
+description: "Learn how to add an Information Screen to display text, images, or instructions with no required response in Peekator surveys."
 ---
 
-An information screen displays rich text or HTML content to respondents without collecting any answer. Use it to introduce a section, provide context before a set of questions, show a consent statement, or display important instructions.
+An Information Screen displays content to respondents without asking for an answer. Use this type for welcome messages, consent statements, instructions between sections, or thank-you pages. It helps structure the questionnaire and set expectations without adding to your response data.
 
-## Add an information screen
+## When to use this question type
+
+- You want to show a welcome message or instructions before the first question.
+- You need to display a consent statement or privacy notice.
+- You want to divide the questionnaire into sections with transition screens.
+- You want to end the survey with a thank-you or redirection message.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Information Screen**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter the content">
-    Type or paste the HTML or rich text that respondents will read. This can include formatted text, links, or embedded images.
+  <Step>
+    Select **Information Screen** from the popup.
   </Step>
-  <Step title="Optionally add a custom title">
-    Enable **Show custom screen title** and enter the title text to display a heading above the content.
+  <Step>
+    The screen appears on the canvas. Click it to open the configuration panel and add your text, images, or formatting.
   </Step>
 </Steps>
 
@@ -24,23 +31,35 @@ An information screen displays rich text or HTML content to respondents without 
 
 | Setting | Description |
 | --- | --- |
-| **Content** | The HTML or rich text body displayed to respondents. Supports formatting, links, and inline media. |
-| **Show custom screen title** | Display a custom heading above the content. |
-| **Custom title** | The heading text shown when **Show custom screen title** is enabled. |
+| Screen title | The headline respondents see. |
+| Body text | The main content, which supports rich text formatting. |
+| Image or media | An optional image, video, or file to display on the screen. |
+| Button label | The text on the button that advances the respondent, for example, "Continue" or "I agree". |
+| Auto-advance | Automatically moves to the next question after a set time. |
 
 <Note>
-  Information screens do not collect any data. They advance to the next screen when the respondent clicks the Continue button.
+  **Needs product verification:** Confirm whether "Background colour" and "Custom CSS" settings exist for this question type.
 </Note>
 
-## Common use cases
+## What respondents see
 
-- Welcome message at the start of the survey
-- Section dividers between topic blocks
-- Consent or privacy notice before sensitive questions
-- Instructions for a complex task
+Respondents see a screen with a title, body text, and optionally an image or media file. They read the content and click a button to continue. If auto-advance is enabled, the screen moves on automatically after the set duration. No data is collected from this screen.
 
-## Related pages
+## Logic and piping
 
-- [Open-end](/questionnaire/open-end)
-- [Logic and branching](/questionnaire/logic-and-branching)
+Information Screens do not collect data, so they cannot be used as conditions in logic. However, you can place them before or after logic branches to create structured flows. For full instructions on logic, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Information Screens do not produce response data. They appear in the questionnaire structure for reference but have no entries in the results dashboard or exports.
+
+## Example use case
+
+A market research agency places an Information Screen at the start of a survey with the title "Welcome to our study" and body text explaining the purpose, estimated duration, and confidentiality assurances. Respondents click "Begin survey" to proceed to the first question.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Single Choice question](/questionnaire/single-choice)
+- [Open End question](/questionnaire/open-end)

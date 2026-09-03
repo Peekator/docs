@@ -1,0 +1,60 @@
+---
+title: "Set quotas on your survey"
+sidebarTitle: "Quotas"
+description: "Limit how many respondents with specific characteristics are accepted in your Peekator survey using quota cells and targets."
+---
+
+Quotas let you control how many respondents with a given characteristic are accepted into your survey. They are essential for demographic balancing and ensuring your sample stays representative.
+
+## What quotas are
+
+A quota is a limit on the number of respondents who can select a specific answer or combination of answers. Once a quota cell is full, new respondents who match that cell are stopped from completing the survey.
+
+## How to access quotas
+
+Click the **Set quota** button located above the question canvas on the right side. This opens the quota configuration panel.
+
+## Configure a quota cell
+
+<Steps>
+  <Step title="Open Set quota">
+    Click **Set quota** above the question canvas.
+  </Step>
+  <Step title="Choose the question">
+    Select the question that defines the characteristic you want to limit, such as age group or region.
+  </Step>
+  <Step title="Select the answer">
+    Pick the specific answer option that forms the quota cell.
+  </Step>
+  <Step title="Set the target count">
+    Enter the maximum number of respondents you want to accept for that cell.
+  </Step>
+</Steps>
+
+## What happens when a quota is full
+
+When a respondent matches a full quota cell, the survey ends and the respondent sees the **OnQuotaFullText** configured in survey settings.
+
+## When to use quotas
+
+- **Demographic balancing:** ensure equal or weighted representation across age, gender, or region
+- **Representative samples:** prevent any one group from overfilling your data set
+- **Panel management:** control how many completes you accept from specific segments
+
+## Test before launch
+
+Always test quota logic before launching. Use the **test link** to simulate responses and confirm that:
+
+- Quota counts increment correctly
+- Full quotas trigger the quota-full message
+- The **OnQuotaFullText** displays as expected
+
+<Note>
+  **Needs product verification:** full quota configuration steps and whether nested or cross-quota cells are supported.
+</Note>
+
+## Related guides
+
+- [Screen and qualify respondents](/questionnaire/screen-and-qualify)
+- [Survey settings](/survey-settings/overview)
+- [Distribution overview](/distribution/overview)

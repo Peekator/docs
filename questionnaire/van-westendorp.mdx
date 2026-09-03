@@ -1,52 +1,67 @@
 ---
-title: "Van Westendorp questions in Peekator"
+title: "Van Westendorp question in Peekator"
 sidebarTitle: "Van Westendorp"
-description: "Measure price sensitivity in Peekator using the Van Westendorp model. Configure currency, slider range, step, and decimal places across four fixed price perception questions."
+description: "Learn how to add a Van Westendorp Price Sensitivity Meter to find acceptable price ranges in Peekator surveys."
 ---
 
-Van Westendorp Price Sensitivity Meter uses four fixed price questions to map consumer perceptions of price and identify the acceptable price range for a product or service.
+A Van Westendorp question, also known as the Price Sensitivity Meter, asks respondents four questions about price perception: at what price the product is too cheap, cheap, expensive, and too expensive. The overlapping responses produce an acceptable price range and key price points, including the Point of Marginal Cheapness and the Point of Marginal Expensiveness.
 
-Respondents use sliders to indicate the price they consider too cheap, affordable, expensive, and too expensive. Plotting the cumulative responses reveals the acceptable price band, the point of marginal cheapness, and the point of marginal expensiveness.
+## When to use this question type
 
-## Add a Van Westendorp question
+- You want to identify the range of prices consumers consider acceptable.
+- You need to find the optimal price point where the maximum percentage of consumers view the product as neither too cheap nor too expensive.
+- You want a standardised pricing research method that is widely understood and benchmarked.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Van Westendorp**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Configure the price range">
-    Set the minimum and maximum values for the sliders and choose the currency.
+  <Step>
+    Select **Van Westendorp** from the popup.
   </Step>
-  <Step title="Review the fixed questions">
-    The four sub-questions are pre-defined and appear in order. Edit the wording if needed to reference your specific product or service.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and define the product description and price range guidance.
   </Step>
 </Steps>
-
-## Fixed sub-questions
-
-Van Westendorp always uses these four questions in order. They cannot be removed or reordered:
-
-1. What price would you consider as **"too low"** for this product / service?
-2. What price would you consider as **"affordable"** for this product / service?
-3. What price would you consider as **"expensive"** for this product / service?
-4. What price would you consider as **"too expensive"** for this product / service?
 
 ## Settings
 
 | Setting | Description |
 | --- | --- |
-| **Minimum value** | Lowest price value on the sliders. Default is `0`. |
-| **Maximum value** | Highest price value on the sliders. Default is `100`. |
-| **Step** | Slider increment. Default is `1`. |
-| **Currency** | Currency symbol displayed next to slider values. Default is `EUR`. |
-| **Decimal places** | Number of decimal places. Default is `2`. |
+| Product description | The text or image describing the product respondents evaluate. |
+| Price range guidance | Optional minimum and maximum values to guide respondent input. |
+| Question labels | The four standard questions: "At what price would you consider this product too cheap?", "cheap?", "expensive?", "too expensive?" |
+| Mandatory | Requires all four prices to be entered before the respondent can continue. |
 
 <Note>
-  The default instruction shown to respondents is: "Using the sliders, indicate the price you consider too cheap, a good deal, starting to get expensive, and too expensive. Choose the amounts that feel right."
+  **Needs product verification:** Confirm whether "Currency symbol" and "Allow same price for multiple questions" settings exist for this question type.
 </Note>
 
-## Related pages
+## What respondents see
 
-- [Gabor Granger](/questionnaire/gabor-granger)
-- [Conjoint analysis](/questionnaire/conjoint-analysis)
+Respondents see the product description followed by four numeric input fields, each with one of the standard price perception questions. They type a price into each field. The questions are ordered from "too cheap" to "too expensive". If mandatory, all four fields must be completed before they can continue.
+
+<Warning>
+  Van Westendorp questions involve four interdependent numeric inputs and validation. Always preview and test the full questionnaire before launching to ensure the price fields accept valid ranges and the flow behaves correctly.
+</Warning>
+
+## Logic and piping
+
+You can use the individual price points or the derived acceptable range in logic to show or hide later questions. For example, if a respondent's acceptable range is very narrow, you can branch to a follow-up about price sensitivity. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results show four cumulative frequency curves plotted on the same chart: too cheap, cheap, expensive, and too expensive. The intersections define the Point of Marginal Cheapness, Point of Marginal Expensiveness, and the Indifference Price Point. An optimal price range is highlighted where the largest percentage of respondents find the price acceptable.
+
+## Example use case
+
+A subscription box service tests a new monthly box. The Van Westendorp results show an acceptable price range of £24 to £36, with an Indifference Price Point at £30. The company sets the launch price at £29.99 to capture the broadest acceptance while staying below the psychological threshold.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Gabor-Granger question](/questionnaire/gabor-granger)
+- [Conjoint Analysis question](/questionnaire/conjoint-analysis)

@@ -1,45 +1,39 @@
 ---
-title: "Understand sentiment in survey responses"
+title: "Sentiment analysis for open-ended responses"
 sidebarTitle: "Sentiment Analysis"
-description: "Peekator's AI classifies every open-ended response as positive, neutral, or negative and shows the distribution in a chart you can filter by segment."
+description: "Understand how sentiment analysis works for open-ended survey text in Peekator. Verify whether this feature is available separately or through other AI tools."
 ---
 
-Sentiment analysis in Peekator automatically reads every open-ended response and classifies it as **Positive**, **Neutral**, or **Negative**. This gives you an immediate read on how respondents feel without having to manually review hundreds or thousands of text answers.
+Sentiment analysis classifies open-ended responses as positive, negative, or neutral based on the language respondents use. It helps you quickly gauge the emotional tone of feedback, comments, or verbatim answers without reading every response individually.
 
-## How sentiment is classified
+<Note>
+  **Needs product verification:** Whether dedicated sentiment analysis exists as a separate feature from Auto-coding in Peekator, or whether sentiment scoring is part of Auto-coding or Chat with Results. This page is a placeholder pending confirmation.
+</Note>
 
-Peekator's AI evaluates the language and tone of each response individually:
+## What sentiment analysis does
 
-- **Positive**: the response expresses satisfaction, appreciation, enthusiasm, or a favorable opinion.
-- **Neutral**: the response is factual, mixed, or does not lean clearly in either direction.
-- **Negative**: the response expresses dissatisfaction, frustration, criticism, or an unfavorable opinion.
+In general, sentiment analysis:
 
-## View sentiment results
+- Scans open-ended text for positive, negative, and neutral language
+- Assigns a sentiment label to each response or segment
+- Aggregates results so you can see the overall tone of feedback for a question or topic
 
-<Steps>
-  <Step title="Open your survey's analytics">
-    Go to the survey dashboard and scroll to the open-ended question you want to analyze.
-  </Step>
-  <Step title="Click Sentiment">
-    Click the **Sentiment** tab above the response list for that question. Peekator displays a donut chart showing the proportion of Positive, Neutral, and Negative responses.
-  </Step>
-  <Step title="Filter by sentiment">
-    Click any segment of the donut chart (for example, **Negative**) to filter the response list below to show only responses with that sentiment. Read through them to understand the specific concerns.
-  </Step>
-</Steps>
+## When to use it
 
-## Compare sentiment across segments
+Sentiment analysis is useful when you want to:
 
-<Tip>
-  Create two segments in the [Filters and segments](/analytics/filters-and-segments) panel, then switch between them on the sentiment chart to compare how different groups feel. For example, compare sentiment from enterprise customers versus small business customers.
-</Tip>
+- Track satisfaction or dissatisfaction from free-text answers
+- Compare emotional tone across audience segments or time periods
+- Prioritise which responses need detailed human review
 
-## Export sentiment data
+## Current status in Peekator
 
-Sentiment classifications are included when you export to CSV or Excel. Each response row includes a `Sentiment` column with the value `Positive`, `Neutral`, or `Negative`.
+Until product verification confirms how sentiment analysis is delivered, use the following AI features for open-ended analysis:
 
-## Related pages
+- **Auto-coding**: groups responses into themes, which may include sentiment-related categories
+- **Chat with Results**: ask questions about the tone or sentiment of responses and receive AI-generated summaries with source citations
 
-- [Theme detection](/ai-analysis/theme-detection)
-- [AI summary](/ai-analysis/ai-summary)
-- [Filters and segments](/analytics/filters-and-segments)
+## Related guides
+
+- [Auto-code open-ended responses](/ai-analysis/auto-coding)
+- [Chat with Results](/ai-analysis/chat-with-results)

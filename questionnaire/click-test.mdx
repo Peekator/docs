@@ -1,27 +1,28 @@
 ---
-title: "Click test questions in Peekator"
+title: "Click Test question in Peekator"
 sidebarTitle: "Click Test"
-description: "Record where respondents click on an image in Peekator. Configure min/max clicks, heatmap radius, and a success area to measure click accuracy."
+description: "Learn how to add a Click Test or Heatmap question to track where respondents click on an image in Peekator surveys."
 ---
 
-Click test questions record the exact coordinates of where respondents click on an uploaded image. Use this type to test usability, visual hierarchy, or information architecture by asking questions like "Where would you click to find settings?" or "Which part of this image stands out most?"
+A Click Test question shows respondents an image and asks them to click on specific areas. The results are aggregated into a heatmap showing where respondents clicked most often. This is a core UX research method for testing navigation, visual hierarchy, and the findability of elements.
 
-Results are shown as a heatmap overlay on your image in the dashboard.
+## When to use this question type
 
-## Add a click test question
+- You want to see where respondents naturally click on a design, screenshot, or mock-up.
+- You need to test whether important buttons, links, or messages are found quickly.
+- You want visual evidence of confusion or misclicks to guide design improvements.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Click Test**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Upload the image">
-    Upload the image or interface screenshot respondents will click on.
+  <Step>
+    Select **Click Test** from the popup.
   </Step>
-  <Step title="Enter the question prompt">
-    Write clear instructions, for example: `Click where you would expect to find customer support.`
-  </Step>
-  <Step title="Configure click settings">
-    Set the minimum and maximum number of clicks allowed and optionally define a success area.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and upload the image and set the task instruction.
   </Step>
 </Steps>
 
@@ -29,19 +30,39 @@ Results are shown as a heatmap overlay on your image in the dashboard.
 
 | Setting | Description |
 | --- | --- |
-| **Image** | Upload the image respondents will click on. |
-| **Minimum clicks** | The fewest clicks required before the respondent can proceed. Default is `1`. |
-| **Maximum clicks** | The most clicks a respondent can place on the image. Default is `1`. |
-| **Radius** | The visual radius of each click dot in the heatmap results visualization. Default is `10`. |
-| **Success area** | Define a rectangular area (top, bottom, left, right as percentages) that counts as a correct click. Used to measure accuracy rate in results. |
+| Image | The image, screenshot, or design respondents will click on. |
+| Task instruction | The prompt telling respondents what to do, for example, "Where would you click to buy this product?" |
+| Allow multiple clicks | Lets respondents click more than once on the image. |
+| Click limit | The maximum number of clicks allowed if multiple clicks are enabled. |
+| Show heatmap to respondent | Displays a heatmap overlay after the respondent clicks. |
 
 <Note>
-  The default instruction shown to respondents is: "Tap on the area of the image."
+  **Needs product verification:** Confirm whether "Define correct zones" and "Time limit per click" settings exist for this question type.
 </Note>
 
-## Related pages
+## What respondents see
 
-- [5 second test](/questionnaire/five-second-test)
-- [Website test](/questionnaire/website-test)
-- [Card sort](/questionnaire/card-sort)
+Respondents see an image with a task instruction above or below it. They click on the image where they think the answer lies. If multiple clicks are allowed, they can click several times. A counter may show remaining clicks if a limit is set. After clicking, they proceed to the next question.
+
+<Warning>
+  Click Test questions involve image rendering and coordinate capture. Always preview and test the full questionnaire before launching to ensure clicks register correctly across devices and screen sizes.
+</Warning>
+
+## Logic and piping
+
+You can use the click coordinates or whether a click fell within a defined zone in logic to show or hide later questions. For example, if a respondent clicks outside the correct zone, you can ask a follow-up about what they were looking for. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results appear as a heatmap overlay on the image, with darker or warmer colours indicating areas of high click density. Individual click coordinates are also available in exports. If correct zones were defined, accuracy rates are shown.
+
+## Example use case
+
+An e-commerce retailer tests a new product page. Respondents are asked, "Where would you click to add this item to your basket?" The heatmap reveals that many respondents click on the product image instead of the "Add to basket" button, indicating a need for clearer visual hierarchy.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [5 Second Test question](/questionnaire/five-second-test)
+- [Website Test question](/questionnaire/website-test)

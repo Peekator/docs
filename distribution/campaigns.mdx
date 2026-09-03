@@ -1,66 +1,50 @@
 ---
-title: "Distribute surveys via Campaigns"
+title: "Distribute your survey through Campaigns"
 sidebarTitle: "Campaigns"
-description: "Use Peekator Campaigns to send your survey directly to your own contact list via email, SMS, or WhatsApp, with personalization and reminder support."
+description: "Send your Peekator survey via Email, SMS, or WhatsApp to a defined contact list using the Campaign distribution channel."
 ---
 
-Campaigns let you reach your own contacts directly from Peekator. Upload or paste a contact list and send the survey via email, SMS, or WhatsApp. Each contact receives a unique survey link tied to their record, so their response is identified in your results.
+Campaign distribution lets you send your survey directly to respondents through Email, SMS, or WhatsApp. You define the contact list and message content, and Peekator handles delivery and tracking. This is ideal for targeted outreach where you know exactly who you want to reach.
 
-## Create a campaign
+## Set up campaign distribution
 
 <Steps>
-  <Step title="Open the Distribute tab">
-    In your published survey, click the **Distribute** tab.
+  <Step title="Open Distribution">
+    Inside your survey, go to **Setup** and select the **Distribution** tab.
   </Step>
-  <Step title="Choose Campaigns">
-    Click **Campaigns** and then **New Campaign**.
+  <Step title="Select Campaign">
+    Choose **Campaign** as your distribution channel. You are redirected to the Campaigns section for that survey.
   </Step>
-  <Step title="Import your contacts">
-    Add the recipients for this campaign:
-
-    - **Paste contacts**: type or paste a list of email addresses or phone numbers.
-    - **Upload CSV**: upload a CSV file with columns for contact details (email, phone, first name, last name).
+  <Step title="Configure the campaign">
+    Set the channel (Email, SMS, or WhatsApp), upload or select your contact list, and compose the message.
   </Step>
-  <Step title="Choose a channel">
-    Select how you want to reach your contacts:
-
-    - **Email**: respondents receive an email with a survey link.
-    - **SMS**: respondents receive a text message with a short link.
-    - **WhatsApp**: respondents receive a WhatsApp message with a survey link.
+  <Step title="Set send delays">
+    Use **CampaignTargetRespondentsDelayInDays** to control the delay between reminders or sends.
   </Step>
-  <Step title="Compose your message">
-    Write the subject line (email) or message text (SMS/WhatsApp). Use `{{first_name}}` to personalize with the contact's name.
-  </Step>
-  <Step title="Set send time">
-    Choose **Send now** or **Schedule** to pick a specific date and time for delivery.
-  </Step>
-  <Step title="Click Send">
-    Review the recipient count and click **Send campaign**.
+  <Step title="Launch the campaign">
+    Review your settings and launch. The campaign status updates as messages are sent and responses arrive.
   </Step>
 </Steps>
 
-## Set up reminders
+## Campaign statuses
 
-Peekator can automatically follow up with contacts who have not yet responded.
+Campaigns move through the following statuses during their lifecycle:
 
-<Steps>
-  <Step title="Enable reminders">
-    In the campaign settings, toggle **Send reminder** on.
-  </Step>
-  <Step title="Set the delay">
-    Choose how many days after the initial send to send the reminder. Common values are 3 or 7 days.
-  </Step>
-  <Step title="Customize the reminder message">
-    Edit the reminder text if you want different wording from the original message.
-  </Step>
-</Steps>
+| Status | Meaning |
+| --- | --- |
+| **Draft** | Campaign is created but not yet launched. |
+| **Launched** | Campaign has been sent and is actively delivering. |
+| **In Progress** | Messages are being sent and responses are being collected. |
+| **Paused** | Campaign is temporarily stopped. |
+| **Stopped** | Campaign has been manually halted. |
+| **Done** | Campaign has completed its send schedule. |
+| **Archived** | Campaign is no longer active and has been archived. |
 
 <Tip>
-  Personalized messages using `{{first_name}}` improve open and response rates across all three channels.
+  For a cross-project view of all campaigns, open **Campaign Hub** from the main menu next to the Peekator logo. This shows delivery status, response rates, and performance across every survey in one place.
 </Tip>
 
-## Related pages
+## Related guides
 
-- [Link sharing](/distribution/link-sharing)
-- [Panel](/distribution/panel)
+- [Campaign Hub](/campaigns/overview)
 - [Launch checklist](/distribution/launch-checklist)

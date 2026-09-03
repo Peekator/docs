@@ -1,101 +1,108 @@
 ---
 title: "Survey settings in Peekator"
 sidebarTitle: "Survey Settings"
-description: "Configure your Peekator survey's name, dates, response texts, back navigation, speeding QC, redirect, AI summary, and export options in the Settings section."
+description: "Configure respondent experience, collection limits, quality control, exports, redirects, and AI context from the Setup area of any Peekator survey."
 ---
 
-Survey Settings is the third item under **Setup** in the survey editor, alongside Questionnaire and Distribution. It contains configuration specific to the individual survey: how respondents experience it, what the platform records, and how the data is exported.
-
-## General
-
-| Setting | Description |
-| --- | --- |
-| **Survey name** | The internal name of the survey. Used in the project view and exports. |
-| **Name for respondents** | An alternative display name shown to panel respondents instead of the internal name. |
-| **Language** | The primary language of the survey. Used for default text and AI analysis language. |
-| **Market** | The target market for the survey, used for panel targeting and reporting. |
-
-## Dates
-
-| Setting | Description |
-| --- | --- |
-| **Start date** | The date from which the survey accepts responses. |
-| **End date** | The date after which the survey stops accepting responses. |
-
-## Response texts
-
-These texts are shown to respondents at specific points in the survey flow. All can be customized with HTML or rich text.
-
-| Setting | Description |
-| --- | --- |
-| **Intro text** | Shown on the survey welcome screen before the first question. |
-| **On complete text** | Shown after a respondent successfully completes the survey. |
-| **On screenout text** | Shown when a respondent is screened out by a filter question. |
-| **On quota full text** | Shown when the survey's sample quota is already filled. |
+Survey settings control how respondents interact with your survey, how responses are collected, and what data appears in your exports. Open the **Setup** area of a survey, then select the **Settings** section to adjust these options.
 
 ## Respondent experience
 
+These settings affect what respondents see before, during, and after the survey.
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| **IntroText** | Text shown on the welcome screen before the first question. | Empty |
+| **OnCompleteText** | Message shown on the completion screen after the survey is finished. | Empty |
+| **OnScreenoutText** | Message shown when a respondent is screened out. | Empty |
+| **OnQuotaFullText** | Message shown when a quota group is full. | Empty |
+| **EnableBackButton** | Lets respondents return to previous questions. | On |
+| **ShowAverageRespondentTime** | Displays the estimated completion time on the welcome screen. | On |
+| **ShouldAutoSkipWelcomeScreen** | Automatically skips the welcome screen for returning respondents. |  |
+| **DisableAutoSkipOnAllQuestions** | Prevents automatic skipping across all questions. |  |
+
+## Collection settings
+
+These settings define when and how many responses you want to collect.
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| **TotalNumberOfRespondents** | Target number of completed responses. | 500 |
+| **DateFrom** | Date and time when the survey opens for responses. | Empty |
+| **DateTo** | Date and time when the survey closes. | Empty |
+| **Language** | Language used for standard UI labels and messages. |  |
+| **MarketId** | Target market or country for the survey. |  |
+
+## Time limit for continuing
+
+Use these settings if you want respondents to be able to pause and resume the survey later.
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| **AllowContinuingTheSurvey** | Lets respondents return to a partially completed survey. |  |
+| **TimeLimitForContinuingInHours** | How long a partially completed session remains available. | 24 hours |
+
+## Quality control
+
+These settings flag responses that are completed too quickly, so you can review or exclude them.
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| **EnforceSpeedingQC** | Flags responses that are completed faster than the allowed minimum time. |  |
+| **AverageMinutesExpected** | Expected average completion time in minutes. |  |
+| **MinimumTimePercentageAllowed** | Minimum percentage of the expected time a respondent must spend. |  |
+
+## Export settings
+
+These settings add extra columns to your exported data.
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| **ShowTimeSpentOnEachQuestionInExport** | Includes a time-spent column per question in exports. |  |
+| **ShowLengthOfInterviewInExport** | Includes total interview length in exports. |  |
+| **ShowSpssCodeOnAllQuestionsInExport** | Includes SPSS syntax codes for all questions in exports. |  |
+
+## Redirects
+
+Send respondents to an external page after they finish the survey.
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| **ShouldRedirectAtTheEnd** | Redirects respondents to a custom URL after completion. | Off |
+| **RedirectUrl** | The external URL to redirect to. | Empty |
+
+## HTML screen title
+
+Control the browser tab title respondents see.
+
+| Setting | Description | Default |
+| --- | --- | --- |
+| **UseDefaultHtmlScreenTitle** | Uses the survey name as the browser tab title. |  |
+| **DefaultHtmlScreenTitle** | Custom text for the browser tab title. | Empty |
+
+## AI context
+
+Link your survey to an AI summary configuration so that **Chat with Results** and **Auto-coding** use the right context.
+
 | Setting | Description |
 | --- | --- |
-| **Enable back button** | Allow respondents to navigate back to previous questions. Enabled by default. |
-| **Show average respondent time** | Display an estimated completion time to respondents. |
-| **Auto-skip welcome screen** | Skip the intro screen and go directly to the first question. |
-| **Disable auto-skip on all questions** | Prevent questions from auto-advancing when an answer is selected. |
-| **Allow continuing the survey** | Let respondents resume an incomplete survey where they left off. Set a time limit for how long this is allowed. |
-| **Custom CSS** | Apply custom CSS to the survey engine. Overrides the default and client CSS. |
-| **Custom HTML screen title** | Use a custom browser tab title for the survey. |
+| **AiSummaryParametersId** | References a saved AI summary parameter set. |
 
-## Speeding quality control
+## Custom CSS
+
+Apply advanced styling to your survey with a custom stylesheet.
 
 | Setting | Description |
 | --- | --- |
-| **Enforce speeding QC** | Automatically flag or reject responses completed too quickly. |
-| **Average minutes expected** | Expected average completion time in minutes (used as the QC baseline). |
-| **Minimum time percentage allowed** | The minimum percentage of expected time a respondent must take. Responses faster than this are rejected. |
+| **CustomCss** | CSS rules injected into the respondent-facing survey page. |
 
-## Redirect
+<Warning>
+  Custom CSS is an advanced feature. Incorrect styles may break the survey layout on mobile devices. Test thoroughly before launching.
+</Warning>
 
-| Setting | Description |
-| --- | --- |
-| **Redirect at the end** | Redirect respondents to an external URL after completing the survey. |
-| **Redirect URL** | The URL to redirect to. |
+## Related guides
 
-## Campaign settings
-
-| Setting | Description |
-| --- | --- |
-| **Campaign target delay** | Number of days to ignore respondents who were already targeted before re-sending campaign notifications. |
-
-## Distribution
-
-| Setting | Description |
-| --- | --- |
-| **Distribution channel type** | The active distribution channel: Link, Campaign, or Panel. Set in the Distribution section. |
-
-## AI summary
-
-| Setting | Description |
-| --- | --- |
-| **AI summary parameters** | Configure the parameters used by the AI Summary feature for this survey. See [AI Summary](/ai-analysis/ai-summary). |
-
-## Export options
-
-| Setting | Description |
-| --- | --- |
-| **Show time spent on each question** | Include a column in exports with the time (in seconds) spent on each question. |
-| **Show length of interview** | Include a column in exports with the total survey duration per respondent. |
-| **Show SPSS code on all questions** | Include SPSS variable codes for all questions in exports. |
-
-## External panel providers
-
-If your survey uses an external panel (for example via CINT integration), you can configure panel provider redirect URLs here:
-
-- **Success URL**: redirect used when a respondent completes the survey
-- **Screenout URL**: redirect used when a respondent is screened out
-- **Quota full URL**: redirect used when the quota is full
-
-## Related pages
-
-- [Questionnaire overview](/questionnaire/overview)
-- [Distribution overview](/distribution/overview)
-- [AI Analysis](/ai-analysis/overview)
+- [Build your questionnaire](/questionnaire/overview)
+- [Screen and qualify respondents](/questionnaire/screen-and-qualify)
+- [Set response quotas](/questionnaire/quotas)
+- [Distribute your survey](/distribution/overview)

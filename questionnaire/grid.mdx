@@ -1,25 +1,28 @@
 ---
-title: "Grid questions in Peekator: matrix ratings"
+title: "Grid question in Peekator"
 sidebarTitle: "Grid"
-description: "Use grid questions in Peekator to rate multiple items on the same scale. Configure rows, columns, shuffle, multiple-choice mode, and conditional rules."
+description: "Learn how to add and configure a Grid question so respondents rate multiple items across the same set of columns in Peekator."
 ---
 
-Grid questions display rows (items or statements) and columns (scale options) in a matrix layout. Respondents select one option per row. This format is ideal for rating scales, agreement scales, and attribute scoring.
+A Grid question presents a matrix of rows and columns. Respondents rate or evaluate several items using the same scale, which keeps the questionnaire compact and makes comparisons easy. This is ideal for attitude statements, feature importance, or satisfaction ratings.
 
-## Add a grid question
+## When to use this question type
+
+- You want respondents to rate several items on the same scale, such as importance or agreement.
+- You need to compare scores across items in a single view.
+- You want to reduce questionnaire length by grouping related ratings into one question.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Grid**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter question text">
-    Type the main prompt that applies to every row, for example: `Please rate the importance of each feature.`
+  <Step>
+    Select **Grid** from the popup.
   </Step>
-  <Step title="Add rows">
-    Add the items or statements to rate. Each row is a sub-question.
-  </Step>
-  <Step title="Add columns">
-    Add the scale points or answer options that appear across the top of the matrix.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and add rows, columns, and labels.
   </Step>
 </Steps>
 
@@ -27,25 +30,41 @@ Grid questions display rows (items or statements) and columns (scale options) in
 
 | Setting | Description |
 | --- | --- |
-| **Shuffle rows** | Randomly order the row items for each respondent. |
-| **Shuffle columns** | Randomly order the column options for each respondent. |
-| **Shuffle sections** | When rows are organized into sections, shuffle the section order while keeping each section's internal row order intact. |
-| **Answers on both sides of the table** | Split each row label around a `///` delimiter so the first part appears on the far left and the second part on the far right (semantic differential layout). |
-| **Always show as mobile version** | Force the compact mobile layout regardless of the device being used. |
-| **Multiple choice mode** | Allow respondents to select more than one option per row. Default is single selection (Radio). |
-| **Assign points** | Assign a point value to each column answer for scoring or quota calculations. |
-| **Conditional rule on answers** | Apply conditional logic based on the answers selected in the grid. |
+| Question text | The label respondents see above the grid. |
+| Rows | The items respondents evaluate, for example, product features or statements. |
+| Columns | The scale or response options, for example, "Strongly disagree" to "Strongly agree". |
+| Mandatory | Requires a selection for every row before the respondent can continue. |
+| Randomise rows | Shuffles the order of rows for each respondent. |
+| Reverse scale | Flips the column order for some respondents to reduce bias. |
+| Force response per row | Ensures every row receives an answer. |
 
 <Note>
-  The default instruction shown to respondents is: "Select one option per row."
+  **Needs product verification:** Confirm whether "Column labels" and "N/A column" settings exist for this question type.
 </Note>
 
-<Tip>
-  Use **Answers on both sides of the table** to create a bipolar scale, for example `Convenient///Inconvenient`. The first label appears on the left, the second on the right.
-</Tip>
+## What respondents see
 
-## Related pages
+Respondents see a table with rows on the left and column headers across the top. They select one cell per row, usually by clicking a radio button. If the question is mandatory, they must complete every row before continuing.
 
-- [Numeric grid](/questionnaire/numeric-grid)
-- [Single choice](/questionnaire/single-choice)
+<Warning>
+  Grid questions involve multiple rows and validation rules. Always preview and test the full questionnaire before launching to ensure rows, columns, and mandatory rules behave as expected.
+</Warning>
+
+## Logic and piping
+
+You can use answers from individual rows in logic to show or hide later questions. For example, if a respondent rates "Customer support" as "Very dissatisfied", you can branch to a follow-up question. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results appear as a matrix table showing the distribution of responses for each row. You can also view average scores per row if the columns are numeric or ordered scales. Cross-tabs let you compare row ratings by respondent segment.
+
+## Example use case
+
+A hotel chain asks guests to rate five service aspects (check-in, room cleanliness, staff friendliness, amenities, value) on a scale from "Very dissatisfied" to "Very satisfied". The grid format keeps the questionnaire short and produces a clear satisfaction profile.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Numeric Grid question](/questionnaire/numeric-grid)
+- [Ranking question](/questionnaire/ranking)

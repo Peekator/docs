@@ -1,27 +1,28 @@
 ---
-title: "Conjoint analysis questions in Peekator"
+title: "Conjoint Analysis question in Peekator"
 sidebarTitle: "Conjoint Analysis"
-description: "Show respondents product profiles in Peekator to reveal which attribute combinations drive preference. Configure attributes, profiles per set, sets per respondent, and ratings."
+description: "Learn how to add a Conjoint Analysis question to measure trade-off preferences between product attributes in Peekator surveys."
 ---
 
-Conjoint analysis presents respondents with product profiles made up of different attribute combinations and asks them to choose their preferred option. By analyzing choices across multiple sets, you can uncover which attributes and specific levels most influence purchase decisions.
+A Conjoint Analysis question presents respondents with a series of choice tasks, each showing product profiles made up of different attribute levels. By analysing which profiles respondents choose, you can estimate the relative value, or utility, of each attribute level. This is the gold standard method for pricing, product design, and feature prioritisation research.
 
-Use conjoint when you need to optimize product design, pricing structures, or feature bundles.
+## When to use this question type
 
-## Add a conjoint analysis question
+- You need to understand how respondents trade off between price, features, and other attributes.
+- You want to simulate market share for different product configurations.
+- You need to estimate willingness to pay for specific features or improvements.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Conjoint Analysis**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Add attribute categories">
-    Add the product dimensions to test (for example: Price, Brand, Features). Each category becomes a column in the profile card.
+  <Step>
+    Select **Conjoint Analysis** from the popup.
   </Step>
-  <Step title="Add attribute levels">
-    For each category, add the specific values respondents will see (for example: €10, €15, €20).
-  </Step>
-  <Step title="Configure set and profile count">
-    Set how many profiles appear per comparison set and how many sets each respondent completes.
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and define attributes, levels, design type, and number of tasks.
   </Step>
 </Steps>
 
@@ -29,18 +30,41 @@ Use conjoint when you need to optimize product design, pricing structures, or fe
 
 | Setting | Description |
 | --- | --- |
-| **Attribute categories** | The product dimensions and their levels. Add one category per attribute (for example, Price) and add the levels within it (for example, €10, €15, €20). |
-| **Enable ratings** | Also ask respondents to rate each profile in addition to selecting their preferred one. |
-| **Profiles per set** | Number of product profiles shown side by side in each comparison task. Default is `3`. |
-| **Sets per respondent** | Number of comparison tasks each respondent completes. Default is `4`. |
+| Attributes | The product dimensions, for example, Price, Brand, Battery life, Colour. |
+| Levels | The specific values each attribute can take, for example, £199, £249, £299. |
+| Design type | The experimental design used to generate profiles, for example, generic, alternative-specific, or menu-based. |
+| Tasks per respondent | The number of choice sets each respondent sees. |
+| Profiles per task | The number of product options shown in each choice set, typically 2 to 4. |
+| None option | Adds a "None of these" choice to each task. |
+| Mandatory | Requires a choice in every task before the respondent can continue. |
 
 <Note>
-  Peekator generates the profile combinations automatically to ensure balanced experimental design across respondents.
+  **Needs product verification:** Confirm whether "Prohibited level combinations" and "Fixed attributes" settings exist for this question type.
 </Note>
 
-## Related pages
+## What respondents see
 
-- [MaxDiff](/questionnaire/maxdiff)
-- [Gabor Granger](/questionnaire/gabor-granger)
-- [Van Westendorp](/questionnaire/van-westendorp)
+Respondents see a choice task with several product profiles side by side, each described by a combination of attributes and levels. They select the profile they prefer, or "None" if enabled. This repeats for the configured number of tasks. The design ensures each attribute level appears in a balanced way.
+
+<Warning>
+  Conjoint Analysis questions involve complex experimental design and multiple validation rules. Always preview and test the full questionnaire before launching to ensure profiles generate correctly, choices are enforced, and the design is balanced.
+</Warning>
+
+## Logic and piping
+
+You can use choice patterns or estimated utilities in logic to show or hide later questions. For example, if a respondent consistently chooses the lowest price, you can branch to a price sensitivity follow-up. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results show utility scores for each attribute level, importance scores for each attribute, and a market simulator where you can model share of preference for different product configurations. Raw choice data is available for export to advanced statistical software.
+
+## Example use case
+
+An automotive manufacturer tests preferences for electric vehicles across attributes: Price (£25k, £30k, £35k), Range (300 miles, 400 miles, 500 miles), and Charging speed (30 min, 20 min, 15 min). Conjoint results reveal that Range is the most important attribute, and the optimal configuration is 400 miles at £30k with 20-minute charging.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [MaxDiff question](/questionnaire/maxdiff)
+- [Gabor-Granger question](/questionnaire/gabor-granger)

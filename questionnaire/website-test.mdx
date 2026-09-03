@@ -1,22 +1,28 @@
 ---
-title: "Website test questions in Peekator"
+title: "Website Test question in Peekator"
 sidebarTitle: "Website Test"
-description: "Embed a live website in Peekator for respondents to interact with. Configure the URL, task instruction, and enable screen and microphone recording."
+description: "Learn how to add a Website Test question to embed a live URL and collect feedback in Peekator surveys."
 ---
 
-Website test questions embed a live website or prototype directly in the survey so respondents can interact with it as part of completing their task. Use this type for usability testing, prototype validation, or evaluating user flows on live sites.
+A Website Test question embeds a live website or web page directly into the survey, allowing respondents to interact with it and provide feedback. This is ideal for usability testing, prototype evaluation, and gathering contextual reactions to real or staged web experiences.
 
-## Add a website test question
+## When to use this question type
+
+- You want to test a live website, prototype, or landing page in its natural context.
+- You need to observe how respondents navigate and react to real interactive elements.
+- You want to combine behavioural data with attitudinal feedback in one survey.
+
+## How to add it
 
 <Steps>
-  <Step title="Click Add Question">
-    In the questionnaire builder, click **Add Question** and select **Website Test**.
+  <Step>
+    In the questionnaire builder, click **Add questions**.
   </Step>
-  <Step title="Enter the URL">
-    Provide the full URL of the website or prototype to embed.
+  <Step>
+    Select **Website Test** from the popup.
   </Step>
-  <Step title="Write the task instruction">
-    Enter clear instructions for what respondents should do on the site, for example: `Find the pricing page and note the plan options.`
+  <Step>
+    The question appears on the canvas. Click it to open the configuration panel and enter the URL, set dimensions, and define the task.
   </Step>
 </Steps>
 
@@ -24,19 +30,39 @@ Website test questions embed a live website or prototype directly in the survey 
 
 | Setting | Description |
 | --- | --- |
-| **URL** | The website or prototype URL to embed in the question. |
-| **Screen and microphone recording** | Enable recording of the respondent's screen activity and microphone audio during the task. |
+| URL | The web address to embed in the survey. |
+| Display size | The width and height of the embedded frame, for example, desktop, tablet, or mobile dimensions. |
+| Task instruction | The prompt telling respondents what to do on the website, for example, "Find the pricing page and tell us what you think." |
+| Record clicks | Tracks where respondents click within the embedded site. |
+| Record scroll | Tracks how far respondents scroll down the page. |
 
 <Note>
-  The default instruction shown to respondents is: "Browse the site and then click Next."
+  **Needs product verification:** Confirm whether "Allow external links" and "Session recording" settings exist for this question type.
 </Note>
 
-<Tip>
-  Make sure the website URL is publicly accessible. Sites behind authentication or paywalls will not load for respondents.
-</Tip>
+## What respondents see
 
-## Related pages
+Respondents see an embedded browser frame showing the specified website, with a task instruction above or below it. They interact with the site as they normally would. If click or scroll tracking is enabled, their actions are recorded. After completing the task, they answer any follow-up questions and continue.
 
-- [Click test](/questionnaire/click-test)
-- [5 second test](/questionnaire/five-second-test)
+<Warning>
+  Website Test questions involve embedding external content and tracking interactions. Always preview and test the full questionnaire before launching to ensure the site loads correctly, tracking works, and the experience is smooth across devices.
+</Warning>
+
+## Logic and piping
+
+You can use task completion or tracked behaviour in logic to show or hide later questions. For example, if a respondent does not click a specific element, you can ask a follow-up about what they were looking for. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Results in reporting
+
+Results include click heatmaps, scroll depth charts, and time-on-page metrics. Follow-up question responses are shown alongside behavioural data. This combined view helps you understand not just what respondents did, but why.
+
+## Example use case
+
+A SaaS company embeds its new pricing page and asks, "Find the plan that suits a team of 10 and tell us what you would expect to pay." Click tracking reveals that many respondents miss the toggle between monthly and annual billing, prompting a design revision.
+
+## Related guides
+
 - [Questionnaire overview](/questionnaire/overview)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Click Test question](/questionnaire/click-test)
+- [5 Second Test question](/questionnaire/five-second-test)
