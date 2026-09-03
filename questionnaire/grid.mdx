@@ -1,0 +1,51 @@
+---
+title: "Grid questions in Peekator: matrix ratings"
+sidebarTitle: "Grid"
+description: "Use grid questions in Peekator to rate multiple items on the same scale. Configure rows, columns, shuffle, multiple-choice mode, and conditional rules."
+---
+
+Grid questions display rows (items or statements) and columns (scale options) in a matrix layout. Respondents select one option per row. This format is ideal for rating scales, agreement scales, and attribute scoring.
+
+## Add a grid question
+
+<Steps>
+  <Step title="Click Add Question">
+    In the questionnaire builder, click **Add Question** and select **Grid**.
+  </Step>
+  <Step title="Enter question text">
+    Type the main prompt that applies to every row, for example: `Please rate the importance of each feature.`
+  </Step>
+  <Step title="Add rows">
+    Add the items or statements to rate. Each row is a sub-question.
+  </Step>
+  <Step title="Add columns">
+    Add the scale points or answer options that appear across the top of the matrix.
+  </Step>
+</Steps>
+
+## Settings
+
+| Setting | Description |
+| --- | --- |
+| **Shuffle rows** | Randomly order the row items for each respondent. |
+| **Shuffle columns** | Randomly order the column options for each respondent. |
+| **Shuffle sections** | When rows are organized into sections, shuffle the section order while keeping each section's internal row order intact. |
+| **Answers on both sides of the table** | Split each row label around a `///` delimiter so the first part appears on the far left and the second part on the far right (semantic differential layout). |
+| **Always show as mobile version** | Force the compact mobile layout regardless of the device being used. |
+| **Multiple choice mode** | Allow respondents to select more than one option per row. Default is single selection (Radio). |
+| **Assign points** | Assign a point value to each column answer for scoring or quota calculations. |
+| **Conditional rule on answers** | Apply conditional logic based on the answers selected in the grid. |
+
+<Note>
+  The default instruction shown to respondents is: "Select one option per row."
+</Note>
+
+<Tip>
+  Use **Answers on both sides of the table** to create a bipolar scale, for example `Convenient///Inconvenient`. The first label appears on the left, the second on the right.
+</Tip>
+
+## Related pages
+
+- [Numeric grid](/questionnaire/numeric-grid)
+- [Single choice](/questionnaire/single-choice)
+- [Questionnaire overview](/questionnaire/overview)

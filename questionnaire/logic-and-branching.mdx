@@ -1,0 +1,72 @@
+---
+title: "Add logic and branching to your questionnaire"
+sidebarTitle: "Logic"
+description: "Use skip logic, display logic, and end-of-survey logic in Peekator to create personalized question paths based on respondent answers."
+---
+
+Logic rules in Peekator let you create a personalized experience by showing or hiding questions, skipping ahead, and routing respondents to different endings based on their answers. This reduces irrelevant questions and produces cleaner data.
+
+<Note>
+  Logic rules are evaluated top to bottom in the order they appear. If two rules conflict, the first matching rule takes effect.
+</Note>
+
+## Types of logic
+
+- **Skip logic**: jump a respondent forward to a specific question based on their answer, bypassing questions in between.
+- **Display logic**: show or hide a specific question only when a condition is met.
+- **End-of-survey logic**: redirect or end the survey early based on an answer.
+
+## Set up skip logic
+
+<Steps>
+  <Step title="Open the Logic panel">
+    In the questionnaire builder, click the **Logic** tab.
+  </Step>
+  <Step title="Add a rule">
+    Click **Add rule**, choose the source question, set the condition and answer value.
+  </Step>
+  <Step title="Set the destination">
+    Choose which question or section the respondent should jump to.
+  </Step>
+  <Step title="Save the rule">
+    Click **Save rule**. A logic indicator appears on the question card.
+  </Step>
+</Steps>
+
+## Set up display logic
+
+<Steps>
+  <Step title="Select the question">
+    Click the question you want to show or hide conditionally.
+  </Step>
+  <Step title="Open Display Logic">
+    In the settings panel on the right, scroll to **Display Logic** and click **Add condition**.
+  </Step>
+  <Step title="Define and apply the condition">
+    Select the question to check, the operator, and the value. Click **Apply**.
+  </Step>
+</Steps>
+
+## Set up end-of-survey logic
+
+<Steps>
+  <Step title="Open the Logic panel">
+    Click the **Logic** tab in the questionnaire builder.
+  </Step>
+  <Step title="Add an end rule">
+    Click **Add end rule** and select the question, condition, and answer that triggers the action.
+  </Step>
+  <Step title="Choose the action">
+    Select **End survey**, **Redirect to URL**, or **Disqualify**.
+  </Step>
+</Steps>
+
+<Warning>
+  Always preview the questionnaire after adding logic to verify every answer path leads to the intended result.
+</Warning>
+
+## Related pages
+
+- [Questionnaire overview](/questionnaire/overview)
+- [Survey settings](/survey-settings/overview)
+- [Distribution](/distribution/overview)

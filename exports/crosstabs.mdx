@@ -1,0 +1,59 @@
+---
+title: "Analyze data with crosstabs"
+sidebarTitle: "Crosstabs"
+description: "Learn how to create cross-tabulation tables in Peekator to see how answers to one question break down by answers to another, and export the results."
+---
+
+Crosstabs (cross-tabulations) let you compare how different groups of respondents answered your survey questions. By placing one question on the rows and another on the columns, you can immediately see whether responses vary by segment, such as satisfaction scores by age group or NPS by product tier.
+
+## What a crosstab shows
+
+A crosstab table displays the relationship between two questions. For example:
+
+|  | Very satisfied | Satisfied | Neutral | Dissatisfied |
+| --- | --- | --- | --- | --- |
+| 18-24 | 32% | 41% | 18% | 9% |
+| 25-34 | 28% | 45% | 20% | 7% |
+| 35-44 | 35% | 38% | 15% | 12% |
+
+The row variable is "What is your age group?" and the column variable is "How satisfied are you with our service?"
+
+## Create a crosstab
+
+<Steps>
+  <Step title="Open the Crosstabs section">
+    Go to your survey's **Exports** tab and click **Crosstabs**.
+  </Step>
+  <Step title="Select the row variable">
+    Choose the question whose answers will form the rows of the table. This is typically a demographic or segmentation question such as age group, region, or product used.
+  </Step>
+  <Step title="Select the column variable">
+    Choose the question whose answers will form the columns. This is typically the outcome you want to analyze, such as satisfaction score or NPS.
+  </Step>
+  <Step title="Click Generate">
+    Click **Generate crosstab**. Peekator calculates the table and displays it below.
+  </Step>
+</Steps>
+
+## Crosstab options
+
+| Option | Description |
+| --- | --- |
+| **Show counts** | Display the raw number of respondents in each cell. |
+| **Show percentages** | Display the percentage of each row that selected each column answer. Row percentages sum to 100%. |
+| **Show both** | Display counts and percentages together in each cell. |
+| **Highlight significant differences** | Color-code cells where a segment's response rate differs significantly from the overall average. |
+
+## Export a crosstab
+
+Click **Export** on the crosstab view to download the table as a CSV or Excel file. The exported file includes the same counts and percentages shown on screen.
+
+<Tip>
+  Use crosstabs to find patterns across audience segments before your client presentation. Comparing NPS by customer tier or satisfaction by tenure often surfaces the most actionable insights.
+</Tip>
+
+## Related pages
+
+- [Export formats](/exports/export-formats)
+- [Filters and segments](/analytics/filters-and-segments)
+- [Dashboard overview](/analytics/overview)

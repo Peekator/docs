@@ -1,0 +1,50 @@
+---
+title: "Single choice questions in Peekator"
+sidebarTitle: "Single Choice"
+description: "Configure single choice questions in Peekator with radio buttons or dropdown, Other option, shuffle, columns, points, and conditional rules."
+---
+
+Single choice questions let respondents select exactly one answer from a list. Use this type for questions with one correct or definitive answer, such as selecting a country, confirming a yes/no response, or choosing a single preference.
+
+<Tip>
+  Use single choice when only one answer is valid or expected. Use [multiple choice](/questionnaire/multiple-choice) when respondents may reasonably select more than one answer.
+</Tip>
+
+## Add a single choice question
+
+<Steps>
+  <Step title="Click Add Question">
+    In the questionnaire builder, click **Add Question** and select **Single Choice**.
+  </Step>
+  <Step title="Enter question text">
+    Type your question. For example: `How did you hear about us?`
+  </Step>
+  <Step title="Add answer options">
+    Click **Add option** for each answer choice.
+  </Step>
+</Steps>
+
+## Settings
+
+| Setting | Description |
+| --- | --- |
+| **Include "Other"** | Adds a free-text "Other (please specify):" option at the end of the list. Disabled when Display style is set to Dropdown. |
+| **Screenout on "Other"** | Respondents who select Other are screened out of the survey. Only available when Include "Other" is enabled. |
+| **Shuffle answers** | Randomizes the order of answer options on each survey load to reduce position bias. |
+| **Number of columns** | Display options across multiple columns. Default is `1`. |
+| **Display style** | **Radio buttons** (default) or **Dropdown**. Use Dropdown for long option lists. When Dropdown is active, Include "Other" is disabled. |
+| **Show results as percentage** | Display results as percentages instead of absolute counts in reporting. |
+| **Answers are events** | Treat each answer selection as an event for tracking purposes. |
+| **Assign points** | Assign a point value to each answer option for scoring or weighting. |
+| **Conditional rule on answers** | Apply conditional logic based on the answer selected. |
+| **Pipe answers from question** | Inherit answer options dynamically from another question in the survey. |
+
+<Note>
+  The default instruction shown to respondents is: "Select one answer."
+</Note>
+
+## Related pages
+
+- [Multiple choice](/questionnaire/multiple-choice)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Questionnaire overview](/questionnaire/overview)

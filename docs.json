@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "theme": "luma",
+  "name": "Peekator",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6366F1",
+    "light": "#818CF8",
+    "dark": "#4F46E5"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -18,55 +18,154 @@
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    "tabs": [
+      {
+        "tab": "Getting Started",
+        "groups": [
+          {
+            "group": "Get Started",
+            "icon": "rocket",
+            "pages": [
+              "index",
+              "quickstart",
+              "getting-started/account-setup"
+            ]
+          },
+          {
+            "group": "Projects",
+            "icon": "folder",
+            "pages": [
+              "projects/overview",
+              "projects/create-project",
+              "projects/manage-projects"
+            ]
+          },
+          {
+            "group": "Campaigns",
+            "icon": "paper-plane",
+            "pages": [
+              "campaigns/overview"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Setup",
+        "groups": [
+          {
+            "group": "Distribution",
+            "icon": "share-nodes",
+            "pages": [
+              "distribution/overview",
+              "distribution/link-sharing",
+              "distribution/campaigns",
+              "distribution/panel",
+              "distribution/launch-checklist"
+            ]
+          },
+          {
+            "group": "Questionnaire",
+            "icon": "clipboard-list",
+            "pages": [
+              "questionnaire/overview",
+              "questionnaire/question-types",
+              "questionnaire/single-choice",
+              "questionnaire/multiple-choice",
+              "questionnaire/grid",
+              "questionnaire/numeric-grid",
+              "questionnaire/numeric-entry",
+              "questionnaire/ranking",
+              "questionnaire/nps",
+              "questionnaire/open-end",
+              "questionnaire/multiple-link-open-end",
+              "questionnaire/date",
+              "questionnaire/information-screen",
+              "questionnaire/language-single-choice",
+              "questionnaire/conversational-ai",
+              "questionnaire/five-second-test",
+              "questionnaire/click-test",
+              "questionnaire/website-test",
+              "questionnaire/card-sort",
+              "questionnaire/maxdiff",
+              "questionnaire/conjoint-analysis",
+              "questionnaire/constant-sum",
+              "questionnaire/quadrant-matrix",
+              "questionnaire/pairwise-comparison",
+              "questionnaire/upload-file",
+              "questionnaire/gabor-granger",
+              "questionnaire/van-westendorp",
+              "questionnaire/interview-topic",
+              "questionnaire/logic-and-branching"
+            ]
+          },
+          {
+            "group": "Survey Settings",
+            "icon": "gear",
+            "pages": [
+              "survey-settings/overview"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Reporting",
+        "groups": [
+          {
+            "group": "Dashboard",
+            "icon": "chart-bar",
+            "pages": [
+              "analytics/overview",
+              "analytics/response-data",
+              "analytics/filters-and-segments",
+              "analytics/charts-and-visuals"
+            ]
+          },
+          {
+            "group": "Crosstabs & Exports",
+            "icon": "table-columns",
+            "pages": [
+              "exports/crosstabs",
+              "exports/scheduled-reports"
+            ]
+          },
+          {
+            "group": "AI Analysis",
+            "icon": "sparkles",
+            "pages": [
+              "ai-analysis/overview",
+              "ai-analysis/sentiment-analysis",
+              "ai-analysis/theme-detection",
+              "ai-analysis/ai-summary"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Account",
+        "groups": [
+          {
+            "group": "Account & Settings",
+            "icon": "gear",
+            "pages": [
+              "settings/overview",
+              "getting-started/team-and-permissions",
+              "settings/billing"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20width%3D%22180%22%20height%3D%2238.7%22%20viewBox%3D%220%200%20180%2038.7%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%23221c35%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M41.3%2C35.4l4.6%2C1.4c-1.1%2C4.8-5.1%2C6.4-9.6%2C6.4-6.4%2C0-10.8-4.4-10.8-12.1s4.3-12.5%2C11-12.5S46%2C22.8%2C46%2C28.7a13.2%2C13.2%2C0%2C0%2C1-.4%2C3.2H30.7c.2%2C4.2%2C2.1%2C7.1%2C5.8%2C7.1A4.5%2C4.5%2C0%2C0%2C0%2C41.3%2C35.4Zm-.5-7a2.8%2C2.8%2C0%2C0%2C0%2C.1-.9%2C4.5%2C4.5%2C0%2C0%2C0-4.7-4.8c-3%2C0-5%2C2.1-5.4%2C5.7Zm24.9%2C7%2C4.6%2C1.4c-1.1%2C4.8-5.1%2C6.4-9.6%2C6.4-6.4%2C0-10.8-4.4-10.8-12.1s4.2-12.5%2C11-12.5%2C9.5%2C4.2%2C9.5%2C10.1a13.2%2C13.2%2C0%2C0%2C1-.4%2C3.2H55.1c.2%2C4.2%2C2.1%2C7.1%2C5.8%2C7.1A4.5%2C4.5%2C0%2C0%2C0%2C65.7%2C35.4Zm-.5-7a2.8%2C2.8%2C0%2C0%2C0%2C.1-.9%2C4.5%2C4.5%2C0%2C0%2C0-4.7-4.8c-3.1%2C0-5%2C2.1-5.4%2C5.7ZM96.6%2C42.6H90.2L82.5%2C32.4H81.2V42.6H75.8v-30h5.4V28.2h1.1l7.2-9h6.3L86.9%2C30.1ZM117%2C36.5c0%2C1.7.8%2C2.2%2C1.7%2C2.2a2.6%2C2.6%2C0%2C0%2C0%2C1.4-.3v4a6%2C6%2C0%2C0%2C1-2.9.6c-2.8%2C0-4.5-1.2-5.1-3.8-1.2%2C3-3.8%2C4-6.9%2C4s-6.9-2.4-6.9-6.4%2C4-8.1%2C13.5-7.7V26.5c0-2.6-1.5-3.7-3.8-3.7a3.4%2C3.4%2C0%2C0%2C0-3.8%2C3.6L99%2C25.5c.4-4.9%2C4.7-6.9%2C9.4-6.9S117%2C20.7%2C117%2C26Zm-5.2-4.1c-5.8-.2-8.2%2C1.2-8.2%2C3.8a3%2C3%2C0%2C0%2C0%2C3.3%2C3.1c2.3%2C0%2C4.9-1.3%2C4.9-3.9Zm26.5%2C9.4a12.9%2C12.9%2C0%2C0%2C1-6.2%2C1.4c-4.3%2C0-7-2.2-7-6.9v-13h-3.4V19.2h3.4v-5l5.4-.7v5.7h6.9v4.1h-7V35.2c0%2C2.5%2C1.1%2C3.5%2C3%2C3.5a6.9%2C6.9%2C0%2C0%2C0%2C4-1.4Zm41.2-17.2a8%2C8%2C0%2C0%2C0-2.3-.3c-3.1%2C0-6.3%2C2.2-6.3%2C6.8V42.6h-5.3V19.2h4.5l.7%2C6.3c.9-4.1%2C3.6-7.2%2C9.2-6.9Zm-168.6-6C4.3%2C18.6%2C0%2C22.8%2C0%2C30.8V51.4H5.2V41.8a11.5%2C11.5%2C0%2C0%2C0%2C5.7%2C1.4c6.6%2C0%2C10.9-4.5%2C10.9-12.4S17.5%2C18.6%2C10.9%2C18.6Zm0%2C20.4c-3.8%2C0-5.7-2.7-5.7-8.2s1.9-7.9%2C5.7-7.9%2C5.6%2C2.5%2C5.6%2C7.9S14.7%2C39%2C10.9%2C39ZM151.3%2C18.6c-6.6%2C0-10.9%2C4.2-10.9%2C12.2s4.3%2C12.4%2C10.9%2C12.4%2C10.9-4.5%2C10.9-12.4S157.9%2C18.6%2C151.3%2C18.6Zm.4%2C20.4h-.8c-2.4-.3-3.9-1.8-4.5-4.6a17.9%2C17.9%2C0%2C0%2C1-.4-3.6c0-5.4%2C2-7.9%2C5.7-7.9s5.6%2C2.5%2C5.6%2C7.9S155.5%2C39%2C151.7%2C39ZM12%2C29.4a3.2%2C3.2%2C0%2C1%2C0%2C3.3%2C3.2A3.2%2C3.2%2C0%2C0%2C0%2C12%2C29.4Z%22%20transform%3D%22translate(0%20-12.6)%22%2F%3E%3C%2Fsvg%3E",
+    "dark": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20width%3D%22180%22%20height%3D%2238.7%22%20viewBox%3D%220%200%20180%2038.7%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%2398DBCE%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M41.3%2C35.4l4.6%2C1.4c-1.1%2C4.8-5.1%2C6.4-9.6%2C6.4-6.4%2C0-10.8-4.4-10.8-12.1s4.3-12.5%2C11-12.5S46%2C22.8%2C46%2C28.7a13.2%2C13.2%2C0%2C0%2C1-.4%2C3.2H30.7c.2%2C4.2%2C2.1%2C7.1%2C5.8%2C7.1A4.5%2C4.5%2C0%2C0%2C0%2C41.3%2C35.4Zm-.5-7a2.8%2C2.8%2C0%2C0%2C0%2C.1-.9%2C4.5%2C4.5%2C0%2C0%2C0-4.7-4.8c-3%2C0-5%2C2.1-5.4%2C5.7Zm24.9%2C7%2C4.6%2C1.4c-1.1%2C4.8-5.1%2C6.4-9.6%2C6.4-6.4%2C0-10.8-4.4-10.8-12.1s4.2-12.5%2C11-12.5%2C9.5%2C4.2%2C9.5%2C10.1a13.2%2C13.2%2C0%2C0%2C1-.4%2C3.2H55.1c.2%2C4.2%2C2.1%2C7.1%2C5.8%2C7.1A4.5%2C4.5%2C0%2C0%2C0%2C65.7%2C35.4Zm-.5-7a2.8%2C2.8%2C0%2C0%2C0%2C.1-.9%2C4.5%2C4.5%2C0%2C0%2C0-4.7-4.8c-3.1%2C0-5%2C2.1-5.4%2C5.7ZM96.6%2C42.6H90.2L82.5%2C32.4H81.2V42.6H75.8v-30h5.4V28.2h1.1l7.2-9h6.3L86.9%2C30.1ZM117%2C36.5c0%2C1.7.8%2C2.2%2C1.7%2C2.2a2.6%2C2.6%2C0%2C0%2C0%2C1.4-.3v4a6%2C6%2C0%2C0%2C1-2.9.6c-2.8%2C0-4.5-1.2-5.1-3.8-1.2%2C3-3.8%2C4-6.9%2C4s-6.9-2.4-6.9-6.4%2C4-8.1%2C13.5-7.7V26.5c0-2.6-1.5-3.7-3.8-3.7a3.4%2C3.4%2C0%2C0%2C0-3.8%2C3.6L99%2C25.5c.4-4.9%2C4.7-6.9%2C9.4-6.9S117%2C20.7%2C117%2C26Zm-5.2-4.1c-5.8-.2-8.2%2C1.2-8.2%2C3.8a3%2C3%2C0%2C0%2C0%2C3.3%2C3.1c2.3%2C0%2C4.9-1.3%2C4.9-3.9Zm26.5%2C9.4a12.9%2C12.9%2C0%2C0%2C1-6.2%2C1.4c-4.3%2C0-7-2.2-7-6.9v-13h-3.4V19.2h3.4v-5l5.4-.7v5.7h6.9v4.1h-7V35.2c0%2C2.5%2C1.1%2C3.5%2C3%2C3.5a6.9%2C6.9%2C0%2C0%2C0%2C4-1.4Zm41.2-17.2a8%2C8%2C0%2C0%2C0-2.3-.3c-3.1%2C0-6.3%2C2.2-6.3%2C6.8V42.6h-5.3V19.2h4.5l.7%2C6.3c.9-4.1%2C3.6-7.2%2C9.2-6.9Zm-168.6-6C4.3%2C18.6%2C0%2C22.8%2C0%2C30.8V51.4H5.2V41.8a11.5%2C11.5%2C0%2C0%2C0%2C5.7%2C1.4c6.6%2C0%2C10.9-4.5%2C10.9-12.4S17.5%2C18.6%2C10.9%2C18.6Zm0%2C20.4c-3.8%2C0-5.7-2.7-5.7-8.2s1.9-7.9%2C5.7-7.9%2C5.6%2C2.5%2C5.6%2C7.9S14.7%2C39%2C10.9%2C39ZM151.3%2C18.6c-6.6%2C0-10.9%2C4.2-10.9%2C12.2s4.3%2C12.4%2C10.9%2C12.4%2C10.9-4.5%2C10.9-12.4S157.9%2C18.6%2C151.3%2C18.6Zm.4%2C20.4h-.8c-2.4-.3-3.9-1.8-4.5-4.6a17.9%2C17.9%2C0%2C0%2C1-.4-3.6c0-5.4%2C2-7.9%2C5.7-7.9s5.6%2C2.5%2C5.6%2C7.9S155.5%2C39%2C151.7%2C39ZM12%2C29.4a3.2%2C3.2%2C0%2C1%2C0%2C3.3%2C3.2A3.2%2C3.2%2C0%2C0%2C0%2C12%2C29.4Z%22%20transform%3D%22translate(0%20-12.6)%22%2F%3E%3C%2Fsvg%3E"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@peekator.com"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
   }
 }

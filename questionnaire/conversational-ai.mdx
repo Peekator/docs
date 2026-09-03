@@ -1,0 +1,58 @@
+---
+title: "Conversational AI questions in Peekator"
+sidebarTitle: "Conversational AI"
+description: "Use Conversational AI questions in Peekator to run AI-moderated follow-up interviews. Configure goal, follow-up attempts, custom prompt, and audio recording."
+---
+
+Conversational AI questions use an AI assistant to ask respondents follow-up probing questions based on their previous answers. This creates an interview-style experience that captures deeper qualitative insights at scale without manually crafting every follow-up.
+
+Use this type for exploratory research, customer discovery, brand perception studies, or any scenario where you need to probe beyond a single open-ended answer.
+
+## Add a conversational AI question
+
+<Steps>
+  <Step title="Click Add Question">
+    In the questionnaire builder, click **Add Question** and select **Conversational AI**.
+  </Step>
+  <Step title="Enter the goal">
+    Describe what the AI should try to uncover. The platform generates a prompt from this goal automatically.
+  </Step>
+  <Step title="Set the maximum follow-ups">
+    Set how many follow-up questions the AI can ask per respondent.
+  </Step>
+  <Step title="Preview the conversation">
+    Use the Preview tab to test the AI conversation before launching.
+  </Step>
+</Steps>
+
+## Settings
+
+| Setting | Description |
+| --- | --- |
+| **Goal** | What the AI is trying to uncover through its follow-up questions. Used to auto-generate the prompt. |
+| **Override prompt** | Enable to replace the auto-generated prompt with a fully custom one. |
+| **Custom prompt** | The custom prompt sent to the AI when **Override prompt** is enabled. |
+| **Max follow-up attempts** | Maximum number of follow-up questions the AI can ask per respondent. |
+| **Do not mention specific suggestions** | Instructs the AI not to suggest specific answers, keeping responses more spontaneous. |
+| **Save audio files** | Record and save the respondent's audio input alongside the text response. |
+
+<Note>
+  The default instruction shown to respondents is: "Our AI assistant will ask you a few follow-up questions."
+</Note>
+
+## What gets stored
+
+Each conversational AI question stores three internal sub-answers per respondent:
+
+- **Solution**: the final summarized answer the AI extracted
+- **Full conversation**: the complete transcript of the AI-respondent conversation
+- **Is success**: whether the AI determined it reached its goal
+
+These fields are available in exports and the dashboard.
+
+## Related pages
+
+- [Open-end](/questionnaire/open-end)
+- [Interview topic](/questionnaire/interview-topic)
+- [AI Analysis](/ai-analysis/overview)
+- [Questionnaire overview](/questionnaire/overview)

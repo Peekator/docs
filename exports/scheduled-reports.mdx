@@ -1,0 +1,57 @@
+---
+title: "Survey data export formats"
+sidebarTitle: "Export Formats"
+description: "Export your Peekator survey data in CSV, Excel, SPSS, or PowerPoint format. Learn what each format includes and when to use each one."
+---
+
+Peekator supports multiple export formats so you can work with your data in the tools your team already uses. Exports are available from the survey's reporting section once responses have been collected.
+
+## Available export formats
+
+| Format | Best for |
+| --- | --- |
+| **CSV** | Raw response data for custom analysis in any tool. Lightweight and universal. |
+| **Excel** | Calculated results with question labels. Pre-formatted tables and summary statistics ready for stakeholders. |
+| **SPSS** | Statistical analysis in IBM SPSS. Includes variable labels, value labels, and a `.sav` or zipped file. |
+| **PowerPoint** | Visual presentation of results with charts. Ready to share with clients or present to stakeholders. |
+| **PDF** | Print-ready report of the dashboard view. |
+
+## CSV export
+
+The CSV export contains one row per respondent and one column per question/answer. Options:
+
+- **Include IDs**: adds GUID columns for questions and answers (useful for programmatic processing)
+- **Include panel IDs**: adds columns for third-party panel respondent IDs and panel name
+- **Filter by given answers**: export only the responses that match an active filter
+- **Select questions**: export only the questions you need
+
+## Excel export
+
+The Excel export produces a formatted workbook with calculated results. It includes:
+
+- Question labels and answer labels
+- Response counts and percentages per answer
+- Summary statistics for numeric questions
+- Applied filters reflected in the data
+
+## SPSS export
+
+The SPSS export generates a `.sav` file (or a `.zip` file if the dataset is large) suitable for import into IBM SPSS or compatible tools. It includes:
+
+- Variable labels mapped to question text
+- Value labels mapped to answer text
+- Numeric codes for all categorical answers
+
+## PowerPoint export
+
+The PowerPoint export creates a slide deck with one slide per question showing the results as charts. Use it to quickly build a client-ready presentation from your survey data.
+
+## PDF export
+
+The PDF export captures the current dashboard view as a print-ready document.
+
+## Related pages
+
+- [Dashboard overview](/analytics/overview)
+- [Crosstabs](/exports/crosstabs)
+- [Filters and segments](/analytics/filters-and-segments)
