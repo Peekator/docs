@@ -1,69 +1,94 @@
 ---
-title: "Gabor-Granger question in Peekator"
+title: "Gabor Granger question"
 sidebarTitle: "Gabor-Granger"
-description: "Learn how to add a Gabor-Granger question to measure price sensitivity and demand curves in Peekator surveys."
+description: "Use a Gabor Granger question to measure willingness to pay at different price points and identify the price with the strongest revenue potential. Respondents see a proposed price and answer whether they would be willing to pay it."
 ---
 
-A Gabor-Granger question tests price sensitivity by asking respondents whether they would buy a product at a specific price. The price is adjusted up or down based on their answer, producing a demand curve that shows the percentage of respondents willing to buy at each price point. This is a direct method for estimating optimal pricing.
+## When to use Gabor Granger
 
-## When to use this question type
+Use this question when you want to test pricing for a product, service or subscription.
 
-- You want to estimate demand at different price points for a single product.
-- You need a simple, direct measure of price sensitivity without complex trade-offs.
-- You want to identify the price at which willingness to buy drops sharply.
+It helps you understand:
 
-## How to add it
+- willingness to pay at each proposed price;
+- how demand changes as the price increases; and
+- the price point with the greatest estimated revenue.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Gabor-Granger** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and define the product description, price range, and step intervals.
-  </Step>
-</Steps>
+## Add a Gabor Granger question
 
-## Settings
+1. In the questionnaire builder, select **Add questions**.
+2. Choose **Gabor Granger**.
+3. Enter the question text.
+4. Add the price points you want to test under **Values**.
+5. Review the positive and negative answers under **Answers**.
 
-| Setting | Description |
-| --- | --- |
-| Product description | The text or image describing the product respondents evaluate. |
-| Starting price | The first price shown to respondents. |
-| Price range | The minimum and maximum prices to test. |
-| Price step | The increment or decrement between price points, for example, £5. |
-| Question text | The purchase intent question, typically "Would you buy this product at [price]?" |
-| Response options | The answers, typically "Yes" and "No". |
+<Info>
+  An **Instruction note** is added automatically. You can edit it to give respondents additional guidance.
+</Info>
 
-<Note>
-  **Needs product verification:** Confirm whether "Randomise starting price" and "Allow "Maybe" response" settings exist for this question type.
-</Note>
+## Configure price points and answers
+
+Under **Values**, add each proposed price that you want respondents to consider.
+
+Use a sensible range of prices and keep the increments meaningful. For example: £10, £15, £20, £25 and £30.
+
+Under **Answers**, define the response options:
+
+<table>
+  <colgroup>
+    <col width="162" />
+    <col width="513" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Answer type</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Negative**</td>
+      <td>Indicates that the respondent would not pay the proposed price, such as _No_.</td>
+    </tr>
+    <tr>
+      <td>**Positive**</td>
+      <td>Indicates that the respondent would pay the proposed price, such as _Yes_.</td>
+    </tr>
+  </tbody>
+</table>
+
+Keep one positive and one negative answer so Peekator can calculate willingness to pay and revenue.
+
+## Conditional logic
+
+Under **Ask only if**, select **Add conditional rule** to control whether the entire Gabor Granger question is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
 
 ## What respondents see
 
-Respondents see the product description and a price, followed by a yes/no question about their willingness to buy. If they say yes, the price increases by the step amount. If they say no, the price decreases. This continues until a maximum, minimum, or indifference point is reached.
+Respondents are shown a proposed price and select the answer that best reflects whether they would be willing to pay it.
 
-<Warning>
-  Gabor-Granger questions involve sequential logic and price adjustment rules. Always preview and test the full questionnaire before launching to ensure prices step correctly and the flow behaves as expected.
-</Warning>
-
-## Logic and piping
-
-You can use the final accepted or rejected price in logic to show or hide later questions. For example, if a respondent rejects all prices, you can ask what price would be acceptable. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+They see different price points during the question, allowing Peekator to measure demand at each level.
 
 ## Results in reporting
 
-Results show a demand curve chart with price on the horizontal axis and the percentage of respondents willing to buy on the vertical axis. Revenue curves may also be calculated by multiplying price by demand. The optimal price is identified where revenue or demand is maximised.
+Results appear in **Fundamental Analytics** as a chart showing:
+
+- **Willingness to Pay** — the share of respondents willing to pay each price;
+- **Revenue** — the estimated revenue at each price point; and
+- **Optimum price point** — the price with the highest estimated revenue.
+
+The revenue line is calculated from the revenue base shown above the chart. Hover over a point to see the value for that price.
 
 ## Example use case
 
-A snack food brand tests a new protein bar starting at £2.00 with £0.50 steps up to £4.00. The demand curve shows 80 per cent willing to buy at £2.00, dropping to 30 per cent at £3.50. The revenue curve peaks at £2.50, suggesting the optimal launch price.
+A software company is considering monthly prices of £15, £20, £25, £30 and £35 for a new plan.
+
+It asks respondents whether they would pay each price. The results show how willingness to pay changes across the range and identify the price with the highest estimated revenue.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
+- [Conjoint analysis question](/questionnaire/conjoint-analysis)
+- [Constant sum question](/questionnaire/constant-sum)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Van Westendorp question](/questionnaire/van-westendorp)
-- [Conjoint Analysis question](/questionnaire/conjoint-analysis)

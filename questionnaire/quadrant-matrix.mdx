@@ -1,70 +1,107 @@
 ---
-title: "Quadrant Matrix question in Peekator"
+title: "Quadrant Matrix question"
 sidebarTitle: "Quadrant Matrix"
-description: "Learn how to add a Quadrant Matrix question so respondents place items on a 2x2 grid in Peekator surveys."
+description: "Use a Quadrant Matrix question to ask respondents to place their answer on a two-dimensional chart. It is useful for exploring how respondents perceive something across two related dimensions, such as affordable to premium and traditional to innovative."
 ---
 
-A Quadrant Matrix question presents a two-by-two grid with labelled axes and asks respondents to drag items into the quadrant that best represents their view. This is a visual and intuitive way to map perceptions, priorities, or positioning, such as importance versus satisfaction or price versus quality.
+## When to use a Quadrant Matrix
 
-## When to use this question type
+Use this question when you want respondents to position an item, concept or brand between two opposing scales.
 
-- You want to visualise how respondents perceive trade-offs between two dimensions.
-- You need a perceptual map of brands, features, or statements from the respondent's point of view.
-- You want an engaging, interactive question that produces immediately chartable data.
+For example:
 
-## How to add it
+- map a brand from _traditional_ to _modern_ and _affordable_ to _premium_;
+- assess an experience from _easy_ to _difficult_ and _useful_ to _not useful_; or
+- understand where a concept sits between two viewpoints.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Quadrant Matrix** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and define the axes, labels, and items to place.
-  </Step>
-</Steps>
+## Add a Quadrant Matrix question
 
-## Settings
+1. In the questionnaire builder, select **Add questions**.
+2. Choose **Quadrant Matrix**.
+3. Enter the question text.
+4. Define the labels at each end of the X and Y axes.
+
+An **Instruction note** is added automatically. You can edit it to give respondents additional guidance.
+
+## Configure the axes
+
+The **X axis** runs from left to right. The **Y axis** runs from bottom to top.
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="341" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Left**</td>
+      <td>Label at the left end of the X axis.</td>
+    </tr>
+    <tr>
+      <td>**Right**</td>
+      <td>Label at the right end of the X axis.</td>
+    </tr>
+    <tr>
+      <td>**Bottom**</td>
+      <td>Label at the bottom end of the Y axis.</td>
+    </tr>
+    <tr>
+      <td>**Top**</td>
+      <td>Label at the top end of the Y axis.</td>
+    </tr>
+  </tbody>
+</table>
+
+Choose clear, opposing labels. For example:
+
+| Axis | Labels |
+| :-- | :-- |
+| X axis | Traditional — Modern |
+| Y axis | Affordable — Premium |
+
+## Configure the scale
+
+In **Settings**, set the numeric range for each axis:
 
 | Setting | Description |
-| --- | --- |
-| Question text | The label respondents see. |
-| Horizontal axis label | The label for the left-right dimension, for example, "Low price" to "High price". |
-| Vertical axis label | The label for the bottom-top dimension, for example, "Low quality" to "High quality". |
-| Items to place | The list of items respondents drag onto the grid, for example, brand names or features. |
-| Mandatory | Requires all items to be placed before the respondent can continue. |
-| Randomise items | Shuffles the order of items for each respondent. |
-| Allow multiple items per quadrant | Lets respondents place more than one item in the same quadrant. |
+| :-- | :-- |
+| **Min X value** | Sets the lowest value on the X axis. |
+| **Max X value** | Sets the highest value on the X axis. |
+| **Min Y value** | Sets the lowest value on the Y axis. |
+| **Max Y value** | Sets the highest value on the Y axis. |
 
-<Note>
-  **Needs product verification:** Confirm whether "Snap to grid" and "Show axis midpoints" settings exist for this question type.
-</Note>
+## Conditional logic
+
+Under **Ask only if**, select **Add conditional rule** to control whether the entire Constant sum question is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
 
 ## What respondents see
 
-Respondents see a square grid with axis labels on the edges and a list of draggable items beside it. They drag each item into one of the four quadrants. If mandatory, they must place all items before continuing. The interface may show a counter of remaining items.
+Respondents see a chart with your X and Y axis labels. They place their answer at the point that best represents their view across both dimensions.
 
-<Warning>
-  Quadrant Matrix questions involve drag-and-drop interaction and axis validation. Always preview and test the full questionnaire before launching to ensure items, axes, and placement rules behave correctly across devices.
-</Warning>
-
-## Logic and piping
-
-You can use the quadrant placement of specific items in logic to show or hide later questions. For example, if a respondent places your brand in the "High price, Low quality" quadrant, you can branch to a diagnostic question. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+For example, a respondent may place a brand towards _Modern_ and _Premium_.
 
 ## Results in reporting
 
-Results appear as an aggregate perceptual map showing the percentage of respondents who placed each item in each quadrant. Individual placements are available in exports. This makes it easy to identify consensus positions and outlier perceptions.
+Results use respondents’ X and Y placements to show where answers fall across the matrix.
+
+Use the results to identify clusters of opinion, compare which quadrants receive the most responses and understand the overall position of the item being assessed.
 
 ## Example use case
 
-A consumer goods company asks respondents to place five competing brands on a quadrant with "Low price" to "High price" on the horizontal axis and "Low quality" to "High quality" on the vertical axis. The results reveal that most respondents place the company's brand in the "High price, High quality" quadrant, supporting a premium positioning strategy.
+A retailer asks customers to position its brand between _Affordable_ and _Premium_ on one axis, and _Traditional_ and _Modern_ on the other.
+
+The results show how customers perceive the brand and whether its intended positioning matches their experience.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
-- [Logic and branching](/questionnaire/logic-and-branching)
-- [Grid question](/questionnaire/grid)
-- [Ranking question](/questionnaire/ranking)
+- [Grid question](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#)
+- [Ranking question](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#)
+- [Constant sum question](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#)

@@ -20,22 +20,20 @@
     ],
     "tabs": [
       {
-        "tab": "Start Here",
+        "tab": "Start Here ✅",
         "groups": [
           {
             "group": "Start Here",
             "icon": "rocket",
             "pages": [
               "index",
-              "quickstart",
-              "getting-started/account-setup",
-              "getting-started/add-users"
+              "quickstart"
             ]
           }
         ]
       },
       {
-        "tab": "Projects",
+        "tab": "Projects ✅",
         "groups": [
           {
             "group": "Projects",
@@ -50,7 +48,7 @@
         ]
       },
       {
-        "tab": "Build",
+        "tab": "Build ✅",
         "groups": [
           {
             "group": "Questionnaire",
@@ -92,7 +90,7 @@
             ]
           },
           {
-            "group": "UX Research Question Types",
+            "group": "UX Research Types",
             "icon": "eye",
             "pages": [
               "questionnaire/five-second-test",
@@ -102,7 +100,7 @@
             ]
           },
           {
-            "group": "Market Research Question Types",
+            "group": "Market Research Types",
             "icon": "chart-bar",
             "pages": [
               "questionnaire/maxdiff",
@@ -128,11 +126,13 @@
             "pages": [
               "questionnaire/structure-your-questionnaire",
               "questionnaire/logic-and-branching",
+              "questionnaire/piping-and-text-substitution",
               "questionnaire/hidden-variables",
               "questionnaire/screen-and-qualify",
               "questionnaire/quotas",
               "questionnaire/randomisation",
-              "questionnaire/translations"
+              "questionnaire/translations",
+              "questionnaire/pre-fill-answers-with-query-strings"
             ]
           },
           {
@@ -145,7 +145,7 @@
         ]
       },
       {
-        "tab": "Distribute",
+        "tab": "Distribute ✅",
         "groups": [
           {
             "group": "Distribute and Launch",
@@ -168,36 +168,25 @@
         ]
       },
       {
-        "tab": "Analyse",
+        "tab": "Analyse ✅",
         "groups": [
           {
             "group": "Dashboard",
             "icon": "chart-bar",
             "pages": [
               "analytics/overview",
-              "analytics/charts-and-visuals",
-              "analytics/filters-and-segments",
-              "analytics/response-data"
+              "analytics/filters-and-segments"
             ]
           },
           {
             "group": "Exports",
             "icon": "table-columns",
-            "pages": [
-              "exports/crosstabs",
-              "exports/scheduled-reports"
-            ]
+            "pages": []
           },
           {
             "group": "AI Analysis",
             "icon": "sparkles",
-            "pages": [
-              "ai-analysis/overview",
-              "ai-analysis/chat-with-results",
-              "ai-analysis/auto-coding",
-              "ai-analysis/sentiment-analysis",
-              "ai-analysis/ai-summary"
-            ]
+            "pages": []
           }
         ]
       }

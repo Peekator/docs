@@ -1,68 +1,60 @@
 ---
-title: "Website Test question in Peekator"
+title: "Website Test question"
 sidebarTitle: "Website Test"
-description: "Learn how to add a Website Test question to embed a live URL and collect feedback in Peekator surveys."
+description: "Use a Website Test to give respondents a task to complete on a live website while they explain their thoughts aloud. It helps you understand how people browse, what they notice and where they experience difficulty."
 ---
-
-A Website Test question embeds a live website or web page directly into the survey, allowing respondents to interact with it and provide feedback. This is ideal for usability testing, prototype evaluation, and gathering contextual reactions to real or staged web experiences.
 
 ## When to use this question type
 
-- You want to test a live website, prototype, or landing page in its natural context.
-- You need to observe how respondents navigate and react to real interactive elements.
-- You want to combine behavioural data with attitudinal feedback in one survey.
+Use a Website Test when you want to:
 
-## How to add it
+- Observe how respondents explore a website.
+- Test whether they can find information or complete a task.
+- Understand what attracts attention and why respondents make particular choices.
+- Collect spoken feedback while respondents browse.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Website Test** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and enter the URL, set dimensions, and define the task.
-  </Step>
-</Steps>
+## Add a Website Test question
 
-## Settings
+1. In the questionnaire builder, select **Add questions**.
+2. Select **Website Test**.
+3. Enter the task you want respondents to complete.
+4. Edit the **Instruction note** if needed.
+5. Enter the **Web page URL** respondents will visit.
+6. Select **Save question**.
 
-| Setting | Description |
-| --- | --- |
-| URL | The web address to embed in the survey. |
-| Display size | The width and height of the embedded frame, for example, desktop, tablet, or mobile dimensions. |
-| Task instruction | The prompt telling respondents what to do on the website, for example, "Find the pricing page and tell us what you think." |
-| Record clicks | Tracks where respondents click within the embedded site. |
-| Record scroll | Tracks how far respondents scroll down the page. |
+## Write a clear task
 
-<Note>
-  **Needs product verification:** Confirm whether "Allow external links" and "Session recording" settings exist for this question type.
-</Note>
+Give respondents a realistic goal instead of telling them exactly where to click.
+
+For example:
+
+> Imagine you are choosing a cleaning product for your household. Explore the website to find a product you would consider buying, then look for information on how much to use in a wash.
+
+Use the instruction note to ask respondents to think aloud, for example:
+
+> Please speak your thoughts aloud as you browse. Tell us what you are looking at, what you are trying to find and why you choose to click somewhere.
+
+## Configure audio and screen sharing
+
+Select **Require audio feedback and screen-share where supported** to require spoken feedback while the respondent browses the website.
+
+Respondents speak as they scroll through the website. Where their device supports it, Peekator also captures their screen share.
 
 ## What respondents see
 
-Respondents see an embedded browser frame showing the specified website, with a task instruction above or below it. They interact with the site as they normally would. If click or scroll tracking is enabled, their actions are recorded. After completing the task, they answer any follow-up questions and continue.
-
-<Warning>
-  Website Test questions involve embedding external content and tracking interactions. Always preview and test the full questionnaire before launching to ensure the site loads correctly, tracking works, and the experience is smooth across devices.
-</Warning>
-
-## Logic and piping
-
-You can use task completion or tracked behaviour in logic to show or hide later questions. For example, if a respondent does not click a specific element, you can ask a follow-up about what they were looking for. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+Respondents receive your task and open the website you have provided. They browse the website, complete the task and describe their thoughts as they go.
 
 ## Results in reporting
 
-Results include click heatmaps, scroll depth charts, and time-on-page metrics. Follow-up question responses are shown alongside behavioural data. This combined view helps you understand not just what respondents did, but why.
+Results include an AI generated summary for each respondent, based on their voice recording. The summary helps you review what respondents did, what they noticed and why they made particular choices.
+
+Select the response icon beside a summary to view the full answer. Select **Website Link** to open the tested website.
 
 ## Example use case
 
-A SaaS company embeds its new pricing page and asks, "Find the plan that suits a team of 10 and tell us what you would expect to pay." Click tracking reveals that many respondents miss the toggle between monthly and annual billing, prompting a design revision.
+A retailer asks respondents to find a product they would consider buying, then locate its usage information. The spoken feedback shows whether the product range is easy to browse, which details influence decisions and whether the usage information is easy to find.
 
 ## Related guides
 
+- [Results and reporting](/analytics/overview)
 - [Questionnaire overview](/questionnaire/overview)
-- [Logic and branching](/questionnaire/logic-and-branching)
-- [Click Test question](/questionnaire/click-test)
-- [5 Second Test question](/questionnaire/five-second-test)

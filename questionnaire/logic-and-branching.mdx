@@ -1,72 +1,208 @@
 ---
-title: "Add logic and branching to your questionnaire"
+title: "Logic and branching"
 sidebarTitle: "Logic"
-description: "Use skip logic, display logic, and end-of-survey logic in Peekator to create personalized question paths based on respondent answers."
+description: "Use conditions to control which questions or groups each respondent sees, based on their earlier answers."
 ---
 
-Logic rules in Peekator let you create a personalized experience by showing or hiding questions, skipping ahead, and routing respondents to different endings based on their answers. This reduces irrelevant questions and produces cleaner data.
+<Card title="A condition is read as:" type="note">
+  Show this question or group **if** an earlier answer matches the rule you set.
+</Card>
+
+## Conditions on questions
+
+Every question has an **Ask only if** area. Use it when a question should appear only for certain respondents.
+
+If the condition is not met, Peekator skips the question.
+
+### Add a condition
+
+1. Select the question in the questionnaire builder.
+2. Under **Ask only if**, select **Add conditional rule**.
+3. Choose the earlier question to use as the condition.
+4. Select a rule: **IS** or **IS NOT**.
+5. Select the relevant answer or answers.
+6. Select **Confirm**.
+
+Use an earlier question as the condition source, so Peekator can evaluate the respondent’s answer before deciding whether to show the question.
+
+## IS and IS NOT
+
+There are only two rules for an individual condition:
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="602" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Rule</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**IS**</td>
+      <td>Show the question when the respondent **selected** the specified answer.</td>
+    </tr>
+    <tr>
+      <td>**IS NOT**</td>
+      <td>Show the question when the respondent **did not select** the specified answer.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Choose more than one answer
+
+If you select **IS** and then choose more than one answer from the same source question, Peekator automatically changes the label to **IS EITHER**.
+
+For example, you may ask:
+
+> Which channels does your organisation currently use?
+
+To show a follow-up question to respondents who use email or SMS:
+
+1. Select **Which channels does your organisation currently use?**
+2. Select **IS**.
+3. Select _Email_ and _SMS_.
+
+Peekator then displays:
+
+> **Which channels does your organisation currently use?** **IS EITHER** _Email_ **OR** _SMS_
+
+This is still one condition. The respondent only needs to have selected one of the chosen answers.
 
 <Note>
-  Logic rules are evaluated top to bottom in the order they appear. If two rules conflict, the first matching rule takes effect.
+  **IS EITHER** is not a separate rule you select. It appears automatically when an **IS** condition includes more than one answer.
 </Note>
 
-## Types of logic
+## Combine multiple conditions
 
-- **Skip logic**: jump a respondent forward to a specific question based on their answer, bypassing questions in between.
-- **Display logic**: show or hide a specific question only when a condition is met.
-- **End-of-survey logic**: redirect or end the survey early based on an answer.
+The first dropdown in the **Ask only if** window controls how multiple condition rows work together. This is separate from **IS** and **IS NOT**, which apply to each individual condition.
 
-## Set up skip logic
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="509" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Question is shown when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Any**</td>
+      <td>At least one condition is met.</td>
+    </tr>
+    <tr>
+      <td>**All**</td>
+      <td>Every condition is met.</td>
+    </tr>
+    <tr>
+      <td>**At least**</td>
+      <td>The selected number of conditions, or more, are met.</td>
+    </tr>
+    <tr>
+      <td>**At most**</td>
+      <td>No more than the selected number of conditions are met.</td>
+    </tr>
+    <tr>
+      <td>**Exactly**</td>
+      <td>The selected number of conditions are met.</td>
+    </tr>
+  </tbody>
+</table>
 
-<Steps>
-  <Step title="Open the Logic panel">
-    In the questionnaire builder, click the **Logic** tab.
-  </Step>
-  <Step title="Add a rule">
-    Click **Add rule**, choose the source question, set the condition and answer value.
-  </Step>
-  <Step title="Set the destination">
-    Choose which question or section the respondent should jump to.
-  </Step>
-  <Step title="Save the rule">
-    Click **Save rule**. A logic indicator appears on the question card.
-  </Step>
-</Steps>
+For example:
 
-## Set up display logic
+- Use **Any** to show a question when a respondent uses _Email_ or _SMS_.
+- Use **All** to show a question only when a respondent uses _Email_ and works for an organisation with 250 or more employees.
+- Use **Exactly 2 conditions** to show a question only when exactly two listed conditions are met.
 
-<Steps>
-  <Step title="Select the question">
-    Click the question you want to show or hide conditionally.
-  </Step>
-  <Step title="Open Display Logic">
-    In the settings panel on the right, scroll to **Display Logic** and click **Add condition**.
-  </Step>
-  <Step title="Define and apply the condition">
-    Select the question to check, the operator, and the value. Click **Apply**.
-  </Step>
-</Steps>
+Select **Add another condition** to add more condition rows.
 
-## Set up end-of-survey logic
+## Conditions on answers
 
-<Steps>
-  <Step title="Open the Logic panel">
-    Click the **Logic** tab in the questionnaire builder.
-  </Step>
-  <Step title="Add an end rule">
-    Click **Add end rule** and select the question, condition, and answer that triggers the action.
-  </Step>
-  <Step title="Choose the action">
-    Select **End survey**, **Redirect to URL**, or **Disqualify**.
-  </Step>
-</Steps>
+Use an answer condition to show or hide a specific answer option within a question. Unlike a question condition, it does not hide the whole question.
 
-<Warning>
-  Always preview the questionnaire after adding logic to verify every answer path leads to the intended result.
-</Warning>
+Use answer conditions when the available answers should depend on an earlier response. For example, only show relevant office locations once a respondent has selected their country.
 
-## Related pages
+Answer conditions are available for question types with answer options.
 
-- [Questionnaire overview](/questionnaire/overview)
-- [Survey settings](/survey-settings/overview)
-- [Distribution](/distribution/overview)
+### Add a condition to an answer
+
+1. Select the question.
+2. In **Settings**, select **Conditional rule on answer**.
+3. Select the conditional-rule arrow to the left of the answer you want to control.
+4. In the **Condition answer** window, select **Include** or **Exclude**.
+5. Choose the earlier question, then set the answer condition.
+6. Select **Confirm** and save the question.
+
+### Include and exclude answers
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="435" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Include**</td>
+      <td>Show this answer only when the condition is met.</td>
+    </tr>
+    <tr>
+      <td>**Exclude**</td>
+      <td>Hide this answer when the condition is met.</td>
+    </tr>
+  </tbody>
+</table>
+
+For example, you could ask:
+
+> Where is your organisation based?
+
+Then, in a later **Select your office location** question:
+
+- Include _London_ and _Manchester_ if the organisation is based in the _United Kingdom_.
+- Include _New York_ and _Chicago_ if the organisation is based in the _United States_.
+
+The respondent sees only the office locations relevant to their earlier answer.
+
+You can add more than one condition to an answer and combine them using the same **Any**, **All**, **At least**, **At most** and **Exactly** options used for question conditions.
+
+## Conditions on groups
+
+You can apply the same conditions to a **Group**.
+
+When editing a group, use **Ask only if** and select **Add conditional rule**. Configure the condition in the same way as for an individual question.
+
+If the group condition is not met, Peekator skips the entire group and every question inside it.
+
+Use a group condition when several related follow-up questions should be shown to the same respondents. For example, show a group of account-management questions only to enterprise customers.
+
+## Use hidden variables for reusable segments
+
+Use direct question or group conditions for straightforward logic.
+
+If you need a more specific segment, cannot express the logic cleanly with direct conditions, or want to reuse the same segment across several questions or groups, create a **Hidden Variable**.
+
+A hidden variable turns one or more earlier answers into a named segment, such as _Enterprise customers_. You can then use that segment as the source for a question or group condition.
+
+For instructions, see [Hidden variables](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
+
+## Test your logic
+
+Before launch, use **Preview** to test each path through the questionnaire and check that questions and groups appear as intended.
+
+## Related guides
+
+- [Hidden variables](/questionnaire/hidden-variables)
+- [Groups](/questionnaire/randomisation)

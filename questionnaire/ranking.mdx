@@ -1,65 +1,99 @@
 ---
-title: "Ranking question in Peekator"
+title: "Ranking question"
 sidebarTitle: "Ranking"
-description: "Learn how to add and configure a Ranking question so respondents order items by preference or priority in Peekator surveys."
+description: "Use a Ranking question when you want respondents to place options in order of preference, importance or priority. For example, ask respondents to rank product features, brands or campaign messages from most to least preferred."
 ---
 
-A Ranking question asks respondents to arrange a list of items in order of preference, importance, or priority. This reveals not just which items are liked, but how they compare to one another, giving you richer preference data than a simple multiple choice question.
+## When to use a Ranking question
 
-## When to use this question type
+- You need respondents to compare several options directly.
+- You want to identify the most and least preferred options.
+- You want to understand the order of respondents’ priorities.
 
-- You want to understand the relative priority of features, brands, or messages.
-- You need to identify a winner when multiple options are popular.
-- You want to force trade-offs rather than letting respondents select everything.
+## Add a Ranking question
 
-## How to add it
+1. In the Questionnaire builder, select **Add question**.
+2. Select **Ranking**.
+3. Enter your question text.
+4. An **Instruction note** is added automatically. Edit it if needed, for example to explain what the first and last positions mean.
+5. Type or paste your answer choices into the first answer field. 
+6. Select **Add answer** to add further choices manually, or drag answers to change their order.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Ranking** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and add the items to be ranked.
-  </Step>
-</Steps>
+<Tip>
+  You can **paste multiple rows** or **columns** into the first field. Peekator automatically separates them into individual items.
+</Tip>
 
-## Settings
+[Insert screenshot: Ranking question builder]
 
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see. |
-| Items to rank | The list of options respondents will order. |
-| Mandatory | Requires all items to be ranked before the respondent can continue. |
-| Randomise items | Shuffles the order of items for each respondent. |
-| Rank all | Requires respondents to rank every item, not just a subset. |
-| Number to rank | Limits ranking to a specific number of items if not all need to be ranked. |
+## Configure the question
+
+<table>
+  <colgroup>
+    <col width="222" />
+    <col width="497" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>What it means</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Include answer: “Other”</td>
+      <td>Lets respondents add and rank an answer that is not in your list.</td>
+    </tr>
+    <tr>
+      <td>Limit amount of options</td>
+      <td>Sets the minimum and maximum number of options a respondent can rank.</td>
+    </tr>
+  </tbody>
+</table>
 
 <Note>
-  **Needs product verification:** Confirm whether "Reverse rank" and "Tie allowed" settings exist for this question type.
+  If you do not set a limit, respondents rank all available options.
 </Note>
+
+## Add conditions and piping
+
+Use **Add conditional rule** in the **Ask only if** section to control whether respondents see the Ranking question.
+
+Select **Pipe answers** to use answers from earlier questions as ranking options.
+
+For full instructions, see [Logic and branching](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#) and [Piping answers](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
 
 ## What respondents see
 
-Respondents see a list of items, often with drag handles or numbered positions. They drag items into order or select a rank for each item. If "Rank all" is enabled, every item must be placed before they can continue. A counter may show progress.
+Respondents arrange the options in order, from their highest to lowest priority.
 
-## Logic and piping
-
-You can use the top-ranked item or the rank of a specific item in logic to show or hide later questions. For example, if a respondent ranks "Price" first, you can branch to a price sensitivity question. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+If you set an answer limit, they rank only the number of options you specify. Any remaining options are left unranked.
 
 ## Results in reporting
 
-Results appear as a ranking table showing the average rank, first-place count, and distribution of positions for each item. A chart may show the percentage of respondents who ranked each item in each position. This makes it easy to identify clear winners and losers.
+Ranking results show:
 
-## Example use case
+- The overall rank for each option.
+- The average rank.
+- The number of respondents who ranked the option.
+- The percentage or count of respondents who placed the option in each position, such as first, second or third.
 
-A retailer asks, "Please rank the following factors in order of importance when choosing an online store: Price, Delivery speed, Product range, Return policy, Customer reviews." The results show that Delivery speed and Price are the top two drivers for most customers.
+A lower average rank indicates a higher overall preference.
+
+[Insert screenshot: Ranking results]
+
+## Example
+
+Ask: “Rank the following superpowers according to which one you would most like to have.”
+
+Answers:
+
+- Invisibility
+- Mind reading
+- Healing powers
+- Time travel
+- Shapeshifting
 
 ## Related guides
 
 - [Questionnaire overview](/questionnaire/overview)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Multiple Choice question](/questionnaire/multiple-choice)
-- [MaxDiff question](/questionnaire/maxdiff)

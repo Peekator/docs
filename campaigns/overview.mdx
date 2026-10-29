@@ -1,46 +1,138 @@
 ---
-title: "Campaign Hub: manage all your campaigns"
+title: "Campaigns"
 sidebarTitle: "Campaign Hub"
-description: "View and monitor all Email, SMS, and WhatsApp campaigns across every Peekator project from one central Campaign Hub in the main menu."
+description: "Use Campaigns to create, personalise and launch survey invitations to a list of contacts."
 ---
 
-The **Campaign Hub** is a cross-project view of all your distribution campaigns. Open it from the main menu next to the Peekator logo to see delivery status, response rates, and performance across every survey in one place. This is different from setting up a campaign for a single survey, which you do inside the **Distribution** tab of that survey.
+Before you start, make sure that:
 
-## What you can do in Campaign Hub
+- the survey has been launched and its status is **Collecting**;
+- the survey distribution channel is set to **Campaign**;
+- your sending channel and branding have been configured with your Peekator account manager; and
+- you have a contact list in CSV format.
 
-- Monitor delivery status for Email, SMS, and WhatsApp campaigns.
-- Track response rates and campaign performance across all projects.
-- See which campaigns are active, paused, or completed.
+## Create a campaign
 
-## Campaign channels
+1. Open **Campaign** in the main navigation, then select **Campaigns**.
+2. Select **Create campaign**.
+3. Enter a clear **Campaign name**.
+4. Select the survey. Only surveys with the status **Collecting** are available to send through a campaign.
+5. Set the **Launch date and time**. The time shown refers to your local time zone.
+6. Set how many days the campaign link should remain active for.
 
-Campaigns in Peekator support three channels:
-
-| Channel | Description |
-| --- | --- |
-| **Email** | Send survey invitations and reminders to a list of email addresses. |
-| **SMS** | Send survey links via text message to mobile numbers. |
-| **WhatsApp** | Send survey invitations through WhatsApp to opted-in contacts. |
-
-## Campaign statuses
-
-Campaigns in the hub display one of the following statuses:
-
-| Status | Meaning |
-| --- | --- |
-| **Draft** | Campaign is created but not yet launched. |
-| **Launched** | Campaign has been sent and is actively delivering. |
-| **In Progress** | Messages are being sent and responses are being collected. |
-| **Paused** | Campaign is temporarily stopped. |
-| **Stopped** | Campaign has been manually halted. |
-| **Done** | Campaign has completed its send schedule. |
-| **Archived** | Campaign is no longer active and has been archived. |
+**Important:** Set the launch date and time more than 15 minutes in advance. A campaign cannot be scheduled to launch sooner.
 
 <Note>
-  To create a new campaign for a specific survey, go to the **Distribution** tab inside that survey.
+  You can select Save Draft at any point and return to the campaign later.
 </Note>
 
-## Related guides
+## Upload your contact list
 
-- [Distribute through Campaigns](/distribution/campaigns)
-- [Distribution overview](/distribution/overview)
+Upload a CSV file containing the recipients you want to contact.
+
+After uploading the file, check the parsed-data preview and map the relevant columns.
+
+<table>
+  <colgroup>
+    <col width="172" />
+    <col width="529" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>What to select</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Unique client ID**</td>
+      <td>A value that uniquely identifies each recipient, such as a CRM contact ID or a unique email address.</td>
+    </tr>
+    <tr>
+      <td>**Email address**</td>
+      <td>The column containing each recipient’s email address. Required for email campaigns.</td>
+    </tr>
+    <tr>
+      <td>**Phone number**</td>
+      <td>The column containing each recipient’s phone number. Required for SMS or WhatsApp campaigns.</td>
+    </tr>
+    <tr>
+      <td>**Other CSV columns**</td>
+      <td>Data you want to use for personalisation or to pre-fill survey answers.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Pre-fill survey answers from the CSV file
+
+Use **Map survey questions to CSV columns** to pre-fill a survey answer with data from each recipient’s row.
+
+For example, you might map a hidden audience question to an _Audience_ column in the contact file.
+
+1. Select the survey question you want to pre-fill.
+2. Select the matching CSV column.
+3. Repeat for any additional questions.
+
+For choice questions, the value in the CSV file must match the relevant answer option exactly.
+
+For more information, see [Pre-fill answers with query strings](/questionnaire/pre-fill-answers-with-query-strings).
+
+## Craft the campaign message
+
+Open the **Crafting the Campaign message** tab.
+
+1. Select the configured sending **Channel**.
+2. Select the appropriate **Template**.
+3. For email campaigns, enter an **Email subject** and write the message body.
+4. Add personalisation variables where needed.
+5. Review the preview before launching.
+
+The available message fields may vary by channel.
+
+### Add personalisation and survey links
+
+Use the variables shown below the message editor to insert a survey link or information from the recipient’s CSV row.
+
+| Variable | Use |
+| :-- | :-- |
+| `{{button::button_text}}` | Adds a button that opens the survey. Replace `button_text` with the text you want to show. |
+| `{{customButton::button_text::button_link}}` | Adds a button that opens a custom link. |
+| `{{survey_link::link_text}}` | Adds a text link to the survey. |
+| `{{survey_name}}` | Adds the selected survey’s name. |
+| `{{First name}}` | Adds the value from the matching CSV column for that recipient. The field name depends on your CSV header. |
+
+Use the copy icon beside a variable to add it to the message accurately.
+
+<Note>
+  Include a survey button or survey link in every invitation so recipients can open the survey.
+</Note>
+
+### Test an email campaign
+
+Select **Send test Email** to check the invitation before launching.
+
+A pop-up opens with the fields from your uploaded CSV file. Enter dummy values for the recipient data, then select **Send test Email**.
+
+When you receive the test email, check that:
+
+- the sender, subject line and branding are correct;
+- the survey button or link opens the right survey; and
+- all placeholders are replaced with the dummy values you entered.
+
+If the received email shows the correct values in place of the placeholders, the personalisation is working correctly.
+
+## Review and launch
+
+When the campaign is ready:
+
+1. Confirm that the correct survey, channel and contact list are selected.
+2. Check that the launch date, time and active period are correct.
+3. Review the recipient-data mapping.
+4. Send a test email, where applicable.
+5. Select **Review and Launch**.
+6. Complete the final review, then launch the campaign.
+
+## Related pages
+
+- [Campaigns](/distribution/campaigns)
+- [Pre-fill answers with query strings](/questionnaire/pre-fill-answers-with-query-strings)

@@ -1,66 +1,114 @@
 ---
-title: "Numeric Entry question in Peekator"
+title: "Numeric Entry question"
 sidebarTitle: "Numeric Entry"
-description: "Learn how to add and configure a Numeric Entry question so respondents type a number in Peekator surveys."
+description: "Use a Numeric Entry question when respondents need to provide one number, such as their age, spend, number of purchases or rating."
 ---
 
-A Numeric Entry question asks respondents to type a number into a single input field. Use this type when you need exact quantities, such as age, income, number of employees, or units purchased, rather than a pre-defined list of ranges.
+## When to use Numeric Entry
 
-## When to use this question type
+- You need one numeric response.
+- You want to collect a quantity, amount, score or rating.
+- You need to set an acceptable response range.
 
-- You need an exact numeric value rather than a range or category.
-- You want to calculate averages, totals, or perform statistical analysis on the raw data.
-- You need to validate input within a specific range or format.
+## Add a Numeric Entry question
 
-## How to add it
+1. In the Questionnaire builder, select **Add question**.
+2. Select **Numeric entry**.
+3. Enter your question text.
+4. An **Instruction note** is added automatically. Edit it if needed, for example to say “Please enter a number”.
+5. Choose the entry type and configure the response settings.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Numeric Entry** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and set the label, limits, and format.
-  </Step>
-</Steps>
+[Insert screenshot: Numeric Entry question builder]
 
-## Settings
+## Configure the question
 
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see. |
-| Minimum value | The lowest number a respondent can enter. |
-| Maximum value | The highest number a respondent can enter. |
-| Decimal places | Whether to allow decimals and how many. |
-| Prefix | A symbol or text shown before the input, for example, a currency symbol. |
-| Suffix | A symbol or text shown after the input, for example, "%" or "kg". |
-| Mandatory | Requires a value before the respondent can continue. |
+<table>
+  <colgroup>
+    <col width="207" />
+    <col width="483" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>What it means</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Entry type</td>
+      <td>Choose how respondents provide their numeric response. Available types are **Numeric**, **Digits**, **Slider**, **Stars** and **Dropdown**.</td>
+    </tr>
+    <tr>
+      <td>Min value</td>
+      <td>Sets the lowest accepted value.</td>
+    </tr>
+    <tr>
+      <td>Max value</td>
+      <td>Sets the highest accepted value.</td>
+    </tr>
+    <tr>
+      <td>Screenout if out of range</td>
+      <td>Screens out respondents whose answer falls outside the minimum and maximum values.</td>
+    </tr>
+    <tr>
+      <td>Currency</td>
+      <td>Adds a currency to the numeric response.</td>
+    </tr>
+    <tr>
+      <td>No. of decimal places</td>
+      <td>Sets how many decimal places respondents can enter.</td>
+    </tr>
+  </tbody>
+</table>
 
-<Note>
-  **Needs product verification:** Confirm whether "Allow negative numbers" and "Slider display" settings exist for this question type.
-</Note>
+<Info>
+  The settings available may change depending on the entry type you select.
+</Info>
+
+## Add conditions
+
+Use **Add conditional rule** in the **Ask only if** section to control whether respondents see the question.
+
+For full instructions, see [Logic and branching](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
 
 ## What respondents see
 
-Respondents see a single text input field, often with a prefix or suffix. They type a number. The field may reject non-numeric characters or values outside the set range. If the question is mandatory, the "Next" button remains disabled until a valid number is entered.
+The response format depends on the entry type you select:
 
-## Logic and piping
-
-You can use the numeric value in logic to show or hide later questions. For example, if a respondent enters an age below 18, you can branch to a different set of questions. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+- **Numeric**: respondents type a number.
+- **Digits**: respondents enter a whole number.
+- **Slider**: respondents choose a value on a scale.
+- **Stars**: respondents choose a rating using stars.
+- **Dropdown**: respondents select a numeric value from a list.
 
 ## Results in reporting
 
-Results appear as descriptive statistics: average, median, minimum, maximum, and standard deviation. A histogram shows the distribution of responses. Raw values are available in exports for further analysis.
+Numeric Entry results show the **average result** by default.
 
-## Example use case
+You can create custom categories to group responses into ranges, such as age groups or spend bands.
 
-A B2B software company asks, "How many employees does your organisation have?" with a minimum of 1 and no maximum. The raw numbers let them segment results by company size in analysis.
+1. In the results view, select **Add custom categories to show in the graph**.
+2. Enter the start and end value for each category.
+3. Select **Create categories and place responses**.
+
+You can then view the distribution by percentage or response count.
+
+[Insert screenshot: Numeric Entry reporting categories]
+
+## Example
+
+Ask: “How old are you?”
+
+Use the **Numeric** entry type and create reporting categories such as:
+
+- 18 to 24
+- 25 to 34
+- 35 to 44
+- 45 to 54
+- 55 to 64
+- 65 and over
 
 ## Related guides
 
 - [Questionnaire overview](/questionnaire/overview)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Numeric Grid question](/questionnaire/numeric-grid)
-- [Open End question](/questionnaire/open-end)

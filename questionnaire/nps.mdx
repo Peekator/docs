@@ -1,64 +1,81 @@
 ---
-title: "Net Promoter Score question in Peekator"
+title: "Net Promoter Score (NPS) question"
 sidebarTitle: "NPS"
-description: "Learn how to add and configure an NPS question to measure customer loyalty and likelihood to recommend in Peekator surveys."
+description: "Use a Net Promoter Score question to measure how likely respondents are to recommend your product, service or brand. NPS uses a fixed scale from 0 to 10 and automatically calculates your overall NPS score."
 ---
 
-A Net Promoter Score (NPS) question measures how likely respondents are to recommend a product, service, or brand to others. Respondents rate on a scale from 0 to 10. The results classify respondents as Promoters (9-10), Passives (7-8), or Detractors (0-6), producing a single loyalty score.
+## When to use an NPS question
 
-## When to use this question type
+- You want to measure loyalty or likelihood to recommend.
+- You want a recognised benchmark for customer sentiment.
+- You need to track NPS over time.
 
-- You want a standardised benchmark for customer loyalty or satisfaction.
-- You need a metric that is easy to track over time and compare across segments.
-- You want to identify Detractors who may need follow-up attention.
+## Add an NPS question
 
-## How to add it
+1. In the Questionnaire builder, select **Add question**.
+2. Select **Net Promoter Score (NPS)**.
+3. Enter your question text.
+4. Add an optional **Instruction note** if respondents need extra guidance.
+5. Add labels for the two ends of the scale:
+   - **Min label** explains what a score of 0 means.
+   - **Max label** explains what a score of 10 means.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **NPS** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and edit the question text and labels.
-  </Step>
-</Steps>
+For example:
 
-## Settings
+- Min label: Not at all likely
+- Max label: Extremely likely
 
-| Setting | Description |
-| --- | --- |
-| Question text | The main question, typically "How likely are you to recommend [brand] to a friend or colleague?" |
-| Low label | The label for 0, for example, "Not at all likely". |
-| High label | The label for 10, for example, "Extremely likely". |
-| Mandatory | Requires a selection before the respondent can continue. |
-| Follow-up open end | Adds a text box asking why the respondent gave that score. |
+[Insert screenshot: NPS question builder]
 
-<Note>
-  **Needs product verification:** Confirm whether "Scale direction" (0 on left vs right) and "Custom scale range" settings exist for this question type.
-</Note>
+<Warning>
+  NPS uses a fixed 0 to 10 scale. You cannot change the answer options.
+</Warning>
+
+## Add conditions
+
+Use **Add conditional rule** in the **Ask only if** section to control whether respondents see the NPS question.
+
+For full instructions, see [Logic and branching](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
 
 ## What respondents see
 
-Respondents see a horizontal scale numbered 0 to 10 with the low and high labels at each end. They click one number. If a follow-up open end is enabled, a text box appears after they select a score, asking for the reason behind their rating.
+Respondents select one score from 0 to 10.
 
-## Logic and piping
-
-You can use the NPS score in logic to show or hide later questions. For example, you can branch Detractors (0-6) to a service recovery question and Promoters (9-10) to a referral request. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+The labels you add help them understand what the lowest and highest scores represent.
 
 ## Results in reporting
 
-Results show the overall NPS score (percentage of Promoters minus percentage of Detractors), a distribution bar chart, and the count in each segment. If a follow-up question was included, responses are listed for qualitative analysis.
+Peekator automatically calculates an NPS score from -100 to 100.
 
-## Example use case
+Responses are grouped into:
 
-A SaaS company asks, "How likely are you to recommend our platform to a colleague?" Detractors are routed to a follow-up asking what would improve their experience. The company tracks the NPS monthly and benchmarks it against industry averages.
+| Group | Scores |
+| :-- | :-- |
+| Ambassadors | 9 to 10 |
+| Neutrals | 7 to 8 |
+| Haters | 0 to 6 |
+
+Your NPS score is calculated by subtracting the percentage of **Haters** from the percentage of **Ambassadors**.
+
+Reporting shows:
+
+- Your overall NPS score.
+- The percentage of Ambassadors, Neutrals and Haters.
+- A visual NPS gauge.
+- The distribution of responses from 0 to 10.
+
+Select **All answers view** to review each score in more detail. You can switch between percentages and response counts.
+
+[Insert screenshot: NPS reporting]
+
+## Example
+
+Ask: “On a scale of 0 to 10, how likely are you to recommend Peekator to a colleague?”
+
+- Min label: Not at all likely
+- Max label: Extremely likely
 
 ## Related guides
 
 - [Questionnaire overview](/questionnaire/overview)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Single Choice question](/questionnaire/single-choice)
-- [Open End question](/questionnaire/open-end)

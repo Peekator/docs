@@ -1,47 +1,134 @@
 ---
 title: "Dashboard overview"
 sidebarTitle: "Overview"
-description: "Get a real-time view of your survey results in the Peekator dashboard. Monitor responses, completion rates, and charts as data arrives."
+description: "The Dashboard is where you view and explore your survey results. It updates as responses are collected, so you can monitor fieldwork in real time or analyse completed surveys."
 ---
 
-The Peekator dashboard gives you a live view of incoming response data for any survey that is collecting or has completed. You can find it inside the **Reporting** tab when you open a survey. As responses arrive, the dashboard updates automatically so you can track progress and spot trends without waiting for a full export.
+## Open the Dashboard
 
-## What the dashboard shows
+1. Open the survey you want to analyse.
+2. Select **Reporting**.
+3. Select **Dashboard**.
 
-When you open the dashboard, you see a summary of your survey's performance and a breakdown of results per question.
+## Understand the survey summary
 
-- **Response count**: the total number of responses received so far
-- **Completion rate**: the percentage of started surveys that were finished
-- **Charts per question**: visual summaries generated automatically for each question based on its type
-- **Response timeline**: a view of when responses arrived, useful for spotting peaks after a campaign send
+At the top of the Dashboard, you can see key information about the selected survey:
 
-## What you can do in the dashboard
+<table>
+  <colgroup>
+    <col width="117" />
+    <col width="505" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Survey title**</td>
+      <td>The survey you are currently viewing.</td>
+    </tr>
+    <tr>
+      <td>**Project**</td>
+      <td>The project the survey belongs to.</td>
+    </tr>
+    <tr>
+      <td>**N**</td>
+      <td>The number of collected responses. Where a target is set, this may also show progress against the target.</td>
+    </tr>
+    <tr>
+      <td>**IR**</td>
+      <td>The incidence rate: the percentage of potential respondents who qualified for the survey. This is mainly relevant for panel projects.</td>
+    </tr>
+    <tr>
+      <td>**Status**</td>
+      <td>The current survey status, such as **Editing**, **Review,** **Collecting**, **Collecting** **Paused**, **Quality Control** or **Done**.</td>
+    </tr>
+  </tbody>
+</table>
 
-The dashboard is more than a read-only report. You can interact with the data directly to explore patterns and prepare outputs.
+The summary may also show other fieldwork information, depending on the distribution channel and project setup.
 
-<CardGroup cols={2}>
-  <Card title="View charts" icon="chart-bar" href="/analytics/charts-and-visuals">
-    Explore auto-generated charts and visuals for each question in your survey.
-  </Card>
+Use the actions in the upper-right corner to:
 
-  <Card title="Apply filters" icon="filter" href="/analytics/filters-and-segments">
-    Narrow results by answer value, date range, or respondent attribute to focus on specific groups.
-  </Card>
+- select **Preview Survey** to view the survey as a respondent;
+- select **Export** to download results; or
+- select **Share** to create a shareable Dashboard link.
 
-  <Card title="Explore response data" icon="table" href="/analytics/response-data">
-    Switch from aggregate charts to individual respondent records for detailed inspection.
-  </Card>
+## Filter the results
 
-  <Card title="Export" icon="download" href="/exports/scheduled-reports">
-    Download your data in CSV, Excel, SPSS, PowerPoint, or PDF format for external analysis or sharing.
-  </Card>
-</CardGroup>
+Use filters to analyse a particular respondent group.
 
-## When to use the dashboard
+You can filter results in two ways:
 
-Use the dashboard during fieldwork to monitor response quality and volume. It is also the fastest way to share initial findings with stakeholders before producing a formal report.
+1. Select **Add Filter**, then choose the question and answer you want to filter by.
+2. Select an answer directly in a result chart or table.
+
+For example, you could select an age group or employment status to see how that group answered every other question.
+
+After you apply a filter, all Dashboard results update to show the selected group only. Exports can also use the filtered results.
+
+## Explore question results
+
+Results are displayed in survey order, with a separate card for each question.
+
+Each card shows:
+
+- the question type and question text;
+- the **N** value, which is the number of respondents who answered that question;
+- a chart, table or other visualisation appropriate to the question type; and
+- controls for changing the display or opening additional actions.
+
+Use the controls on a question card to switch between percentages and response counts, change the view where available, or open more options.
+
+<Note>
+  If a question shows Conditions applied, not every respondent was shown that question. Its N may therefore be lower than the total survey response count.
+</Note>
+
+### Understand result visuals
+
+Peekator automatically selects a suitable view for each question type, such as a bar chart, donut chart, matrix or table.
+
+Use the controls on each result card to switch between percentages and response counts. Select an answer in a chart or table to filter the Dashboard by that response.
+
+## Analyse open-ended responses
+
+Open-ended, Conversational AI and AI Interview questions can show the original responses or AI-coded categories.
+
+A **category set** groups similar responses into themes. Select a category set in the left-hand panel to view its results.
+
+You can use the available controls to:
+
+- view all responses associated with a category;
+- review and edit categories;
+- review and edit individual coded answers; or
+- create another AI auto-code set.
+
+Select **Add next AI auto-code** when you want to create an additional set of categories without replacing the existing one.
+
+## Export results
+
+Select **Export** to download survey results for further analysis or reporting.
+
+Available export formats include:
+
+- CSV;
+- Excel;
+- SPSS; 
+- Dasbhoard Excel Report; and
+- editable PowerPoint, with one question per slide.
+
+## Share the Dashboard
+
+Select **Share** to create a link to the Dashboard for colleagues or stakeholders.
+
+You can share a view of the results without giving recipients access to the full Peekator platform. Configure the shared view and its expiry settings before sending the link.
 
 ## Related guides
 
-- [Charts and visuals](/analytics/charts-and-visuals)
-- [Export your survey data](/exports/scheduled-reports)
+- [Crosstabs](/exports/crosstabs)
+- [AI analysis](/ai-analysis/sentiment-analysis)
+- [Export survey data](/exports/scheduled-reports)
+- [Share Dashboard results](/distribution/link-sharing)

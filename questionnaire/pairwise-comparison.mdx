@@ -1,65 +1,71 @@
 ---
-title: "Pairwise Comparison question in Peekator"
+title: "Pairwise comparison"
 sidebarTitle: "Pairwise Comparison"
-description: "Learn how to add a Pairwise Comparison question for sequential monadic A/B testing in Peekator surveys."
+description: "Use a Pairwise comparison question to compare images two at a time and identify the preferred option. Respondents choose between pairs of images. Their selection is saved, then another comparison appears."
 ---
 
-A Pairwise Comparison question presents respondents with two options side by side and asks them to choose one or rate them against each other. This sequential monadic A/B format is ideal for testing concepts, designs, messages, or products in a controlled, head-to-head format that forces a clear preference.
+# Pairwise comparison question
 
-## When to use this question type
+Use a **Pairwise comparison** question to compare images two at a time and identify the preferred option.
 
-- You want to test two concepts, designs, or messages directly against each other.
-- You need a forced choice to identify a winner when both options may be liked.
-- You want to rotate which option appears on the left or right to control for order bias.
+Respondents choose between pairs of images. Their selection is saved, then another comparison appears.
 
-## How to add it
+## When to use Pairwise comparison
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Pairwise Comparison** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and upload or define the two options and set the comparison task.
-  </Step>
-</Steps>
+Use this question when you need to compare visual concepts, such as:
 
-## Settings
+- packaging designs;
+- advertisements;
+- logo options;
+- product images; or
+- website or campaign creative.
 
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see, for example, "Which of these two designs do you prefer?" |
-| Option A | The first concept, image, or description to display. |
-| Option B | The second concept, image, or description to display. |
-| Rotate order | Randomly swaps Option A and Option B for half of respondents to control for position bias. |
-| Answer format | The type of response: forced choice (pick one), rating scale, or preference strength. |
-| Mandatory | Requires a selection before the respondent can continue. |
+It is especially useful when choosing from several alternatives would feel difficult in one screen.
 
-<Note>
-  **Needs product verification:** Confirm whether "Blind test" (hide brand names) and "Attribute rating after choice" settings exist for this question type.
-</Note>
+## Add a Pairwise comparison question
+
+1. In the questionnaire builder, select **Add questions**.
+2. Choose **Pairwise comparison**.
+3. Enter the question text.
+4. Upload the images you want respondents to compare.
+
+Select the upload area or drag and drop an image. Add every image you want to include as a possible answer.
+
+<Info>
+  An **Instruction note** is added automatically. You can edit it to give respondents additional guidance.
+</Info>
+
+## Conditional logic
+
+Under **Ask only if**, select **Add conditional rule** to control whether the entire Pairwise comparison question is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
 
 ## What respondents see
 
-Respondents see two options displayed side by side, often as images, descriptions, or a combination. They select one option, rate the pair, or indicate preference strength. If rotation is enabled, the left-right order may differ for each respondent. The "Next" button remains disabled until a choice is made if mandatory.
+Respondents see two images at a time and select the one they prefer.
 
-## Logic and piping
-
-You can use the selected option or rating in logic to show or hide later questions. For example, if a respondent prefers Option A, you can ask what they liked most about it. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+After each selection, Peekator saves the choice and shows a new comparison. This continues until the respondent has completed the required comparisons.
 
 ## Results in reporting
 
-Results show the percentage of respondents who chose each option, with a breakdown by order rotation if enabled. If ratings were collected, average scores and distributions are shown. Significance testing may indicate whether the preference is statistically meaningful.
+Results show each image with the percentage of comparisons in which it was selected.
+
+Use the results to identify:
+
+- the strongest-performing visual option;
+- options with similar appeal; and
+- images that respondents selected least often.
 
 ## Example use case
 
-A fashion retailer tests two homepage banner designs. Respondents see Design A and Design B side by side and select the one they find more appealing. Rotation ensures half see A on the left and half on the right. The results show Design B wins 62 per cent to 38 per cent, a statistically significant preference.
+A food brand has four packaging designs for a new range. It asks respondents to choose the design they prefer whenever two options are shown together.
+
+The results reveal which packaging design performs best overall before the brand moves to final design development.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
+- [Click test](/questionnaire/click-test)
+- [5 Second Test](/questionnaire/five-second-test)
+- [Ranking question](/questionnaire/ranking)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [MaxDiff question](/questionnaire/maxdiff)
-- [Conjoint Analysis question](/questionnaire/conjoint-analysis)

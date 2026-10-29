@@ -1,63 +1,137 @@
 ---
-title: "Multiple Choice question in Peekator"
+title: "Multiple Choice question"
 sidebarTitle: "Multiple Choice"
-description: "Learn how to add and configure a Multiple Choice question so respondents select one or more options in Peekator surveys."
+description: "Use a Multiple choice question when respondents should select one or more answers from a list. It works well for questions about products used, features liked, interests or any other topic where more than one answer may apply."
 ---
 
-A Multiple Choice question lets respondents select one or more answers from a list of options. Use this type when you want to capture all relevant choices, such as products used, features liked, or interests held.
+## When to use Multiple choice
 
-## When to use this question type
+- Respondents may need to select more than one answer.
+- You want to understand combinations of preferences or behaviours.
+- You want to compare each selected answer in reporting.
 
-- You want respondents to select every option that applies, not just one.
-- You need to understand combinations of preferences or behaviours.
-- You plan to analyse overlap between choices, such as which features are used together.
+## Add a Multiple choice question
 
-## How to add it
+1. In the Questionnaire builder, select **Add question**.
+2. Select **Multiple choice**.
+3. Enter your question text.
+4. An **Instruction note** is added automatically. Edit it if you need to give respondents additional guidance.
+5. **Type** or **paste** your answer choices into the first answer field. 
+6. Select **Add answer** to add further choices manually, or drag answers to change their order.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Multiple Choice** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and edit the text and options.
-  </Step>
-</Steps>
+<Tip>
+  You can **paste multiple answers** into the first field. Peekator automatically separates them into individual items.
+</Tip>
 
-## Settings
+[Insert screenshot: Multiple choice question builder]
 
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see. |
-| Answer options | The list of choices. Click to add, reorder, or remove options. |
-| Allow "Other" option | Adds an "Other" choice with a free-text field. |
-| Mandatory | Requires at least one selection before the respondent can continue. |
-| Randomise options | Shuffles the order of choices for each respondent. |
-| Minimum selections | Sets the lowest number of options a respondent must choose. |
-| Maximum selections | Sets the highest number of options a respondent can choose. |
-| Exclusive option | Marks one choice (for example, "None of the above") so selecting it deselects all other choices. |
+## Configure the question
 
-<Note>
-  **Needs product verification:** Confirm whether "Allow not sure" and "Display as dropdown" settings exist for this question type.
-</Note>
+Select the question, then select **See more** in the **Settings** panel to view all settings.
+
+[Insert screenshot: Multiple choice settings]
+
+<table>
+  <colgroup>
+    <col width="220" />
+    <col width="405" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>What it means</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Include answer: “Other”</td>
+      <td>Lets respondents enter an answer that is not in your list.</td>
+    </tr>
+    <tr>
+      <td>Shuffle answers</td>
+      <td>Randomises the order of answer choices for each respondent.</td>
+    </tr>
+    <tr>
+      <td>Assign points</td>
+      <td>Adds a score to each answer choice.</td>
+    </tr>
+    <tr>
+      <td>Conditional rule on answer</td>
+      <td>Controls when an individual answer choice is shown.</td>
+    </tr>
+    <tr>
+      <td>Limit amount of answers</td>
+      <td>Sets the minimum and maximum number of answers a respondent can select.</td>
+    </tr>
+    <tr>
+      <td>Number of columns</td>
+      <td>Changes the layout of answer choices.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Add conditions
+
+You can add conditions to either the whole question or individual answer choices.
+
+### Condition a question
+
+Use **Add conditional rule** in the **Ask only if** section to control whether respondents see the whole question. For example, show a question only to respondents who selected a particular answer earlier in the survey.
+
+### Condition an answer
+
+Use **Conditional rule on answer** to control whether a specific answer choice appears. For example, show an answer only when it is relevant to a respondent’s earlier response.
+
+For full instructions and examples, see [Logic and branching](#).
+
+## Advanced settings
+
+Use these settings only when needed for your survey setup.
+
+<table>
+  <colgroup>
+    <col width="215" />
+    <col width="451" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>What it means</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Are answers events</td>
+      <td>Treats answers as events and enables date parameters.</td>
+    </tr>
+    <tr>
+      <td>Skip if no query string</td>
+      <td>Skips the question if the specified query string is not available.</td>
+    </tr>
+    <tr>
+      <td>Query string name</td>
+      <td>Enter the query string used in your survey link.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## What respondents see
 
-Respondents see a vertical list of checkboxes or tiles. They can tick multiple options. If minimum or maximum limits are set, a counter shows how many they have selected. The "Next" button remains disabled until the mandatory requirement is met.
+Respondents see a list of answer choices and can select more than one.
 
-## Logic and piping
-
-You can use Multiple Choice answers in logic to show or hide later questions based on whether a specific option was selected. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+If you set answer limits, respondents must select within the minimum and maximum number specified. If you include an **Other** answer, they can enter their own response after selecting it.
 
 ## Results in reporting
 
-Results appear as a stacked bar chart or table showing the count and percentage for each option. Respondents can select multiple options, so percentages typically sum to more than 100 per cent. Overlap between choices can be analysed in cross-tabulations.
+In reporting, you can see how many respondents selected each answer and the percentage each answer represents.
 
-## Example use case
+As respondents can select more than one answer, percentages may add up to more than 100%.
 
-A streaming service asks, "Which of the following genres do you watch at least once a week?" with options for Drama, Comedy, Documentary, Reality, and Other. The results reveal which genres are most popular and which combinations are common.
+## Example
+
+Ask: “Which of the following streaming genres do you watch at least once a week?”
+
+Answers: Drama, Comedy, Documentary, Reality and Other.
 
 ## Related guides
 

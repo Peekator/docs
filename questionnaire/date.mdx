@@ -1,65 +1,57 @@
 ---
 title: "Date question in Peekator"
 sidebarTitle: "Date"
-description: "Learn how to add and configure a Date question so respondents select or type a date in Peekator surveys."
+description: "Use a Date question when respondents need to select a date from a calendar, such as a visit date, appointment date or preferred delivery date."
 ---
-
-A Date question asks respondents to provide a date using a date picker or typed input. Use this type for collecting birth dates, purchase dates, event attendance dates, or any other specific point in time you need for segmentation or validation.
 
 ## When to use this question type
 
-- You need an exact date rather than a month, year, or age range.
-- You want to validate that a date falls within a specific range, for example, in the past or future.
-- You plan to segment results by date, such as recent purchasers versus lapsed customers.
+Use a Date question when you need to:
 
-## How to add it
+- Collect one or more dates in a consistent format.
+- Limit selections to a specific date range.
+- Record the current date automatically.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Date** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and set the label, format, and range limits.
-  </Step>
-</Steps>
+## Add a Date question
 
-## Settings
+1. In the questionnaire builder, select **Add questions**.
+2. Select **Date**.
+3. Enter your question text.
+4. Edit the **Instruction note** if respondents need additional guidance.
+5. Select **Save question**.
+
+## Configure the question
+
+Select **See more** in the settings panel to configure the available options.
 
 | Setting | Description |
-| --- | --- |
-| Question text | The label respondents see. |
-| Date format | The display format, for example, DD/MM/YYYY or MM/DD/YYYY. |
-| Minimum date | The earliest date a respondent can select. |
-| Maximum date | The latest date a respondent can select. |
-| Mandatory | Requires a date selection before the respondent can continue. |
-| Default date | A pre-filled date, if any. |
+| :-- | :-- |
+| **Multiple choices** | Allows respondents to select more than one date. |
+| **Skip question and auto fill with current time** | Skips the question and records the current date automatically. |
+| **Start date** | Sets the earliest date respondents can select. |
+| **End date** | Sets the latest date respondents can select. |
+| **Skip if no query string** | Shows the question only when the specified query string is present. |
+| **Query string name** | Enter the query string that controls whether the question is shown. |
 
-<Note>
-  **Needs product verification:** Confirm whether "Date and time" (including time picker) and "Calendar start day" (Monday vs Sunday) settings exist for this question type.
-</Note>
+## Conditions
+
+Use **Add conditional rule** under **Ask only if** to control whether the whole Date question is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
 
 ## What respondents see
 
-Respondents see a date input field, often with a calendar icon that opens a date picker. They can click a date in the calendar or type directly into the field if permitted. Dates outside the set range are rejected. If the question is mandatory, the "Next" button remains disabled until a valid date is entered.
-
-## Logic and piping
-
-You can use the date value in logic to show or hide later questions. For example, if a respondent selects a date more than 12 months ago, you can branch to a re-engagement question. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+Respondents select a date using a calendar. If **Multiple choices** is enabled, they can select more than one date. If you set a start or end date, dates outside that range are unavailable.
 
 ## Results in reporting
 
-Results appear as a distribution of responses by day, month, or year, depending on the range of data collected. You can also view minimum, maximum, and average dates. Raw values are available in exports for time-based segmentation.
+Results appear in a calendar view, showing the percentage of respondents who selected each date. Choose a time period, such as one month, three months or one year, or set a custom date range to explore the results.
 
 ## Example use case
 
-A travel company asks, "When did you last book a holiday with us?" with a maximum date of today. Respondents who booked within the last six months are routed to a satisfaction question, while those who booked longer ago are asked what would bring them back.
+A training provider asks, “Which date would you prefer for your course?” They limit the available dates to the upcoming course period, so respondents can choose only from valid dates.
 
 ## Related guides
 
 - [Questionnaire overview](/questionnaire/overview)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Numeric Entry question](/questionnaire/numeric-entry)
-- [Single Choice question](/questionnaire/single-choice)

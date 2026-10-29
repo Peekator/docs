@@ -1,67 +1,138 @@
 ---
-title: "Van Westendorp question in Peekator"
+title: "Van Westendorp question"
 sidebarTitle: "Van Westendorp"
-description: "Learn how to add a Van Westendorp Price Sensitivity Meter to find acceptable price ranges in Peekator surveys."
+description: "Use a Van Westendorp question to understand price sensitivity and identify an acceptable price range for a product or service. Respondents provide four price thresholds: when the offer feels too cheap, affordable, expensive and too expensive."
 ---
 
-A Van Westendorp question, also known as the Price Sensitivity Meter, asks respondents four questions about price perception: at what price the product is too cheap, cheap, expensive, and too expensive. The overlapping responses produce an acceptable price range and key price points, including the Point of Marginal Cheapness and the Point of Marginal Expensiveness.
+## When to use Van Westendorp
 
-## When to use this question type
+Use this question when you need to explore pricing for a product, service, subscription or ticket.
 
-- You want to identify the range of prices consumers consider acceptable.
-- You need to find the optimal price point where the maximum percentage of consumers view the product as neither too cheap nor too expensive.
-- You want a standardised pricing research method that is widely understood and benchmarked.
+It helps you understand:
 
-## How to add it
+- the price range respondents consider acceptable;
+- the point at which the offer feels like a bargain;
+- when the price starts to feel expensive; and
+- when it becomes too expensive to consider.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Van Westendorp** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and define the product description and price range guidance.
-  </Step>
-</Steps>
+## Add a Van Westendorp question
 
-## Settings
+1. In the questionnaire builder, select **Add questions**.
+2. Choose **Van Westendorp**.
+3. Enter the question text.
+4. Review and edit the four price questions if needed.
+5. Set the price range and currency.
 
-| Setting | Description |
-| --- | --- |
-| Product description | The text or image describing the product respondents evaluate. |
-| Price range guidance | Optional minimum and maximum values to guide respondent input. |
-| Question labels | The four standard questions: "At what price would you consider this product too cheap?", "cheap?", "expensive?", "too expensive?" |
-| Mandatory | Requires all four prices to be entered before the respondent can continue. |
+An **Instruction note** is added automatically. You can edit it to give respondents additional guidance.
 
-<Note>
-  **Needs product verification:** Confirm whether "Currency symbol" and "Allow same price for multiple questions" settings exist for this question type.
-</Note>
+## Configure the price questions
+
+The question includes four prompts:
+
+<table>
+  <colgroup>
+    <col width="210" />
+    <col width="464" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Prompt</th>
+      <th>What it measures</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Too cheap**</td>
+      <td>The price at which the offer feels so low that respondents question its quality.</td>
+    </tr>
+    <tr>
+      <td>**Affordable**</td>
+      <td>The price at which the offer feels like a good value or bargain.</td>
+    </tr>
+    <tr>
+      <td>**Expensive**</td>
+      <td>The price at which the offer feels expensive but is still worth considering.</td>
+    </tr>
+    <tr>
+      <td>**Too expensive**</td>
+      <td>The price at which respondents would no longer consider buying.</td>
+    </tr>
+  </tbody>
+</table>
+
+You can edit these prompts to match your product or service. All four responses are required.
+
+## Configure the scale
+
+In **Settings**, define the price scale respondents use:
+
+<table>
+  <colgroup>
+    <col width="186" />
+    <col width="514" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Min value**</td>
+      <td>Sets the lowest price respondents can select.</td>
+    </tr>
+    <tr>
+      <td>**Max value**</td>
+      <td>Sets the highest price respondents can select.</td>
+    </tr>
+    <tr>
+      <td>**Currency**</td>
+      <td>Sets the currency label shown with prices.</td>
+    </tr>
+    <tr>
+      <td>**No. of decimal places**</td>
+      <td>Sets how many decimal places respondents can use.</td>
+    </tr>
+    <tr>
+      <td>**Step size**</td>
+      <td>Sets the increment respondents move through the scale by.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Conditional logic
+
+Under **Ask only if**, select **Add conditional rule** to control whether the entire Van Westendorp question is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
 
 ## What respondents see
 
-Respondents see the product description followed by four numeric input fields, each with one of the standard price perception questions. They type a price into each field. The questions are ordered from "too cheap" to "too expensive". If mandatory, all four fields must be completed before they can continue.
+Respondents use sliders to select a price for each of the four prompts.
 
-<Warning>
-  Van Westendorp questions involve four interdependent numeric inputs and validation. Always preview and test the full questionnaire before launching to ensure the price fields accept valid ranges and the flow behaves correctly.
-</Warning>
-
-## Logic and piping
-
-You can use the individual price points or the derived acceptable range in logic to show or hide later questions. For example, if a respondent's acceptable range is very narrow, you can branch to a follow-up about price sensitivity. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+They consider the same product or service throughout, moving from the point at which it feels too cheap to the point at which it feels too expensive.
 
 ## Results in reporting
 
-Results show four cumulative frequency curves plotted on the same chart: too cheap, cheap, expensive, and too expensive. The intersections define the Point of Marginal Cheapness, Point of Marginal Expensiveness, and the Indifference Price Point. An optimal price range is highlighted where the largest percentage of respondents find the price acceptable.
+Results show four price-sensitivity curves, one for each price prompt.
+
+Peekator also calculates:
+
+- **Acceptable price range** — the lower and upper prices respondents are generally willing to accept;
+- **Optimum price point** — the price that best balances concerns that the offer is too cheap or too expensive; and
+- **Indifference price point** — the point at which similar shares of respondents see the price as expensive and as a bargain.
+
+Use these results as an evidence-based starting point for pricing decisions alongside costs, positioning and commercial objectives.
 
 ## Example use case
 
-A subscription box service tests a new monthly box. The Van Westendorp results show an acceptable price range of £24 to £36, with an Indifference Price Point at £30. The company sets the launch price at £29.99 to capture the broadest acceptance while staying below the psychological threshold.
+A fitness app is considering the monthly price for a premium subscription. It asks potential customers when the price would feel too cheap, like good value, expensive but acceptable, and too expensive.
+
+The results show an acceptable price range and help the team choose a subscription price that balances perceived value with demand.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
+- [Gabor Granger question](/questionnaire/gabor-granger)
+- [Conjoint analysis question](/questionnaire/conjoint-analysis)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Gabor-Granger question](/questionnaire/gabor-granger)
-- [Conjoint Analysis question](/questionnaire/conjoint-analysis)

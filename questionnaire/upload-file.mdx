@@ -1,64 +1,63 @@
 ---
-title: "Upload File question in Peekator"
+title: "Upload file question"
 sidebarTitle: "Upload File"
-description: "Learn how to add an Upload File question so respondents attach documents, images, or media in Peekator surveys."
+description: "Use an Upload file question to ask respondents to attach one or more files as their answer. It is useful when a written response is not enough, such as when you need respondents to share images, videos or supporting documents."
 ---
 
-An Upload File question lets respondents attach files directly to their survey response. Use this type when you need receipts, screenshots, photos, audio recordings, or any other file type that supports your research objectives. This is common in customer support research, product testing, and ethnographic studies.
+## When to use an Upload file question
 
-## When to use this question type
+Use this question when respondents need to provide files, for example:
 
-- You need visual evidence, such as photos of a product in use or screenshots of an issue.
-- You want respondents to submit documents, for example, invoices or consent forms.
-- You are running a creative or design contest where submissions are required.
+- photos of a product or receipt;
+- a short video;
+- creative work or design files; or
+- documents that support their response.
 
-## How to add it
+## Add an Upload file question
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Upload File** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and set file type limits, size limits, and the number of files allowed.
-  </Step>
-</Steps>
+1. In the questionnaire builder, select **Add questions**.
+2. Choose **Upload file**.
+3. Enter the question text.
+4. Save the question.
 
-## Settings
-
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see, for example, "Please upload a photo of your receipt." |
-| Allowed file types | The formats respondents can upload, for example, JPG, PNG, PDF, MP4. |
-| Maximum file size | The largest file size permitted per upload, in megabytes. |
-| Maximum number of files | The highest number of files a respondent can attach. |
-| Mandatory | Requires at least one file upload before the respondent can continue. |
+<Info>
+  An **Instruction note** is added automatically. You can edit it to give respondents additional guidance, including the number or type of files you need.
+</Info>
 
 <Note>
-  **Needs product verification:** Confirm whether "Drag-and-drop area" and "Camera capture on mobile" settings exist for this question type.
+  Respondents can upload up to five files.
 </Note>
+
+## Conditional logic
+
+Under **Ask only if**, select **Add conditional rule** to control whether the entire Upload file question is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
 
 ## What respondents see
 
-Respondents see an upload area with a button to browse their device or drag and drop files. They select one or more files within the allowed types and size limits. A progress indicator shows upload status. If mandatory, the "Next" button remains disabled until at least one valid file is uploaded.
+Respondents see an upload area where they can attach one or more files to answer the question.
 
-## Logic and piping
-
-You can use the presence or absence of an upload in logic to show or hide later questions. For example, if a respondent uploads a file, you can skip a text description question. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+Make the question clear about what they should upload. For example: _“Please upload up to five photos of your current workspace.”_
 
 ## Results in reporting
 
-Uploaded files are listed in the response view with download links. You can view, download, and organise files per respondent. File metadata, such as upload time and file size, may also be shown. Files are included in exports where supported.
+Results list the files submitted by respondents, including each file’s name and type.
+
+You can:
+
+- select **View all** to review all uploaded files;
+- select **Download all** to download every file; or
+- view or download individual files from the list.
 
 ## Example use case
 
-A consumer electronics company runs a product test and asks participants to upload a photo of the product installed in their home. The images are reviewed to verify installation context and used in a follow-up qualitative analysis.
+A retailer asks customers to upload photos of how they use a product at home.
+
+The uploaded images give the team visual evidence of real-life use cases, helping them identify common behaviours and opportunities for improvement.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
+- [Open-end question](/questionnaire/open-end)
+- [Multiple line open-end question](/questionnaire/multiple-link-open-end)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Open End question](/questionnaire/open-end)
-- [Information Screen question](/questionnaire/information-screen)

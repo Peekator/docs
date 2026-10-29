@@ -1,65 +1,64 @@
 ---
-title: "Information Screen question in Peekator"
+title: "Information screen in Peekator"
 sidebarTitle: "Information Screen"
-description: "Learn how to add an Information Screen to display text, images, or instructions with no required response in Peekator surveys."
+description: "Use an Information screen to show respondents a message without collecting an answer. For example, you can use it to introduce a section, explain what happens next or share instructions."
 ---
 
-An Information Screen displays content to respondents without asking for an answer. Use this type for welcome messages, consent statements, instructions between sections, or thank-you pages. It helps structure the questionnaire and set expectations without adding to your response data.
+## When to use this screen
 
-## When to use this question type
+Use an Information screen when you want to:
 
-- You want to show a welcome message or instructions before the first question.
-- You need to display a consent statement or privacy notice.
-- You want to divide the questionnaire into sections with transition screens.
-- You want to end the survey with a thank-you or redirection message.
+- Welcome respondents or introduce the survey.
+- Explain a task before respondents answer questions.
+- Add context between sections of a questionnaire.
+- Show a thank you or next steps message.
 
-## How to add it
+## Add an Information screen
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Information Screen** from the popup.
-  </Step>
-  <Step>
-    The screen appears on the canvas. Click it to open the configuration panel and add your text, images, or formatting.
-  </Step>
-</Steps>
+1. In the questionnaire builder, select **Add questions**.
+2. Select **Information screen**.
+3. Enter your message in the editor.
+4. Select **Save question**.
 
-## Settings
+## Create your message
 
-| Setting | Description |
-| --- | --- |
-| Screen title | The headline respondents see. |
-| Body text | The main content, which supports rich text formatting. |
-| Image or media | An optional image, video, or file to display on the screen. |
-| Button label | The text on the button that advances the respondent, for example, "Continue" or "I agree". |
-| Auto-advance | Automatically moves to the next question after a set time. |
+Use the message editor to format your content. You can add:
 
-<Note>
-  **Needs product verification:** Confirm whether "Background colour" and "Custom CSS" settings exist for this question type.
-</Note>
+- Bold, italic, underlined and strikethrough text.
+- Headings, text alignment and lists.
+- Text and highlight colours.
+- Links, images, files and videos.
+
+Keep the message focused and make any action respondents need to take clear.
+
+## Add a screen title
+
+In the settings panel, enable **Screen title** to add a title above the message. The title appears beside the Information screen icon.
+
+Select **Make default for all info screens** if you want new Information screens to use the same title setting.
+
+## Conditions
+
+Use **Add conditional rule** under **Ask only if** to control whether the Information screen is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
 
 ## What respondents see
 
-Respondents see a screen with a title, body text, and optionally an image or media file. They read the content and click a button to continue. If auto-advance is enabled, the screen moves on automatically after the set duration. No data is collected from this screen.
-
-## Logic and piping
-
-Information Screens do not collect data, so they cannot be used as conditions in logic. However, you can place them before or after logic branches to create structured flows. For full instructions on logic, see [Logic and branching](/questionnaire/logic-and-branching).
+Respondents see your formatted message and select **Next** to continue. Information screens do not require a response.
 
 ## Results in reporting
 
-Information Screens do not produce response data. They appear in the questionnaire structure for reference but have no entries in the results dashboard or exports.
+Information screens do not collect answers, so they do not create results in reporting. You can still use them to guide respondents through different paths in the questionnaire.
 
 ## Example use case
 
-A market research agency places an Information Screen at the start of a survey with the title "Welcome to our study" and body text explaining the purpose, estimated duration, and confidentiality assurances. Respondents click "Begin survey" to proceed to the first question.
+Before a product evaluation section, add an Information screen that says:
+
+> Next, we will ask about your experience with the product. Please consider your most recent use when answering the following questions.
 
 ## Related guides
 
 - [Questionnaire overview](/questionnaire/overview)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Single Choice question](/questionnaire/single-choice)
-- [Open End question](/questionnaire/open-end)
+- [Questio](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#)[n types](/questionnaire/question-types)

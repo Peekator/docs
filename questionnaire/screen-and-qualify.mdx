@@ -1,52 +1,155 @@
 ---
-title: "Screen and qualify respondents in Peekator"
+title: "Screen and qualify respondents"
 sidebarTitle: "Screeners"
-description: "Use screenout questions in Peekator to filter respondents who do not meet your criteria and end their survey early."
 ---
 
-Screening lets you end a survey early for respondents who do not meet your qualifying criteria. In Peekator, you do this with the **ScreenoutQuestion** type, which checks conditions and redirects ineligible respondents to a screenout message.
+Use screeners to stop respondents who do not meet your survey criteria.
 
-## How screening works
+Peekator offers two ways to set up a screener:
 
-When a respondent answers a screenout question, Peekator evaluates the conditions you set. If the respondent does not match, the survey ends immediately and the respondent sees the **OnScreenoutText** configured in survey settings.
+<table>
+  <colgroup>
+    <col width="187" />
+    <col width="471" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Best for</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Regular screenout**</td>
+      <td>A simple rule based on whether one answer is selected or not selected.</td>
+    </tr>
+    <tr>
+      <td>**Advanced Screenout**</td>
+      <td>Grid questions, more complex multiple-choice logic, or rules that combine several answers or questions.</td>
+    </tr>
+  </tbody>
+</table>
 
-## Add a screenout question
+## Regular screenout
 
-<Steps>
-  <Step title="Open Add questions">
-    Click **Add questions** in the questionnaire menu to open the question type selector.
-  </Step>
-  <Step title="Select Screenout">
-    Choose the **ScreenoutQuestion** type (Filter respondents) and place it on the canvas.
-  </Step>
-  <Step title="Set the conditions">
-    Define which answers qualify the respondent to continue. Respondents who select other answers will be screened out.
-  </Step>
-  <Step title="Review the screenout text">
-    Confirm the **OnScreenoutText** in survey settings says what you want ineligible respondents to see.
-  </Step>
-</Steps>
+Use a regular screenout when one answer should immediately screen a respondent out, or when a required answer has not been selected.
+
+For each answer option, open its answer settings and select one of the following:
+
+- **Screenout if this answer is selected**
+- **Screenout if this answer isn't selected**
+
+For example, ask:
+
+> Are you personally involved in decisions about purchasing software for your organisation?
+
+If only decision-makers should continue, add **Screenout if this answer is selected** to the answer **No**.
+
+Use regular screenout only for straightforward, single-answer rules.
+
+## When not to use regular screenout
+
+Do not use regular screenout when a respondent can qualify through more than one muliple-choice answer.
+
+For example, ask:
+
+> Which of the following are you involved in at work? Select all that apply.
+
+A respondent should qualify if they select either:
+
+- **Purchasing software**; or
+- **Managing IT systems**.
+
+Regular screenout cannot create this rule correctly:
+
+- screening out every other answer could also screen out someone who selected a qualifying answer alongside another option; and
+- adding **isn't selected** to both qualifying answers would require respondents to select both answers, rather than either one.
+
+Use **Advanced Screenout** for this type of rule.
+
+## Advanced Screenout
+
+Use **Advanced Screenout** when your screener requires condition logic.
+
+It is the recommended option for:
+
+- Grid questions;
+- Multiple choice questions where respondents can qualify through one of several answers;
+- conditions across more than one question; and
+- any screener that cannot be created with a regular per-answer screenout.
+
+To add one:
+
+1. In the questionnaire builder, open **Options**.
+2. Select **Filter respondents (Advanced Screenout)**.
+3. Under **Ask only if**, select **Add conditional rule**.
+4. Set up the conditions in the same way as question and group conditions.
+5. Choose the required advanced-screenout outcome.
+6. Save the filter.
 
 <Note>
-  **Needs product verification:** exact flow for setting screenout conditions and whether advanced quota-based screenouts exist.
+  Conditions are required for an Advanced Screenout to work.
 </Note>
 
-## When to use screenouts
+For the work-responsibility example above, create a condition where the question **IS EITHER** **Purchasing software** or **Managing IT systems**. Then select **Let respondents through only if they meet the conditions**.
 
-- **Qualifying demographics:** ensure only target age groups, regions, or roles proceed
-- **Removing ineligible respondents:** filter out those who do not use a product or meet a behaviour criterion
-- **Protecting sample quality:** stop unqualified responses from entering your data set
+For more information on creating conditions, see [Logic and branching](https://chatgpt.com/logic-and-branching).
 
-## Test before launch
+## Choose the outcome
 
-Always test screening logic before launching. Use the **test link** to walk through every answer path and confirm that:
+After setting the conditions, choose what should happen when respondents reach the Advanced Screenout.
 
-- Qualifying answers let the respondent continue
-- Non-qualifying answers trigger the screenout message
-- The screenout text displays correctly
+<table>
+  <colgroup>
+    <col width="325" />
+    <col width="372" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Screenout respondents if they meet the conditions**</td>
+      <td>Respondents who meet the conditions are screened out.</td>
+    </tr>
+    <tr>
+      <td>**Let respondents through only if they meet the conditions**</td>
+      <td>Only respondents who meet the conditions continue. Everyone else is screened out.</td>
+    </tr>
+    <tr>
+      <td>**Respondents will automatically fail quality control if they meet the conditions**</td>
+      <td>Respondents who meet the conditions are redirected to the panel’s quality-fail outcome.</td>
+    </tr>
+    <tr>
+      <td>**Respondents will automatically fail quality control unless they meet the conditions**</td>
+      <td>Respondents who do not meet the conditions are redirected to the panel’s quality-fail outcome.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Use quality control for data-quality failures
+
+Use the two **quality control** options for respondents who should fail a data-quality check, rather than for ordinary eligibility criteria.
+
+A quality-control failure redirects the respondent to the panel’s quality-fail outcome instead of a normal screenout. This is important because it prevents quality failures from increasing your screenout or dropout rate.
+
+For example, use quality control for failed attention checks, inconsistent answers or other evidence that a respondent did not complete the survey properly.
+
+## Test your screener
+
+Preview and test the questionnaire with qualifying and non-qualifying answers before launching.
+
+Check that:
+
+- qualifying respondents continue;
+- non-qualifying respondents receive the intended outcome; and
+- quality-control failures are sent to the quality-fail outcome rather than a standard screenout.
 
 ## Related guides
 
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Quotas](/questionnaire/quotas)
-- [Survey settings](/survey-settings/overview)
+- [Multiple Choice question](/questionnaire/multiple-choice)
+- [Grid question](/questionnaire/grid)

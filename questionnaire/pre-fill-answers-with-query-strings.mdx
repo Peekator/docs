@@ -1,0 +1,115 @@
+---
+title: "Query Strings"
+description: "Use a query string to pre-fill a respondent’s answer from the survey link, rather than asking them the question in the survey."
+---
+
+# Pre-fill answers with query strings
+
+Use a **query string** to pre-fill a respondent’s answer from the survey link, rather than asking them the question in the survey.
+
+Query strings are also commonly called **URL parameters** or **URL variables**. They are added to the **end of a live survey URL after a** `?`.
+
+For example:
+
+```text wrap
+https://platform.peekator.com/survey-engine/Live/9b9e4b9b-c781-4840-ff6d-08df1ecdff27?Language=English
+```
+
+In this example:
+
+- `Language` is the query string name.
+- `English` is the value that pre-fills the answer.
+
+This is useful when you already know information about a respondent, such as their language or audience, and do not need to ask them for it.
+
+## Set up a question to use a query string
+
+1. Add the question you want to pre-fill. For example, add a **Single choice** question for audience or a **Language single choice** question for survey language.
+2. Add the possible answers.
+3. Open the question’s **Settings** and select **See more**.
+4. In **Query string name**, enter a name for the value you will add to the survey URL, such as `Language` or `Audience`.
+5. Select **Confirm**.
+
+The value in the link must match one of the question’s answers exactly.
+
+<Warning>
+  Do not use blank spaces in a query string name or value. Use an underscore instead. For example, create the answer as Existing_Customer, then use that exact value in the survey link.
+</Warning>
+
+## Skip the question
+
+Enable **Skip if no query string** if the question should not be shown when the survey link does not include that query string.
+
+This is useful for questions that exist only to store information from the URL, rather than to collect an answer directly from the respondent.
+
+## Send respondents directly to their language
+
+Use a query string with a **Language single choice** question when you want to send respondents directly to a translated version of the survey.
+
+For example, set the query string name to `Language` and add these answers:
+
+- English
+- French
+- German
+
+Use a separate live link for each language:
+
+```text wrap
+https://platform.peekator.com/survey-engine/Live/9b9e4b9b-c781-4840-ff6d-08df1ecdff27?Language=English
+```
+
+```text wrap
+https://platform.peekator.com/survey-engine/Live/9b9e4b9b-c781-4840-ff6d-08df1ecdff27?Language=French
+```
+
+The respondent’s language is selected automatically, so they do not need to choose it themselves.
+
+## Route different audiences
+
+You can use the same approach to identify different audiences without asking respondents to select an answer.
+
+For example, create a **Single choice** question for audience with these answers:
+
+- Existing_Customer
+- Prospect
+- Partner
+
+Set the query string name to `Audience`, then create a link for each group:
+
+```text wrap
+https://platform.peekator.com/survey-engine/Live/9b9e4b9b-c781-4840-ff6d-08df1ecdff27?Audience=Existing_Customer
+```
+
+You can then use the pre-filled answer in conditions, quotas or reporting to manage each audience separately.
+
+## Combine query strings
+
+You can add more than one query string to the same survey link.
+
+Start the first query string with `?`, then add each additional query string with `&`.
+
+For example, to pre-fill both the language and audience:
+
+```text wrap
+https://platform.peekator.com/survey-engine/Live/9b9e4b9b-c781-4840-ff6d-08df1ecdff27?Language=English&Audience=Existing_Customer
+```
+
+This link automatically selects:
+
+- `English` for the **Language** question; and
+- `Existing_Customer` for the **Audience** question.
+
+## Test every link
+
+Before launching, open each link and confirm that:
+
+- the intended answer is pre-filled;
+- the question is skipped when appropriate; and
+- respondents see the correct language or survey path.
+
+## Related pages
+
+- [Language single choice](/questionnaire/language-single-choice)
+- [Survey Translations](/questionnaire/translations)
+- [Logic and Branching](/questionnaire/logic-and-branching)
+- [Quotas](/questionnaire/quotas)

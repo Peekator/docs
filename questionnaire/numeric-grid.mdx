@@ -1,68 +1,112 @@
 ---
-title: "Numeric Grid question in Peekator"
+title: "Numeric Grid question"
 sidebarTitle: "Numeric Grid"
-description: "Learn how to add and configure a Numeric Grid question so respondents enter numbers for multiple items in Peekator surveys."
+description: "Use a Numeric Grid question when respondents need to enter numbers for several related items in one table. For example, collect the number of products purchased across several categories, or the number of employees by role or department."
 ---
 
-A Numeric Grid question presents a matrix where respondents enter a number for each row. This is useful for collecting quantities, percentages, or scores across several items in a compact format, such as units purchased or hours spent.
+## When to use a Numeric Grid question
 
-## When to use this question type
+- You need numeric answers for several related items.
+- You want to compare amounts across categories.
+- You want to calculate totals by row or column.
 
-- You need numeric input for multiple related items in one question.
-- You want to collect quantities, percentages, or scores that can be summed or averaged.
-- You prefer a compact layout instead of separate numeric entry questions.
+## Add a Numeric Grid question
 
-## How to add it
+1. In the Questionnaire builder, select **Add question**.
+2. Select **Numeric grid**.
+3. Enter your question text.
+4. An **Instruction note** is added automatically. Edit it if needed.
+5. Add your **Rows**. These are the items respondents will enter numbers for.
+6. Add your **Columns**. These are the categories respondents will enter numbers against.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Numeric Grid** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and add rows, set validation rules, and define the input format.
-  </Step>
-</Steps>
+<Tip>
+  You can **paste multiple rows** or **columns** into the first field. Peekator automatically separates them into individual items.
+</Tip>
 
-## Settings
+[Insert screenshot: Numeric Grid question builder]
 
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see above the grid. |
-| Rows | The items respondents provide numbers for. |
-| Column label | The header for the numeric input column. |
-| Minimum value | The lowest number a respondent can enter. |
-| Maximum value | The highest number a respondent can enter. |
-| Decimal places | Whether to allow decimals and how many. |
-| Mandatory | Requires a value for every row before the respondent can continue. |
-| Randomise rows | Shuffles the order of rows for each respondent. |
-| Sum to total | Requires all row values to add up to a specified total. |
+## Configure the Numeric Grid
 
-<Note>
-  **Needs product verification:** Confirm whether "Prefix/suffix" (for example, currency symbols or "%") and "Allow negative numbers" settings exist for this question type.
-</Note>
+<table>
+  <colgroup>
+    <col width="253" />
+    <col width="470" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>What it means</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shuffle rows</td>
+      <td>Randomises the order of rows for each respondent.</td>
+    </tr>
+    <tr>
+      <td>Shuffle columns</td>
+      <td>Randomises the order of columns for each respondent.</td>
+    </tr>
+    <tr>
+      <td>Conditional rule on answer</td>
+      <td>Controls when an individual Grid item is shown.</td>
+    </tr>
+    <tr>
+      <td>Total per column</td>
+      <td>Adds a total for each column.</td>
+    </tr>
+    <tr>
+      <td>Total per row</td>
+      <td>Adds a total for each row.</td>
+    </tr>
+    <tr>
+      <td>Always show as mobile version</td>
+      <td>Shows each row as an individual statement instead of a table on all devices. This is the “flying statements” layout.</td>
+    </tr>
+    <tr>
+      <td>Answers are mandatory</td>
+      <td>Requires respondents to enter a number in every cell before continuing.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Add conditions and piping
+
+Use **Add conditional rule** in the **Ask only if** section to control whether respondents see the whole Numeric Grid.
+
+Use **Conditional rule on answer** to add conditions to individual Grid items.
+
+Select **Pipe answers** to use answers from earlier questions in your Numeric Grid.
+
+For full instructions, see [Logic and branching](#) and [Piping answers](#).
 
 ## What respondents see
 
-Respondents see a table with rows on the left and a single numeric input column. They type a number into each cell. Input may be restricted by minimum, maximum, or decimal rules. If the question is mandatory, they must fill every row before continuing.
+Respondents see a table with rows on the left and numeric input fields for each column.
 
-<Warning>
-  Numeric Grid questions involve multiple validation rules. Always preview and test the full questionnaire before launching to ensure limits, totals, and mandatory rules behave correctly.
-</Warning>
-
-## Logic and piping
-
-You can use values from individual rows in logic to show or hide later questions. For example, if a respondent enters zero for a product, you can skip follow-up questions about that product. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+If **Answers are mandatory** is enabled, respondents must enter a number in every cell. If **Always show as mobile version** is enabled, each row appears as a separate statement rather than part of a table.
 
 ## Results in reporting
 
-Results appear as a table with average, minimum, maximum, and total values for each row. If "Sum to total" is enabled, the total is also shown. Data can be exported for further statistical analysis.
+Reporting displays the numeric results for each row and column. You can switch between **Average** and **Median** views.
 
-## Example use case
+If you enable row or column totals, the totals also appear in reporting.
 
-A beverage company asks, "How many units of each drink did you purchase last month?" with rows for Cola, Lemonade, and Energy Drink. Respondents enter whole numbers. The company uses the totals to estimate market share.
+## Example
+
+Ask: “During the past 12 months, how many employees left your organisation for each of the following reasons?”
+
+Rows:
+
+- Dismissal
+- Resignation
+- Retirement
+
+Columns:
+
+- Male
+- Female
+- Other
 
 ## Related guides
 

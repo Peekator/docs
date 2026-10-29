@@ -1,108 +1,112 @@
 ---
-title: "Survey settings in Peekator"
+title: "Survey settings"
 sidebarTitle: "Survey Settings"
-description: "Configure respondent experience, collection limits, quality control, exports, redirects, and AI context from the Setup area of any Peekator survey."
+description: "The settings available for a survey depend on the distribution channel you select. Basic settings are available for all surveys, while additional settings are available when you distribute through a link, campaign or your own panel."
 ---
 
-Survey settings control how respondents interact with your survey, how responses are collected, and what data appears in your exports. Open the **Setup** area of a survey, then select the **Settings** section to adjust these options.
+Use **Setup** → **Settings** to manage survey settings.
 
-## Respondent experience
+## Basic settings
 
-These settings affect what respondents see before, during, and after the survey.
+Everyone can view and edit these settings.
 
-| Setting | Description | Default |
-| --- | --- | --- |
-| **IntroText** | Text shown on the welcome screen before the first question. | Empty |
-| **OnCompleteText** | Message shown on the completion screen after the survey is finished. | Empty |
-| **OnScreenoutText** | Message shown when a respondent is screened out. | Empty |
-| **OnQuotaFullText** | Message shown when a quota group is full. | Empty |
-| **EnableBackButton** | Lets respondents return to previous questions. | On |
-| **ShowAverageRespondentTime** | Displays the estimated completion time on the welcome screen. | On |
-| **ShouldAutoSkipWelcomeScreen** | Automatically skips the welcome screen for returning respondents. |  |
-| **DisableAutoSkipOnAllQuestions** | Prevents automatic skipping across all questions. |  |
+### Set the main survey language
 
-## Collection settings
+Use **Main Language of the Survey** to select the survey’s original language. English is selected by default.
 
-These settings define when and how many responses you want to collect.
+For translated surveys, this is the language that all translations are based on. See [Survey translations](/questionnaire/translations).
 
-| Setting | Description | Default |
-| --- | --- | --- |
-| **TotalNumberOfRespondents** | Target number of completed responses. | 500 |
-| **DateFrom** | Date and time when the survey opens for responses. | Empty |
-| **DateTo** | Date and time when the survey closes. | Empty |
-| **Language** | Language used for standard UI labels and messages. |  |
-| **MarketId** | Target market or country for the survey. |  |
+### Let respondents go back
 
-## Time limit for continuing
+Enable **Enable Back Button** to let respondents return to previous questions.
 
-Use these settings if you want respondents to be able to pause and resume the survey later.
+## Set respondent messages
 
-| Setting | Description | Default |
-| --- | --- | --- |
-| **AllowContinuingTheSurvey** | Lets respondents return to a partially completed survey. |  |
-| **TimeLimitForContinuingInHours** | How long a partially completed session remains available. | 24 hours |
+Use **Messages** to edit the text respondents see at key points in the survey.
 
-## Quality control
+| Message | When respondents see it |
+| :-- | :-- |
+| **Introduction message** | On the welcome screen before the survey starts. |
+| **Success message** | After completing the survey. |
+| **Screenout message** | When they are screened out. |
+| **Quota full message** | When the relevant quota is full. |
 
-These settings flag responses that are completed too quickly, so you can review or exclude them.
+Use the editor toolbar to format text and add links or media.
 
-| Setting | Description | Default |
-| --- | --- | --- |
-| **EnforceSpeedingQC** | Flags responses that are completed faster than the allowed minimum time. |  |
-| **AverageMinutesExpected** | Expected average completion time in minutes. |  |
-| **MinimumTimePercentageAllowed** | Minimum percentage of the expected time a respondent must spend. |  |
+## Configure basic exports
 
-## Export settings
+Enable **Show SPSS codes on all questions** to include SPSS codes for every question in your survey export.
 
-These settings add extra columns to your exported data.
+## Add context for better AI
 
-| Setting | Description | Default |
-| --- | --- | --- |
-| **ShowTimeSpentOnEachQuestionInExport** | Includes a time-spent column per question in exports. |  |
-| **ShowLengthOfInterviewInExport** | Includes total interview length in exports. |  |
-| **ShowSpssCodeOnAllQuestionsInExport** | Includes SPSS syntax codes for all questions in exports. |  |
+Add your research and business goals to help Peekator AI interpret your survey results.
 
-## Redirects
+| Field | What to add |
+| :-- | :-- |
+| **What’s your research goal of the project** | The research question you want the survey to answer. |
+| **What’s your business goal of the project** | The business decision or outcome the research should support. |
 
-Send respondents to an external page after they finish the survey.
+For example:
 
-| Setting | Description | Default |
-| --- | --- | --- |
-| **ShouldRedirectAtTheEnd** | Redirects respondents to a custom URL after completion. | Off |
-| **RedirectUrl** | The external URL to redirect to. | Empty |
+- Research goal: _What would be an acceptable price range for our new product in the UK market?_
+- Business goal: _Decide which price point and positioning to use for launch._
 
-## HTML screen title
+This context helps improve AI-generated summaries, analysis and auto-coding.
 
-Control the browser tab title respondents see.
+<Note>
+  Save each settings section separately after making changes.
+</Note>
 
-| Setting | Description | Default |
-| --- | --- | --- |
-| **UseDefaultHtmlScreenTitle** | Uses the survey name as the browser tab title. |  |
-| **DefaultHtmlScreenTitle** | Custom text for the browser tab title. | Empty |
+## Advanced settings
 
-## AI context
+Advanced settings are available only when you distribute your survey through a link, campaign or your own panel.
 
-Link your survey to an AI summary configuration so that **Chat with Results** and **Auto-coding** use the right context.
+### Manage collection
 
-| Setting | Description |
-| --- | --- |
-| **AiSummaryParametersId** | References a saved AI summary parameter set. |
+Use **Survey Status** to control whether the survey is collecting responses. Check this before sharing the survey.
 
-## Custom CSS
+### Add more information to exports
 
-Apply advanced styling to your survey with a custom stylesheet.
+If available, you can also include:
 
-| Setting | Description |
-| --- | --- |
-| **CustomCss** | CSS rules injected into the respondent-facing survey page. |
+| Setting | What it does |
+| :-- | :-- |
+| **Show time spent on each question** | Includes the time each respondent spent on every question. |
+| **Show length of interview** | Includes each respondent’s total interview length. |
 
-<Warning>
-  Custom CSS is an advanced feature. Incorrect styles may break the survey layout on mobile devices. Test thoroughly before launching.
-</Warning>
+### Show the estimated survey length
 
-## Related guides
+Enable **Show average respondent time** to display the estimated completion time to respondents.
 
-- [Build your questionnaire](/questionnaire/overview)
-- [Screen and qualify respondents](/questionnaire/screen-and-qualify)
-- [Set response quotas](/questionnaire/quotas)
-- [Distribute your survey](/distribution/overview)
+Enter the **Average expected time for the survey completion** in minutes.
+
+### Check for speeders
+
+Use these settings to identify respondents who complete the survey too quickly:
+
+1. Enter the expected completion time.
+2. Set the **Percentage cutoff time**.
+3. Enable **Turn on QC for speeders**.
+
+For example, if the expected completion time is 6 minutes and the cut-off is 30%, the speeder threshold is 1.8 minutes. Responses completed faster than this are assessed by the speeder quality-control rule.
+
+### Control survey flow
+
+| Setting | What it does |
+| :-- | :-- |
+| **Allow continuing the survey** | Lets respondents return to a partially completed survey. |
+| **Redirect survey at the end** | Sends respondents to another URL after they complete the survey. |
+| **Skip welcome screen** | Sends respondents directly to the first question instead of showing the introduction message. |
+| **Require respondents to click Continue after selecting an answer** | Requires respondents to confirm their selection before moving on. |
+
+### Brand your survey
+
+Use **Custom CSS for this survey** for white-label branding.
+
+To add your logo or change the survey colours to match your brand, contact the Peekator team. We can configure the styling for you.
+
+## Related pages
+
+- [Survey translations](/questionnaire/translations)
+- [Screeners](/questionnaire/screen-and-qualify)
+- [Quotas](/questionnaire/quotas)

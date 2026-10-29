@@ -1,69 +1,103 @@
 ---
-title: "MaxDiff question in Peekator"
+title: "MaxDiff question"
 sidebarTitle: "MaxDiff"
-description: "Learn how to add a MaxDiff question for best-worst scaling to measure relative importance in Peekator surveys."
+description: "Use a MaxDiff question to identify which items matter most and least to respondents. Each screen shows a small set of items, and respondents choose one as the best and one as the worst.\nMaxDiff is useful when you need clear priorities across a longer list of features, statements, values or benefits."
 ---
 
-A MaxDiff question, also known as best-worst scaling, asks respondents to choose the most important and least important items from a small subset. By repeating this across multiple sets, MaxDiff produces a reliable ranking of all items based on relative importance, avoiding the bias that occurs when respondents rate everything highly.
+## When to use MaxDiff
 
-## When to use this question type
+Use a MaxDiff question when:
 
-- You want to measure the relative importance or preference of many items.
-- You need to force trade-offs rather than allowing respondents to rate everything as important.
-- You want statistically robust preference scores that can be compared across segments.
+- You need respondents to make trade-offs between items.
+- You want to understand relative priorities, rather than ratings for every item.
+- You have many items and want a more focused alternative to asking respondents to rank the full list.
 
-## How to add it
+## Add a MaxDiff question
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **MaxDiff** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and add items, set the number of items per set, and configure the number of sets.
-  </Step>
-</Steps>
+1. In the questionnaire builder, select **Add questions**.
+2. Choose **MaxDiff**.
+3. Enter the question text.
+4. Add the items respondents will compare.
 
-## Settings
+<Tip>
+  You can paste all items into the first answer field. Peekator separates them into individual answers automatically.
+</Tip>
 
-| Setting | Description |
-| --- | --- |
-| Items | The full list of attributes, features, or statements to evaluate. |
-| Items per set | The number of items shown in each choice task, typically 4 or 5. |
-| Number of sets | How many tasks each respondent completes. |
-| Balanced design | Ensures each item appears an equal number of times across sets. |
-| Mandatory | Requires a best and worst choice in every set before the respondent can continue. |
-| Randomise items within sets | Shuffles the order of items within each task. |
+## Configure the question
 
-<Note>
-  **Needs product verification:** Confirm whether "Anchor item" and "Prohibited pairs" settings exist for this question type.
-</Note>
+Set the labels respondents will use for their choices:
+
+- **Text for worst answer** — the label for the least valuable or least important item, such as _Worst_ or _Least important_.
+- **Text for best answer** — the label for the most valuable or most important item, such as _Best_ or _Most important_.
+
+In **Settings**, configure the study design:
+
+<table>
+  <colgroup>
+    <col width="312" />
+    <col width="369" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Number of items on screen**</td>
+      <td>Sets how many items appear together in each comparison set.</td>
+    </tr>
+    <tr>
+      <td>**How many times to show each item**</td>
+      <td>Sets how often each item is included across the comparison sets.</td>
+    </tr>
+    <tr>
+      <td>**Total items**</td>
+      <td>Shows the number of items added to the question.</td>
+    </tr>
+    <tr>
+      <td>**Total screens**</td>
+      <td>Shows the number of comparison sets created from your settings.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Conditional logic
+
+Under **Ask only if**, select **Add conditional rule** to control whether the entire MaxDiff question is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
 
 ## What respondents see
 
-Respondents see a small set of items, typically 4 to 5, with two selection columns: "Most important" and "Least important". They select one item in each column. This repeats for several sets. The design ensures each respondent sees a balanced sample of all items.
+Respondents see several sets of items. For each set, they select:
 
-<Warning>
-  MaxDiff questions involve complex experimental design and validation. Always preview and test the full questionnaire before launching to ensure sets are balanced, items display correctly, and best/worst selections are enforced.
-</Warning>
+- one item as the most valuable or important; and
+- one item as the least valuable or important.
 
-## Logic and piping
-
-You can use aggregate MaxDiff scores or responses to specific sets in logic to show or hide later questions. For example, if a respondent consistently selects a feature as most important, you can branch to a pricing question about that feature. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+Items can appear more than once across the sets. This is intentional: repeated comparisons produce a more reliable view of relative priorities.
 
 ## Results in reporting
 
-Results show utility scores for each item, indicating relative importance on a common scale. A ranking table and bar chart display the scores. Cross-tabs let you compare preferences across respondent segments. Raw choice data is available for advanced statistical modelling.
+Results show each item with:
+
+- the percentage selected as **LEAST important**;
+- the percentage selected as **MOST important**; and
+- a **Utility Score**.
+
+The Utility Score compares the item’s overall likelihood of being chosen as most rather than least important. Higher scores indicate stronger relative importance; lower scores indicate weaker relative importance.
+
+Use the table to identify the clearest priorities, items with mixed views, and items that are consistently selected as least important.
 
 ## Example use case
 
-A software company wants to prioritise 12 new features. It runs a MaxDiff with 5 items per set and 6 sets per respondent. The results show that "Offline mode" and "Two-factor authentication" have the highest utility scores, guiding the product roadmap.
+A product team wants to understand which service improvements customers value most. They add items such as faster delivery, lower prices, more support channels and easier returns.
+
+With MaxDiff, customers choose the most and least valuable improvement from several small sets. The results give the team a clear relative priority order for future investment.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
-- [Logic and branching](/questionnaire/logic-and-branching)
 - [Ranking question](/questionnaire/ranking)
-- [Conjoint Analysis question](/questionnaire/conjoint-analysis)
+- [Grid question](/questionnaire/grid)
+- [Logic and branching](/questionnaire/logic-and-branching)

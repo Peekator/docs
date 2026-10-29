@@ -1,67 +1,114 @@
 ---
-title: "Constant Sum question in Peekator"
+title: "Constant sum question"
 sidebarTitle: "Constant Sum"
-description: "Learn how to add a Constant Sum question so respondents distribute a fixed total across options in Peekator surveys."
+description: "Use a Constant sum question to ask respondents to distribute a fixed total across several items. It is useful for understanding relative importance, budget allocation or how respondents would divide a limited resource."
 ---
 
-A Constant Sum question asks respondents to allocate a fixed number of points, percentages, or units across several options. The sum of their allocations must equal the specified total. This method forces trade-offs and reveals the relative importance or share of preference respondents assign to each item.
+## When to use Constant sum
 
-## When to use this question type
+Use a Constant sum question when respondents need to allocate a fixed number of points, money or percentages across a list.
 
-- You want respondents to show relative importance by distributing a fixed budget or percentage.
-- You need to simulate realistic trade-offs, such as budget allocation or time spent.
-- You want data that sums to 100 per cent or a fixed total for easy comparison.
+For example:
 
-## How to add it
+- divide a £1,000 travel budget between flights, accommodation and entertainment;
+- distribute 100 points across product features based on importance; or
+- show how a marketing budget should be shared between channels.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Constant Sum** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and add items, set the total, and configure validation.
-  </Step>
-</Steps>
+## Add a Constant sum question
 
-## Settings
+1. In the questionnaire builder, select **Add questions**.
+2. Choose **Constant sum**.
+3. Enter the question text.
+4. An **Instruction note** is added automatically. You can edit it to give respondents additional guidance.
+5. Add the items respondents will allocate the value between.
 
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see. |
-| Items | The list of options respondents allocate points to. |
-| Total to allocate | The fixed sum respondents must distribute, for example, 100 points or 10 hours. |
-| Unit label | The label shown next to inputs, for example, "%", "points", or "hours". |
-| Minimum per item | The lowest allocation allowed for any single item. |
-| Maximum per item | The highest allocation allowed for any single item. |
-| Mandatory | Requires the total to be reached before the respondent can continue. |
-| Randomise items | Shuffles the order of items for each respondent. |
+<Tip>
+  You can paste all items into the first answer field. Peekator separates them into individual answers automatically.
+</Tip>
 
-<Note>
-  **Needs product verification:** Confirm whether "Auto-balance remaining" and "Allow decimal allocations" settings exist for this question type.
-</Note>
+## Configure the question
+
+In **Settings**, define the allocation rules:
+
+<table>
+  <colgroup>
+    <col width="201" />
+    <col width="518" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Min value**</td>
+      <td>Sets the lowest value a respondent can assign to an item.</td>
+    </tr>
+    <tr>
+      <td>**Max value**</td>
+      <td>Sets the highest value a respondent can assign to an item.</td>
+    </tr>
+    <tr>
+      <td>**Value to be distributed**</td>
+      <td>Sets the total that all item values must add up to.</td>
+    </tr>
+    <tr>
+      <td>**Values in percentage**</td>
+      <td>Formats allocations as percentages.</td>
+    </tr>
+    <tr>
+      <td>**Shuffle answers**</td>
+      <td>Shows the items in a different order for each respondent.</td>
+    </tr>
+    <tr>
+      <td>**Currency**</td>
+      <td>Adds a currency label to the values respondents enter.</td>
+    </tr>
+    <tr>
+      <td>**Step**</td>
+      <td>Sets the increment respondents can use, such as 1, 5 or 10.</td>
+    </tr>
+  </tbody>
+</table>
+
+The question is required. Respondents must distribute the full value before they can continue.
+
+## Conditional logic
+
+Under **Ask only if**, select **Add conditional rule** to control whether the entire Constant sum question is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
 
 ## What respondents see
 
-Respondents see a list of items, each with a numeric input field. They type a number for each item. A running total shows how much they have allocated and how much remains. The "Next" button remains disabled until the sum equals the required total, if mandatory.
+Respondents see each item with a numeric field. They assign a value to every item until their combined allocation matches the total you set.
 
-## Logic and piping
+For example, if the total is 100, a respondent could allocate:
 
-You can use the allocation values for individual items in logic to show or hide later questions. For example, if a respondent allocates more than 50 per cent to one item, you can branch to a follow-up about why that item is so important. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+- 50 to accommodation;
+- 30 to flight tickets; and
+- 20 to entertainment.
 
 ## Results in reporting
 
-Results appear as a table showing the average allocation, minimum, maximum, and total for each item. A stacked bar chart visualises the distribution. Because allocations sum to a fixed total, averages can be compared directly across items and segments.
+Results show each item’s:
+
+- **Average** allocated value;
+- **Median** allocated value; and
+- distribution of allocations across value ranges.
+
+Use these results to identify which items receive the largest share of the available budget, points or percentage.
 
 ## Example use case
 
-A media company asks, "You have 100 points to allocate across these news categories. How important is each to you?" with items for Politics, Sports, Entertainment, Technology, and Health. The results show that Technology receives the highest average allocation, guiding content strategy.
+A travel company asks respondents to distribute £1,000 across accommodation, flight tickets and entertainment for a city break.
+
+The results show the average amount respondents would allocate to each part of the trip, helping the company understand where customers place the most value.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
-- [Logic and branching](/questionnaire/logic-and-branching)
 - [Ranking question](/questionnaire/ranking)
-- [MaxDiff question](/questionnaire/maxdiff)
+- [Numeric entry question](/questionnaire/numeric-entry)
+- [Multiple choice question](/questionnaire/multiple-choice)

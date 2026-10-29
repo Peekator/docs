@@ -1,66 +1,122 @@
 ---
 title: "Grid question in Peekator"
 sidebarTitle: "Grid"
-description: "Learn how to add and configure a Grid question so respondents rate multiple items across the same set of columns in Peekator."
+description: "Use a Grid question to collect responses to several related statements using the same set of answer choices. For example, ask respondents to rate several service areas from “Strongly disagree” to “Strongly agree”."
 ---
-
-A Grid question presents a matrix of rows and columns. Respondents rate or evaluate several items using the same scale, which keeps the questionnaire compact and makes comparisons easy. This is ideal for attitude statements, feature importance, or satisfaction ratings.
 
 ## When to use this question type
 
-- You want respondents to rate several items on the same scale, such as importance or agreement.
-- You need to compare scores across items in a single view.
-- You want to reduce questionnaire length by grouping related ratings into one question.
+- You want respondents to rate several items on the same scale.
+- You need to compare responses across related statements.
+- You want to keep a set of related questions together.
 
 ## How to add it
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Grid** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and add rows, columns, and labels.
-  </Step>
-</Steps>
+1. In the Questionnaire builder, select **Add question**.
+2. Select **Grid**.
+3. Enter your question text.
+4. An **Instruction note** is added automatically. Edit it if needed, for example to say “Select one option per row”.
+5. Add your **Rows**. These are the statements or items respondents will evaluate.
+6. Add your **Columns**. These are the response choices or scale points.
 
-## Settings
+<Tip>
+  You can **paste multiple rows** or **columns** into the first field. Peekator automatically separates them into individual items.
+</Tip>
 
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see above the grid. |
-| Rows | The items respondents evaluate, for example, product features or statements. |
-| Columns | The scale or response options, for example, "Strongly disagree" to "Strongly agree". |
-| Mandatory | Requires a selection for every row before the respondent can continue. |
-| Randomise rows | Shuffles the order of rows for each respondent. |
-| Reverse scale | Flips the column order for some respondents to reduce bias. |
-| Force response per row | Ensures every row receives an answer. |
+## Configure the Grid
 
-<Note>
-  **Needs product verification:** Confirm whether "Column labels" and "N/A column" settings exist for this question type.
-</Note>
+<table>
+  <colgroup>
+    <col width="278" />
+    <col width="438" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>What it means</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shuffle rows</td>
+      <td>Randomises the order of rows for each respondent.</td>
+    </tr>
+    <tr>
+      <td>Shuffle columns</td>
+      <td>Randomises the order of columns for each respondent.</td>
+    </tr>
+    <tr>
+      <td>Shuffle sections</td>
+      <td>Randomises any sections you have added to the Grid.</td>
+    </tr>
+    <tr>
+      <td>Answers on both sides of the table</td>
+      <td>Creates a semantic differential scale, with opposite answer labels at each side of the table, such as “Difficult” and “Easy”.</td>
+    </tr>
+    <tr>
+      <td>Always show as mobile version</td>
+      <td>Shows each row as an individual statement instead of a table on all devices. This is the “flying statements” layout.</td>
+    </tr>
+    <tr>
+      <td>Assign points</td>
+      <td>Adds a score to each answer choice.</td>
+    </tr>
+    <tr>
+      <td>Conditional rule on answer</td>
+      <td>Controls when an individual Grid item is shown.</td>
+    </tr>
+    <tr>
+      <td>No. of choices per row</td>
+      <td>Choose **Single choice** when respondents select one answer per row, or **Multiple choice** when they can select more than one.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Use sections
+
+You can group related rows into sections.
+
+Open the row’s answer settings and select **Make this answer a Section**. The row becomes a heading for the rows beneath it.
+
+## Add conditions and piping
+
+Use **Add conditional rule** in the **Ask only if** section to control whether respondents see the whole Grid.
+
+Use **Conditional rule on answer** to add conditions to individual Grid items.
+
+Select **Pipe answers** to use answers from earlier questions in your Grid.
+
+For full instructions, see [Logic and branching](#) and [Piping answers](#).
 
 ## What respondents see
 
-Respondents see a table with rows on the left and column headers across the top. They select one cell per row, usually by clicking a radio button. If the question is mandatory, they must complete every row before continuing.
+By default, respondents see rows on the left and answer choices across the top of a table.
 
-<Warning>
-  Grid questions involve multiple rows and validation rules. Always preview and test the full questionnaire before launching to ensure rows, columns, and mandatory rules behave as expected.
-</Warning>
+With **Single choice**, they select one answer for each row. With **Multiple choice**, they can select more than one answer per row.
 
-## Logic and piping
-
-You can use answers from individual rows in logic to show or hide later questions. For example, if a respondent rates "Customer support" as "Very dissatisfied", you can branch to a follow-up question. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+If **Always show as mobile version** is enabled, each row appears as a separate statement rather than part of a table.
 
 ## Results in reporting
 
-Results appear as a matrix table showing the distribution of responses for each row. You can also view average scores per row if the columns are numeric or ordered scales. Cross-tabs let you compare row ratings by respondent segment.
+Reporting displays the response distribution for every row and column in a table. You can switch between percentages and response counts.
 
-## Example use case
+## Example
 
-A hotel chain asks guests to rate five service aspects (check-in, room cleanliness, staff friendliness, amenities, value) on a scale from "Very dissatisfied" to "Very satisfied". The grid format keeps the questionnaire short and produces a clear satisfaction profile.
+Ask: “To what extent do you agree with the following statements?”
+
+Rows:
+
+- The website is easy to use.
+- The information is clear.
+- I would recommend this service.
+
+Columns:
+
+- Strongly disagree
+- Disagree
+- Neutral
+- Agree
+- Strongly agree
 
 ## Related guides
 

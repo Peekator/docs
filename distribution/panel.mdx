@@ -1,52 +1,80 @@
 ---
-title: "Use Panel to distribute your survey"
+title: "Collect responses through a panel"
 sidebarTitle: "Panel"
-description: "Let Peekator source respondents from a managed panel by specifying your target count, market, and audience. The team handles launch and quality."
+description: "Use Panel distribution to reach respondents through Peekator’s integrated panel or through an external panel provider you connect to Peekator."
 ---
 
-Panel distribution is for when you want Peekator to find respondents on your behalf. You describe the audience you need, and the Peekator team sources participants from a managed panel, handles the launch, and monitors quality. This is useful when you do not have your own contact list or when you need a specific demographic that is hard to reach directly.
+## Choose a panel route
 
-## Set up Panel distribution
+1. Open your survey and go to **Setup** → **Distribution**.
+2. Select **Panel**.
+3. Choose one of the following options:
 
-<Steps>
-  <Step title="Open Distribution">
-    Inside your survey, go to **Setup** and select the **Distribution** tab.
-  </Step>
-  <Step title="Select Panel">
-    Choose **Panel** as your distribution channel.
-  </Step>
-  <Step title="Fill in the target details">
-    Complete the following fields:
+| Option | Use it when |
+| :-- | :-- |
+| **Panel managed by Peekator** | You want Peekator to manage respondent recruitment and fieldwork. |
+| **Connect Panel** | You are working with your own panel provider and want to connect it to Peekator. |
 
-    - **No. of Respondents**: the target number of completed responses you want.
-    - **Market**: the country or region where respondents should be located.
-    - **Target Audience**: a description of the demographic or behavioural profile you need.
-  </Step>
-  <Step title="Submit for review">
-    After you save the Panel setup, the survey enters **Review** mode. The Peekator team reviews your requirements and manages the launch. You do not control the exact timing.
-  </Step>
-</Steps>
+## Use a panel managed by Peekator
 
-## What happens after submission
+Select **Panel managed by Peekator** when you want Peekator to source respondents through its integrated panel network.
 
-Once you submit a Panel request:
+1. Enter the required **No. of Respondents**.
+2. Select the **Market**.
+3. Describe the **Target Audience**, including any key eligibility requirements, such as age, location, occupation or other screening criteria.
+4. Select **Save changes**.
+5. Select **Review and Launch**.
 
-- The survey moves to the **Review** state.
-- The Peekator team validates your target audience and market.
-- The team sources respondents and launches the survey when ready.
-- Quality control is handled by the Peekator team throughout collection.
+When you select **Review and Launch**, the survey moves to **In review**. The Peekator team checks the questionnaire and panel requirements, then launches the survey to the selected panels.
 
-You can monitor progress from the survey dashboard, but you cannot start or stop collection yourself.
+### After fieldwork
 
-## When to use each channel
+After data collection ends, the survey enters a **Data Quality** phase. The Peekator team reviews the responses and replaces any low-quality data where needed.
 
-| Channel | Best for |
-| --- | --- |
-| **Link** | You have your own audience and want full control over sharing. |
-| **Campaign** | You have a contact list and want to send via Email, SMS, or WhatsApp. |
-| **Panel** | You need Peekator to find respondents and manage the entire process. |
+Once the data has been checked, the survey moves to **Done** with cleaned results.
 
-## Related guides
+## Connect your own panel provider
+
+Select **Connect Panel** when you want to use an external panel provider.
+
+1. Enter the required **No. of Respondents**.
+2. Select **Add panel provider**.
+3. Search for and select your provider from the list.
+4. Select **Next Step**.
+5. Enter the outcome IDs supplied by the panel provider.
+6. Select **Save and Connect provider**.
+7. Select **Save changes** on the Distribution page.
+8. Select **Review and Launch** when the survey is ready.
+
+You can add more than one provider if needed.
+
+### Add provider outcome IDs
+
+The panel provider supplies an ID for each respondent outcome. Enter these in the matching fields:
+
+| Field | Use |
+| :-- | :-- |
+| **Success ID** | Sent when a respondent completes the survey successfully. |
+| **Screenout ID** | Sent when a respondent does not meet the survey eligibility criteria. |
+| **Quota full ID** | Sent when the relevant quota has already been filled. |
+| **Quality control fail ID** | Sent when a respondent fails a quality-control check. |
+
+<Note>
+  Use the Quality control fail ID for respondents who fail quality checks. This lets the panel provider record the outcome as a quality failure rather than a standard screenout.
+</Note>
+
+## Before you launch
+
+Check that:
+
+- the respondent number is correct;
+- the market and target audience are clear;
+- all required quotas and screeners have been set up;
+- the correct external provider is connected, where applicable; and
+- the provider outcome IDs have been entered correctly.
+
+## Related pages
 
 - [Distribution overview](/distribution/overview)
-- [Survey settings](/survey-settings/overview)
+- [Screeners](/questionnaire/screen-and-qualify)
+- [Quotas](/questionnaire/quotas)

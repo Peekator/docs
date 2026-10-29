@@ -1,0 +1,119 @@
+---
+title: "Piping and text"
+description: "Use piping to add a respondent’s earlier answers as options in a later question.\nUse text substitution to insert an earlier answer into question text, an instruction note or an answer option."
+---
+
+## Piping
+
+You can pipe from:
+
+- an earlier **Multiple choice** question; or
+- a **hidden variable**.
+
+When piping from a Multiple choice question, Peekator pipes every option the respondent selected. You cannot choose only some of their selected options.
+
+For example, if a respondent selects _Product quality_, _Customer service_ and _Price_, all three can appear in the next question.
+
+<Tip>
+  To show only selected options in specific circumstances, use [Conditions on answers](/questionnaire/logic-and-branching) instead.
+</Tip>
+
+Piping does not include text entered in an Other answer.
+
+## Pipe answers into a question
+
+1. Open the question that should receive the piped answers.
+2. Select **Pipe answers**.
+3. Choose the earlier **Multiple choice** question or hidden variable to use as the source.
+4. Confirm your selection.
+
+The next step depends on the type of question receiving the piped answers.
+
+<table>
+  <colgroup>
+    <col width="299" />
+    <col width="407" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Target question type</th>
+      <th>What to do</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Single choice** or **Multiple choice**</td>
+      <td>Leave the answer-option list blank. The piped options are added for each respondent. Add answer options only if you also want to show fixed options alongside the piped ones.</td>
+    </tr>
+    <tr>
+      <td>All other question types, such as **Grid**</td>
+      <td>Copy each source answer into the relevant answer field in the target question. The text must match exactly, including spaces, letters and symbols, so Peekator can recognise it as the same answer.</td>
+    </tr>
+  </tbody>
+</table>
+
+For example, if you pipe selected products into a Grid question, copy each product name into the Grid’s relevant row or column field exactly as it appears in the source question.
+
+<Note>
+  Preview and test the questionnaire after setting up piping, especially when the source question allows several selections.
+</Note>
+
+## Text substitution
+
+Use text substitution when an earlier response should appear inside another piece of text. You can add the value to:
+
+- question text;
+- an instruction note;
+- an answer option; or
+- another text field in the questionnaire.
+
+For example, if a respondent selects **Company Ltd** as their employer, you can ask:
+
+> How do you find working at Company Ltd?
+
+### Set up text substitution
+
+1. Select **Set more**.
+2. Select **Set Text Substitution**.
+3. Choose the source question and answer.
+4. Peekator automatically fills **Value to replace** and **Text to replace**.
+5. Copy the automatically generated **Text to replace** into the target question, instruction note or answer option.
+6. Save your changes.
+
+For a closed question with several possible answers, add a substitution row for each answer you want to replace. For an open-end question, Peekator automatically uses the text entered by the respondent.
+
+<Warning>
+  Copy Text to replace exactly as it appears. Do not add or remove spaces, letters or symbols.When to use each feature
+</Warning>
+
+<table>
+  <colgroup>
+    <col width="535" />
+    <col width="222" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Use case</th>
+      <th>Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Show earlier selected answers as options in a later question</td>
+      <td>**Piping**</td>
+    </tr>
+    <tr>
+      <td>Insert an earlier answer into a question or answer label</td>
+      <td>**Text substitution**</td>
+    </tr>
+    <tr>
+      <td>Show or hide specific fixed answer options based on earlier answers</td>
+      <td>**Conditions on answers**</td>
+    </tr>
+  </tbody>
+</table>
+
+## Related guides
+
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [Hidden variables](/questionnaire/hidden-variables)

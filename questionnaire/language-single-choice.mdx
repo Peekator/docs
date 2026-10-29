@@ -1,64 +1,75 @@
 ---
-title: "Language Single Choice question in Peekator"
+title: "Language single choice"
 sidebarTitle: "Language Single Choice"
-description: "Learn how to add a Language Single Choice question so respondents select their preferred survey language in Peekator."
+description: "Use a Language single choice question to let respondents choose the language in which they complete the questionnaire. After adding this question type, you must also set up the questionnaire translations."
 ---
-
-A Language Single Choice question lets respondents choose which language they want to complete the survey in. This is typically placed at the very beginning of the questionnaire and controls which translated version of the survey the respondent sees.
 
 ## When to use this question type
 
-- You are running a multilingual survey and want respondents to self-select their language.
-- You want to give respondents control over their language preference rather than relying on browser settings or pre-assigned links.
-- You need to capture language choice as a data point for analysis.
+Use a Language single choice question when you need to:
 
-## How to add it
+- Run the same questionnaire in more than one language.
+- Let each respondent choose their preferred survey language.
+- Show the correct translated content after a language is selected.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Language Single Choice** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and choose which languages to offer.
-  </Step>
-</Steps>
+## Add a Language single choice question
 
-## Settings
+1. In the questionnaire builder, select **Add questions**.
+2. Select **Language single choice**.
+3. Select the languages you want to offer. Use search or **Select all** to find and add languages quickly.
+4. Select **Confirm**. Each language is added as a separate answer choice.
+5. Enter your question text and edit the **Instruction note** if needed.
+6. Select **Save question**.
 
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see, for example, "Please select your language". |
-| Available languages | The list of languages respondents can choose from. Only languages with completed translations are shown. |
-| Default language | The pre-selected language, if any. |
-| Mandatory | Requires a selection before the respondent can continue. |
-| Display as dropdown | Shows languages in a dropdown instead of a radio button list. |
+Although you can add several languages at once, respondents select one language.
 
-<Note>
-  **Needs product verification:** Confirm whether "Auto-detect language" and "Redirect to language-specific URL" settings exist for this question type.
-</Note>
+## Configure the question
+
+Select **See more** in the settings panel to configure the display.
+
+<table>
+  <colgroup>
+    <col width="164" />
+    <col width="325" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Show flags**</td>
+      <td>Shows each language’s flag beside its name.</td>
+    </tr>
+  </tbody>
+</table>
+
+You can remove a language from the answer list at any time.
+
+## Set translations
+
+After you add a Language single choice question, open **Set more** and select **Set Translations**.
+
+Add translations for the question text, instruction notes, answer options and other questionnaire content. The language options you add to this question should match the translations you set up.
+
+For more information, see [Questionnaire translations](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
 
 ## What respondents see
 
-Respondents see a list or dropdown of available languages at the start of the survey. They select one option. After confirming, the rest of the questionnaire is displayed in their chosen language. If a language is not fully translated, fallback text may appear in the default language.
-
-## Logic and piping
-
-You can use the selected language in logic to show or hide later questions. For example, you might show culturally specific follow-up questions only to respondents who selected a particular language. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+Respondents see the available languages and select one. The questionnaire then displays in the language you have set up for their selection.
 
 ## Results in reporting
 
-Results show the count and percentage of respondents who selected each language. This helps you understand the language composition of your sample and can be used to filter or weight other results.
+Results show how many respondents selected each language and the percentage each language represents.
 
 ## Example use case
 
-A global consumer goods company runs a survey in English, Spanish, French, and German. The Language Single Choice question appears on the welcome screen. Respondents select Spanish and the entire questionnaire, including buttons and error messages, is shown in Spanish.
+An organisation runs a questionnaire in English, Croatian and German. Respondents select their preferred language on the first screen, then complete the translated version of the questionnaire.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
-- [Logic and branching](/questionnaire/logic-and-branching)
-- [Single Choice question](/questionnaire/single-choice)
-- [Information Screen question](/questionnaire/information-screen)
+- [Questionnaire translations](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#)
+- [Questionnaire overview](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#)
+- [Results and reporting](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#)

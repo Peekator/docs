@@ -1,65 +1,69 @@
 ---
-title: "Multiple Link Open End question in Peekator"
+title: "Multiple line Open-end question"
 sidebarTitle: "Multiple Link Open End"
-description: "Learn how to add and configure a Multiple Link Open End question for several free-text fields in Peekator surveys."
+description: "Use a Multiple line Open-end question when respondents need to provide several separate text answers within one question. For example, ask respondents to name three items, reasons or ideas."
 ---
 
-A Multiple Link Open End question presents respondents with several linked text fields in a single question. Use this type when you want to collect multiple related free-text answers together, such as strengths and weaknesses, or first, second, and third associations with a brand.
+## When to use Multiple line Open-end
 
-## When to use this question type
+- You need more than one free-text response.
+- You want respondents to answer several related prompts in one question.
+- You want each response to have its own label.
 
-- You need several related open-ended responses in one compact question.
-- You want to keep the questionnaire short while collecting multiple verbatim answers.
-- You plan to compare or code related themes across the linked fields.
+## Add a Multiple line Open-end question
 
-## How to add it
+1. In the Questionnaire builder, select **Add question**.
+2. Select **Multiple line open-end**.
+3. Enter your question text.
+4. An **Instruction note** is added automatically. Edit it if needed.
+5. Replace the default **Answer title** text with a label for each response field.
+6. Select **Add answer** to add another response field.
+7. Drag answer titles to change their order.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Multiple Link Open End** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and add or edit the linked text fields.
-  </Step>
-</Steps>
+[Insert screenshot: Multiple line Open-end question builder]
 
-## Settings
+## Configure answer titles
 
-| Setting | Description |
-| --- | --- |
-| Question text | The main label respondents see. |
-| Text fields | The individual input fields, each with its own label or prompt. |
-| Mandatory | Requires input in every field before the respondent can continue. |
-| Minimum characters per field | Sets the shortest acceptable response for each field. |
-| Maximum characters per field | Sets the longest acceptable response for each field. |
-| Randomise fields | Shuffles the order of fields for each respondent. |
+Each **Answer title** creates a separate text field for the respondent.
 
-<Note>
-  **Needs product verification:** Confirm whether "Validate as email/URL per field" and "Allow empty fields" settings exist for this question type.
-</Note>
+For example, if you ask respondents to name three things, use answer titles such as:
+
+- Thing No. 1
+- Thing No. 2
+- Thing No. 3
+
+Use the answer settings to make an individual response required or optional.
+
+## Add conditions
+
+Use **Add conditional rule** in the **Ask only if** section to control whether respondents see the whole question.
+
+For full instructions, see [Logic and branching](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
 
 ## What respondents see
 
-Respondents see a single question with multiple text input fields stacked vertically, each with its own label. They type an answer into each field. If mandatory, all fields must be completed before they can continue. Character counters may show if limits are set.
+Respondents see a separate text field for each answer title and can enter a different response in each field.
 
-## Logic and piping
+## Results and AI auto-coding
 
-You can use the presence or content of responses from individual fields in logic to show or hide later questions. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+Multiple line Open-end responses can be analysed and auto-coded in the same way as standard Open-end responses.
 
-## Results in reporting
+You can create AI-generated category sets, review individual responses and edit categories or coded answers.
 
-Responses appear as a table with one column per text field. Each column can be filtered, searched, and exported for qualitative analysis. If AI auto-coding is enabled, each field can be coded separately or together to identify themes.
+For full instructions, see [Open-end questions](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
 
-## Example use case
+## Example
 
-An automotive brand asks, "What are the top three reasons you chose our brand?" with three linked fields labelled "Reason 1", "Reason 2", and "Reason 3". The responses are auto-coded to identify the most common purchase drivers.
+Ask: “If you were stranded on a desert island and could only take three things with you, what would they be?”
+
+Answer titles:
+
+- Thing No. 1
+- Thing No. 2
+- Thing No. 3
 
 ## Related guides
 
+- [Open-end questions](/questionnaire/open-end)
 - [Questionnaire overview](/questionnaire/overview)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Open End question](/questionnaire/open-end)
-- [Conversational AI question](/questionnaire/conversational-ai)

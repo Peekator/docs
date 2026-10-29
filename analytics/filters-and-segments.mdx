@@ -1,51 +1,103 @@
 ---
-title: "Filter and segment your survey results"
+title: "Filter dashboard results"
 sidebarTitle: "Filters"
-description: "Narrow your Peekator dashboard results by answer value, date, or respondent attribute. Learn when to use filters versus crosstabs."
+description: "Use filters to focus the Dashboard on a specific respondent group. For example, view results only from existing customers, respondents in a particular age group, or responses submitted during a set date range."
 ---
 
-Filters let you narrow the data shown in the Peekator dashboard so you can focus on a specific subset of responses. You can filter by answer value, date range, or respondent attributes. This is useful when you want to see how a particular group answered, or when you need to exclude incomplete or test responses from your view.
+You can start a filter in either of two ways:
 
-## How filters work
+- Select **Add Filter** to create a filter by question, answer or submission date.
+- Select any answer directly in a chart or table to filter the Dashboard to respondents who gave that answer.
 
-When you apply a filter, the entire dashboard updates to show only the responses that match your criteria. Charts, counts, and completion rates all recalculate automatically based on the filtered set.
+When a filter is active, every result card updates to show data for the selected respondents. The filtered respondent base is shown as **N**.
 
-<Note>
-  **Needs product verification:** exact filter and segment configuration steps, whether saved segments are supported
-</Note>
+## Add a filter
 
-## How to add a filter
+1. Go to **Reporting** → **Dashboard**.
+2. Select **Add Filter**.
+3. Under **Filter by Questions**, select one question.
+4. Select one or more answers for that question.
+5. Select **Confirm selected**.
 
-To apply a filter to your survey results:
+Only one question can be selected at a time in the **Add Filter** window. You can then add more filters from other questions to build a broader or more specific respondent group.
 
-<Steps>
-  <Step title="Open the dashboard">
-    Navigate to the **Reporting** tab inside your survey and select the dashboard view.
-  </Step>
-  <Step title="Open the filter panel">
-    Locate the filter controls, usually near the top of the dashboard.
-  </Step>
-  <Step title="Choose your filter criteria">
-    Select the question, date range, or respondent attribute you want to filter by, then pick the values to include.
-  </Step>
-  <Step title="Apply the filter">
-    Confirm your selection. The dashboard refreshes to show only matching responses.
-  </Step>
-</Steps>
+For example, select the **Gender** question and the answer **Male** to view results only from male respondents.
 
-## Filters vs crosstabs
+## Filter directly from an answer
 
-Filters and crosstabs both help you break down your data, but they serve different purposes.
+Every answer shown in a Dashboard chart or table can be used as a filter.
 
-| Use filters when... | Use crosstabs when... |
-| --- | --- |
-| You want to explore one group at a time | You want to compare multiple groups side by side |
-| You are preparing a filtered export | You need a cross-tabulation table for statistical review |
-| You want to temporarily hide certain responses | You want to see how every question varies across a demographic |
+1. Find the answer you want to analyse, such as **35–44** or **Male**.
+2. Select the answer.
+3. The Dashboard refreshes to show only respondents who selected that answer.
 
-For side-by-side comparisons, see [Crosstabs in Peekator](/exports/crosstabs).
+Use this method when exploring results and you want to investigate a group quickly without opening the filter window.
 
-## Related guides
+## Combine filters with And or Or
 
-- [Explore response data in Peekator](/analytics/response-data)
-- [Crosstabs in Peekator](/exports/crosstabs)
+The **Question filter mode** controls how all active answer selections work together.
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="513" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Mode</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**And**</td>
+      <td>Includes only respondents who match every active selection.</td>
+    </tr>
+    <tr>
+      <td>**Or**</td>
+      <td>Includes respondents who match at least one active selection.</td>
+    </tr>
+  </tbody>
+</table>
+
+For example:
+
+- In **And** mode, filtering for **Aged 25–34** and **Female** shows only female respondents aged 25–34.
+- In **Or** mode, filtering for **Aged 18–24**, **Aged 25–34** and **Male** shows respondents who match any of those selections.
+
+The active-filter area shows the selected answers and the mode currently in use.
+
+<Tip>
+  Use **And** to create a precise audience segment. Use **Or** to combine several relevant groups into one view.
+</Tip>
+
+## Filter by submission date
+
+Use **Filter by date of submission** in the **Add Filter** window to limit results to a time period.
+
+1. Select a **From** date.
+2. Select a **To** date.
+3. Add a question filter if needed.
+4. Select **Confirm selected**.
+
+You can use a date range on its own or alongside question filters. For example, view feedback collected during a particular campaign period.
+
+## Review and remove filters
+
+Active filters appear above the results with the question number and selected answer. The active-filter area also shows the updated respondent base, such as **N = 24**.
+
+To remove one answer selection, select the **×** beside that answer.
+
+To remove all selections for one question, select the **×** at the end of that question’s filter group.
+
+Select **Clear all filters** to return to the full respondent base.
+
+## Export filtered results
+
+Active filters apply to Dashboard exports. Set the filters you need before exporting results, tables or reports so the export reflects the same respondent group.
+
+## Related pages
+
+- [Dashboard overview](/analytics/overview)
+- [Export survey results](/exports/scheduled-reports)
+- [Cross-tabs](/exports/crosstabs)

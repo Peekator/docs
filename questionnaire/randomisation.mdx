@@ -1,52 +1,114 @@
 ---
-title: "Randomisation and rotations in Peekator"
+title: "Groups and group rotations"
 sidebarTitle: "Randomisation"
-description: "Reduce order bias in Peekator by rotating question groups and randomising answer options within questions."
+description: "Use groups to keep related questions together in the questionnaire."
 ---
 
-Randomisation helps reduce order bias by presenting questions or answer options in a different sequence for each respondent. Peekator supports group rotation and answer option randomisation to support unbiased research design.
+A group can have its own conditions, and you can shuffle the questions inside it. Use **group rotations** to change the order in which whole groups appear, or to show each respondent only a randomly selected subset of groups.
 
-## Group rotation
+<Tip>
+  Groups are particularly useful for concept testing.
+</Tip>
 
-Group rotation lets you rotate entire blocks of questions so respondents see them in a different order. Use the **GroupQuestion** (Add group) type to create a group, then apply rotation settings.
+## Add a group
 
-### How to set up group rotation
+1. In the questionnaire builder, select **Options**.
+2. Select **Add Group**.
+3. A new group container appears in the **Questionnaire menu**.
+4. Select the group to open its settings.
+5. Enter a **Group title**.
+6. Drag and drop questions from the Questionnaire menu into the group container.
+7. Select **Save group**.
 
-<Steps>
-  <Step title="Create a group">
-    Add a **GroupQuestion** to the canvas and place the questions you want to rotate inside it.
-  </Step>
-  <Step title="Enable rotation">
-    Configure the group to rotate the order of questions for each respondent.
-  </Step>
-  <Step title="Test the order">
-    Use the **test link** to verify that question order changes across sessions.
-  </Step>
-</Steps>
+You can add any relevant questions to the group, such as a concept image, a concept description and the questions used to evaluate it.
+
+## Add conditions to a group
+
+Use **Ask only if** to control whether the whole group appears for a respondent.
+
+1. Open the group.
+2. Under **Ask only if**, select **Add conditional rule**.
+3. Set the conditions in the same way as for a question.
+4. Save the group.
+
+When the conditions are met, the respondent sees every question in the group. When they are not met, the whole group is skipped.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
+
+## Shuffle questions inside a group
+
+Enable **Shuffle questions inside the group** in the group’s **Settings**.
+
+This randomises the order of the questions within that group for each respondent.
+
+Use this when the group contains several similar questions and you want to reduce order bias.
 
 <Note>
-  **Needs product verification:** exact steps for setting up group rotation and confirming which question types support answer option randomisation.
+  Shuffling questions inside a group is different from group rotation. It changes the order of individual questions, not the order of whole groups.
 </Note>
 
-## Answer option randomisation
+## Set group rotations
 
-Many question types let you randomise the order of answer options within a single question. This is configured in the question settings and is useful for reducing primacy or recency bias in choice-based questions.
+Use group rotations to shuffle whole groups between respondents.
 
-## When to use randomisation
+This is useful for concept testing. For example, create one group for each concept:
 
-- **Reducing primacy or recency bias:** prevent first or last options from being selected more often
-- **Monadic tests:** ensure each concept or stimulus is seen equally often in each position
-- **Balanced designs:** support statistical fairness across respondent groups
+- **Concept A**: concept material and evaluation questions
+- **Concept B**: concept material and evaluation questions
+- **Concept C**: concept material and evaluation questions
 
-## Test before launch
+Then use group rotations to control which concepts each respondent sees and in which order.
 
-Always test rotation logic with the **test link** before launching. Open the survey in multiple sessions and confirm that:
+### Create a rotation
 
-- Group question order varies across respondents
-- Answer option order changes where enabled
-- No questions or options are dropped or duplicated
+1. Select **Set more**.
+2. Select **Set Group Rotations**.
+3. Select the groups you want to rotate.
+4. Under **Show in survey**, choose how many of those groups respondents should see.
+5. Select **Save**.
+
+### Choose what respondents see
+
+<table>
+  <colgroup>
+    <col width="168" />
+    <col width="499" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**All groups**</td>
+      <td>Every respondent sees all selected groups. Peekator shuffles the group order between respondents.</td>
+    </tr>
+    <tr>
+      <td>**Randomly selected**</td>
+      <td>Each respondent sees only the number of groups you specify, selected from the groups in the rotation.</td>
+    </tr>
+  </tbody>
+</table>
+
+For example, if you include **Concept A** and **Concept B** and choose **Randomly selected: 1 group out of 2**, each respondent sees one of the two concept groups.
+
+Use **Add new rotation** to create a separate rotation for another set of groups.
+
+## Test the questionnaire
+
+Preview the questionnaire several times after setting up groups and rotations.
+
+Check that:
+
+- questions are inside the correct group;
+- group conditions work as expected;
+- questions shuffle only when intended; and
+- respondents see the correct group order or number of concept groups.
 
 ## Related guides
 
-- [Structure your questionnaire](/questionnaire/structure-your-questionnaire)
 - [Logic and branching](/questionnaire/logic-and-branching)
+- [Hidden variables](/questionnaire/hidden-variables)
+- [Quotas](/questionnaire/quotas)

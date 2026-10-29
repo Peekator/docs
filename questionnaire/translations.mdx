@@ -1,45 +1,75 @@
 ---
-title: "Translate your survey into multiple languages"
+title: "Survey translations"
 sidebarTitle: "Translations"
-description: "Run a single Peekator survey in multiple languages by letting respondents choose their language and managing translated content."
+description: "Use translations to show a survey in each respondent’s selected language."
 ---
 
-Survey translations let you run a single Peekator survey in multiple languages. Respondents select their preferred language at the start, and all subsequent questions and text display in that language.
+Before setting translations, add a **Language single choice** question to the questionnaire. Add the languages you want to offer as answers.
 
-## Language selection
+<Info>
+  An Instruction note is added automatically. You can edit it to give respondents additional guidance.
+</Info>
 
-The **Language Single Choice** question (the **LanguageQuestion** type) is the entry point for multilingual surveys. It presents respondents with a list of available languages and routes them through the survey in their chosen language.
+## Set the survey’s main language
 
-For details on configuring this question type, see the [Language Single Choice](/questionnaire/language-single-choice) guide.
+**English** is the default main language. The main language is the original version of the survey that translations are based on.
 
-## Set up translations
+To change it:
 
-<Steps>
-  <Step title="Add a Language Single Choice question">
-    Open the **Add questions** popup and select the **LanguageQuestion** type. Place it at the start of the questionnaire.
-  </Step>
-  <Step title="Define available languages">
-    Choose the languages you want to offer to respondents.
-  </Step>
-  <Step title="Translate survey content">
-    Provide translated versions of question text, answer options, and any information screens for each language.
-  </Step>
-  <Step title="Test each language">
-    Use the **test link** to walk through the survey in every language and verify translations display correctly.
-  </Step>
-</Steps>
+1. Go to **Setup** → **Settings**.
+2. Select **Main language of the survey**.
+3. Choose the language to use as the main language.
+
+## Configure the language question
+
+In the **Language single choice** question:
+
+1. Add the languages respondents can select.
 
 <Note>
-  **Needs product verification:** exact workflow for adding language versions, whether translations are managed in the questionnaire builder or a separate screen, and which fields can be translated.
+  Disable **Show flags** if you don't want a small country flag to appear next to each language in the survey.
 </Note>
 
-## When to use translations
+## Add translations
 
-- **Multilingual markets:** reach respondents in their native language across regions
-- **International panels:** support panel providers who field in multiple countries
-- **Consistent analysis:** collect all responses in one survey for unified reporting, even when languages differ
+After adding the language question:
 
-## Related guides
+1. Open **Set more**.
+2. Select **Set Translations**.
+3. Choose the language you want to translate from the language tabs at the top.
+4. Enter translations for each question, instruction note and answer option.
+5. Select **Save settings for translations** when you are finished.
 
-- [Language Single Choice](/questionnaire/language-single-choice)
-- [Panel distribution](/distribution/panel)
+Translations are set separately for each language. Repeat the process for every language you have added.
+
+### Translate manually
+
+For each question, enter the translated question text in the **Question translation** field. Enter translated answer text beside each original answer.
+
+If you leave a question, instruction note or answer field blank, it remains in the main-language form for respondents using that language.
+
+<Tip>
+  If a question includes an image or video that you want to translate, the quickest approach is to generate the translation with AI first, then make any necessary changes manually.
+</Tip>
+
+### Generate translations with AI
+
+You can also use AI to create translations:
+
+- Select **Translate all questions** to generate translations for the full survey.
+- Enable **Translate only selected** to generate translations only for the questions you choose.
+
+Review the generated text and edit it where needed before saving.
+
+## Example
+
+If your main language is English and a respondent selects French:
+
+- Translated fields are shown in French.
+- Any blank translation fields remain in English.
+- If **Show flags** is enabled, the French option is shown with its flag in the language selector.
+
+## Related pages
+
+- [Language single choice](/questionnaire/language-single-choice)
+- [Questionnaire settings](/survey-settings/overview)

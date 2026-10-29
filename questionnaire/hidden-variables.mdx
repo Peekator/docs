@@ -1,57 +1,167 @@
 ---
-title: "Hidden variables and substitutions in Peekator"
+title: "Hidden variables"
 sidebarTitle: "Hidden Variables"
-description: "Pass hidden data into your Peekator survey via the URL and dynamically insert values into question text using substitutions."
+description: "Use hidden variables to create reusable respondent groups based on their answers."
 ---
 
-Hidden variables let you pass data into a survey through the URL without respondents seeing it. Substitutions let you insert those values dynamically into question text, so you can personalise the experience or track where respondents come from.
+A hidden variable is not shown to respondents. It works in the background and lets you apply the same combination of conditions wherever you need it.
 
-## What hidden variables are
+For example, you could create a hidden variable called **UK customer service managers** for respondents who:
 
-A hidden variable is a piece of data appended to the survey link, such as a respondent ID, source tag, or panel identifier. Respondents never see this data, but it is stored with their responses for analysis and integration.
+- selected _United Kingdom_ as their location; and
+- selected _Customer service manager_ as their role.
 
-## What substitutions are
+You can then use that hidden variable in question conditions, group conditions or piping, instead of rebuilding the same rules each time.
 
-Substitutions let you insert hidden variable values directly into question text. For example, you can address a respondent by name or reference a product code without asking the respondent to enter it.
+## When to use hidden variables
 
-## Set up a hidden variable
+Use a hidden variable when you need to:
 
-<Steps>
-  <Step title="Add a hidden variable question">
-    Open the **Add questions** popup and select the **HiddenVariableQuestion** type.
-  </Step>
-  <Step title="Name the variable">
-    Give the variable a clear name, such as `respondent_id` or `source`.
-  </Step>
-  <Step title="Append it to the link">
-    When distributing the survey, add the variable and value to the URL query string.
-  </Step>
-</Steps>
+- apply the same respondent group to several questions or groups;
+- combine answers from more than one question into one reusable segment;
+- simplify complex logic in the questionnaire; or
+- use a respondent group as a piping source.
 
-<Note>
-  **Needs product verification:** exact steps for adding a hidden variable and setting substitution syntax.
-</Note>
+You can create a hidden variable for any group of respondents that can be defined by their answers.
 
-## Use substitutions in question text
+## Create a hidden variable
 
-Once a hidden variable is defined, you can reference it inside question text so the value appears to the respondent. This is useful for:
+1. Select **Options** in the questionnaire menu.
+2. Select **Add hidden variable**.
+3. Give the variable a clear, descriptive name.
+4. Select **Include** or **Exclude**.
+5. Choose whether respondents must meet **All** or **Any** of the conditions.
+6. Select the question, operator and answer for each condition.
+7. Select **Add another condition** to add more rules.
+8. Select **Confirm**.
 
-- Tracking the source or panel that sent the respondent
-- Personalising greetings or scenario descriptions
-- Integrating with external systems that pass identifiers through the link
+[Insert screenshot: hidden variable condition builder]
 
-## When to use hidden variables and substitutions
+<Info>
+  Hidden variables use the same condition builder as question and group conditions.
+</Info>
 
-- **Tracking sources:** distinguish between email, social, or panel traffic
-- **Personalising text:** insert names, codes, or references without asking
-- **Panel integration:** pass panel respondent IDs seamlessly into response data
+## Set the conditions
 
-## Test before launch
+Each condition has three parts:
 
-Always test hidden variables and substitutions with a **test link** before launching. Verify that values pass correctly and appear as expected in question text. If a variable is missing from the URL, check how the survey behaves and whether a default value is shown.
+<table>
+  <colgroup>
+    <col width="114" />
+    <col width="416" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Part</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Question**</td>
+      <td>The question used to define the group.</td>
+    </tr>
+    <tr>
+      <td>**Operator**</td>
+      <td>Choose **IS** or **IS NOT**.</td>
+    </tr>
+    <tr>
+      <td>**Answer**</td>
+      <td>The answer that must be selected or not selected.</td>
+    </tr>
+  </tbody>
+</table>
+
+If you select more than one answer with **IS**, the condition changes to **IS EITHER**. This means the respondent can have selected any one of those answers.
+
+### Include or exclude respondents
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="559" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Include**</td>
+      <td>Adds respondents who meet the condition to the hidden variable.</td>
+    </tr>
+    <tr>
+      <td>**Exclude**</td>
+      <td>Removes respondents who meet the condition from the hidden variable.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Use All or Any
+
+Use the selector above the conditions to decide how several rows work together.
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="441" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**All**</td>
+      <td>The respondent must meet every condition.</td>
+    </tr>
+    <tr>
+      <td>**Any**</td>
+      <td>The respondent must meet at least one condition.</td>
+    </tr>
+  </tbody>
+</table>
+
+For example, to create the **UK customer service managers** hidden variable, select **Include** and **All**, then add these conditions:
+
+| Question | Operator | Answer |
+| :-- | :-- | :-- |
+| Location | **IS** | United Kingdom |
+| Job role | **IS** | Customer service manager |
+
+Only respondents who meet both conditions are included in the hidden variable.
+
+## Use a hidden variable in logic
+
+After creating the hidden variable, select it when you add a condition to a question or group.
+
+For example, use **Ask only if** to show a set of customer-service questions only to respondents in the **UK customer service managers** hidden variable.
+
+This is useful when the same segment controls several parts of the questionnaire. If the segment definition changes, update the hidden variable once instead of editing each question or group separately.
+
+## Use a hidden variable for piping
+
+Use a hidden variable for piping when you need to pipe answers multiple times and the standard **Pipe answers** option cannot support the required setup.
+
+1. Create the hidden variable from the relevant earlier answers.
+2. Open the later question.
+3. Select **Pipe answers**.
+4. Select the hidden variable as the source.
+5. Complete the target-question setup.
+
+For the target-question rules, see [Piping and Text substitution](/piping-and-text-substitution).
+
+## Test the setup
+
+Preview the questionnaire with different answer combinations before launching.
+
+Check that respondents who meet the conditions are included in the hidden variable, and that questions, groups and piped answers behave as expected.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Panel distribution](/distribution/panel)
+- [Piping and Text substitution](/questionnaire/piping-and-text-substitution)

@@ -1,66 +1,96 @@
 ---
-title: "Open End question in Peekator"
+title: "Open-end question"
 sidebarTitle: "Open End"
-description: "Learn how to add and configure an Open End question so respondents type free-text answers in Peekator surveys."
+description: "Use an Open-end question when you want respondents to answer in their own words.\nRespondents can type their answer or record a voice response. Voice responses are transcribed automatically."
 ---
 
-An Open End question gives respondents a single-line text field to type a free-text answer. Use this type when you want unfiltered, qualitative responses in the respondent's own words, such as feedback, explanations, or spontaneous brand recall.
+## When to use an Open-end question
 
-## When to use this question type
+- You want detailed feedback in respondents’ own words.
+- You need to explore reasons, opinions or experiences.
+- You want to identify themes through AI auto-coding.
 
-- You want verbatim responses rather than pre-defined options.
-- You need to capture reasons, opinions, or suggestions in the respondent's own words.
-- You want to identify themes or use AI auto-coding to categorise open-ended responses.
+## Add an Open-end question
 
-## How to add it
+1. In the Questionnaire builder, select **Add question**.
+2. Select **Open-end**.
+3. Enter your question text.
+4. An **Instruction note** is added automatically. Edit it if needed.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Open End** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and edit the question text and validation rules.
-  </Step>
-</Steps>
+[Insert screenshot: Open-end question builder]
 
-## Settings
+## Configure the response
 
-| Setting | Description |
-| --- | --- |
-| Question text | The label respondents see. |
-| Placeholder text | Hint text shown inside the empty input field. |
-| Mandatory | Requires text input before the respondent can continue. |
-| Minimum characters | Sets the shortest acceptable response length. |
-| Maximum characters | Sets the longest acceptable response length. |
-| Validate as email | Restricts input to a valid email format. |
-| Validate as URL | Restricts input to a valid URL format. |
+Select **See more** in the **Settings** panel to view all settings.
 
-<Note>
-  **Needs product verification:** Confirm whether "Multi-line textarea" and "Spell check" settings exist for this question type.
-</Note>
+| Setting | What it means |
+| :-- | :-- |
+| Save audio files to the server | Saves the original voice recording. Turn this off if you want to keep only the transcript. |
+| Show large transcribe design | Shows respondents a larger layout for recording and reviewing their voice transcript. |
+| Show as single line | Displays a single-line text field instead of a larger text area. |
+| Answer is mandatory | Requires respondents to provide an answer before continuing. |
+| Enable answer validation | Requires the respondent’s text to match the accepted answer you add in the questionnaire. |
+| Skip if no query string | Skips the question if the specified query string is not available. |
+| Query string name | Enter the query string used in your survey link. |
+
+## Voice responses
+
+Respondents can record an answer instead of typing it. Peekator automatically creates a transcript.
+
+Choose whether to save the original recording:
+
+- Enable **Save audio files to the server** to keep both the recording and transcript.
+- Disable it to keep the transcript only.
+
+## Add conditions
+
+Use **Add conditional rule** in the **Ask only if** section to control whether respondents see the question.
+
+For full instructions, see [Logic and branching](https://chatgpt.com/c/6a9944be-99a0-83ed-acda-754df5c50a8c#).
 
 ## What respondents see
 
-Respondents see a single-line text input field below the question text. They type their answer. If minimum or maximum character limits are set, a counter may show progress. The "Next" button remains disabled until the mandatory requirement and any validation rules are met.
+Respondents can enter a free-text answer or record a voice response.
 
-## Logic and piping
+If you enable answer validation, their typed answer must match the accepted answer before they can continue.
 
-You can use the presence or content of an open-ended response in logic to show or hide later questions. For example, if a respondent leaves the field empty, you can skip a follow-up. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+## Analyse answers with AI auto-coding
 
-## Results in reporting
+Open-end responses can be automatically coded into themes and categories.
 
-Responses appear as a list of verbatim answers. You can filter, search, and export them for qualitative analysis. If AI auto-coding is enabled, responses are automatically categorised into named themes with counts and percentages.
+1. Open the question in reporting.
+2. Select **Add next AI auto-code**.
+3. Review the category set created from the responses.
+4. Select a category to view its coded responses.
 
-## Example use case
+You can use multiple category sets to analyse the same question from different perspectives.
 
-A cosmetics brand asks, "What is the first word that comes to mind when you think of our brand?" The verbatim responses are auto-coded by AI into themes such as "Natural", "Luxury", and "Expensive" to guide messaging strategy.
+## Review and edit coding
+
+Use the reporting tools to review and refine the results:
+
+- **View all**: view all responses in the selected category.
+- **Edit categories**: rename, add or remove categories.
+- **Edit answers**: review or update coded answers.
+- **Delete all**: remove the current coding results.
+
+You can switch between percentages and response counts.
+
+[Insert screenshot: Open-end AI auto-coding results]
+
+## Example
+
+Ask: “What is the best advice you have ever received?”
+
+Use AI auto-coding to identify themes such as:
+
+- Advice and sayings
+- Financial advice
+- Relationships
+- Personal growth
 
 ## Related guides
 
 - [Questionnaire overview](/questionnaire/overview)
 - [Logic and branching](/questionnaire/logic-and-branching)
-- [Multiple Link Open End question](/questionnaire/multiple-link-open-end)
-- [Conversational AI question](/questionnaire/conversational-ai)
+- [AI coding](/ai-analysis/auto-coding)

@@ -1,60 +1,106 @@
 ---
 title: "Set quotas on your survey"
 sidebarTitle: "Quotas"
-description: "Limit how many respondents with specific characteristics are accepted in your Peekator survey using quota cells and targets."
+description: "Use quotas to set response targets for selected answers in your questionnaire."
 ---
 
-Quotas let you control how many respondents with a given characteristic are accepted into your survey. They are essential for demographic balancing and ensuring your sample stays representative.
+Quotas help you collect the required mix of respondents. For example, you may need a specific number of respondents in each age group, job role or customer segment.
 
-## What quotas are
+## Set a quota
 
-A quota is a limit on the number of respondents who can select a specific answer or combination of answers. Once a quota cell is full, new respondents who match that cell are stopped from completing the survey.
+1. Select **Set Quota** in the upper-right corner.
+2. Select **Add new quota**.
+3. Select the question from the dropdown.
+4. Enable each answer that needs a target.
+5. Enter the target for each enabled answer.
+6. Select **Save Quota**.
 
-## How to access quotas
+Use **Enable all answers** when every answer in the selected question needs a quota.
 
-Click the **Set quota** button located above the question canvas on the right side. This opens the quota configuration panel.
+You can select **Add new quota** again to set quotas for another question.
 
-## Configure a quota cell
+## Choose the quota type
 
-<Steps>
-  <Step title="Open Set quota">
-    Click **Set quota** above the question canvas.
-  </Step>
-  <Step title="Choose the question">
-    Select the question that defines the characteristic you want to limit, such as age group or region.
-  </Step>
-  <Step title="Select the answer">
-    Pick the specific answer option that forms the quota cell.
-  </Step>
-  <Step title="Set the target count">
-    Enter the maximum number of respondents you want to accept for that cell.
-  </Step>
-</Steps>
+Use the controls beside the question selector to choose whether to enter quota targets as:
 
-## What happens when a quota is full
+<table>
+  <colgroup>
+    <col width="165" />
+    <col width="414" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Use when</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Percentage** (`%`)</td>
+      <td>You want to set each answer as a percentage.</td>
+    </tr>
+    <tr>
+      <td>**Number** (`123`)</td>
+      <td>You want to set an exact number of respondents.</td>
+    </tr>
+  </tbody>
+</table>
 
-When a respondent matches a full quota cell, the survey ends and the respondent sees the **OnQuotaFullText** configured in survey settings.
+Peekator shows the calculated `n` value next to each quota target.
 
-## When to use quotas
+## Example: age quotas
 
-- **Demographic balancing:** ensure equal or weighted representation across age, gender, or region
-- **Representative samples:** prevent any one group from overfilling your data set
-- **Panel management:** control how many completes you accept from specific segments
+For a 500-response survey, you could set these targets for an age question:
 
-## Test before launch
+| Answer | Quota |
+| :-- | :-- |
+| 18–34 | 35% |
+| 35–54 | 40% |
+| 55+ | 25% |
 
-Always test quota logic before launching. Use the **test link** to simulate responses and confirm that:
+For a Single choice question, quota targets will normally total 100% or the total target number of responses.
 
-- Quota counts increment correctly
-- Full quotas trigger the quota-full message
-- The **OnQuotaFullText** displays as expected
+## Use hidden variables for complex segments
 
-<Note>
-  **Needs product verification:** full quota configuration steps and whether nested or cross-quota cells are supported.
-</Note>
+Set a quota on a hidden variable when the group you need cannot be defined by one answer alone.
+
+For example, you may need a quota for respondents who are both:
+
+- senior decision-makers; and
+- involved in purchasing software for their organisation.
+
+First, create a hidden variable with those conditions. Then add a quota and select that hidden variable as the source.
+
+This lets you set a target for a more complex group without creating a separate screener question.
+
+For instructions on creating the group, see [Hidden variables](/questionnaire/hidden-variables).
+
+## Quotas for Multiple choice questions
+
+Multiple choice answers can overlap because respondents may select more than one option.
+
+For example, a respondent may select both **Purchasing software** and **Managing IT systems**. They can therefore contribute to both enabled quotas.
+
+This means that percentage quotas in a Multiple choice question may total more than 100%.
+
+## See which questions have quotas
+
+A question with a quota is marked with the **Quota** indicator in the questionnaire menu.
+
+Use this indicator to check which questions are controlling quota targets while you build or review the questionnaire.
+
+## Monitor quota results
+
+Questions with quotas are marked as **Quota** in Results.
+
+The graph for a quota question is based on the quota targets you set, rather than the actual number of respondents alone. It shows progress against each target, for example:
+
+- `0 / 100` means no responses have yet been counted towards a target of 100;
+- `65 / 100` means 65 responses have been counted towards that target.
+
+Review quota progress throughout fieldwork to see which groups are filling more slowly.
 
 ## Related guides
 
-- [Screen and qualify respondents](/questionnaire/screen-and-qualify)
-- [Survey settings](/survey-settings/overview)
-- [Distribution overview](/distribution/overview)
+- [Screeners](/questionnaire/screen-and-qualify)
+- [Multiple Choice question](/questionnaire/multiple-choice)

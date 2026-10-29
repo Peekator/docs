@@ -1,73 +1,120 @@
 ---
-title: "Interview Topic question in Peekator"
+title: "Interview topic"
 sidebarTitle: "Interview Topic"
-description: "Learn how to add an Interview Topic question to guide AI-led interviews with structured topic prompts in Peekator."
+description: "An Interview topic adds an AI-led conversation to your survey. The AI asks follow-up questions based on the goals you set, so it can explore respondents’ views in more depth. You can add multiple interview topics to the same survey. Each topic has its own title, goals, tone and time limit."
 ---
 
-An Interview Topic question defines a subject area or discussion theme for AI-led interviews in Peekator. It acts as a prompt that guides the artificial intelligence to explore a specific topic with the respondent, ensuring the conversation stays relevant and covers the areas you need for your research.
+## When to use an Interview topic
 
-## When to use this question type
+Use an Interview topic when you want to understand the reasons behind respondents’ answers, not just what they selected.
 
-- You are running an AI-led interview and want to structure the conversation around specific themes.
-- You need the AI to probe deeply on a topic while maintaining a natural, conversational flow.
-- You want to combine the depth of qualitative interviews with the scale of automated data collection.
+For example, use separate topics to explore:
 
-## How to add it
+- first impressions of a product;
+- barriers to using a service;
+- reactions to a campaign; and
+- ideas for improvement.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Interview Topic** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and enter the topic description, key sub-topics, and conversation style.
-  </Step>
-</Steps>
+## Add an Interview topic
 
-## Settings
-
-| Setting | Description |
-| --- | --- |
-| Topic title | The main subject the AI should discuss with the respondent. |
-| Topic description | Guidance for the AI on what to explore, for example, "Discuss recent purchasing habits for luxury goods, including frequency, budget, and brand preferences." |
-| Key sub-topics | Specific areas the AI should ensure it covers during the conversation. |
-| Conversation style | The tone the AI should adopt, for example, professional, empathetic, or exploratory. |
-| Maximum exchanges | The number of back-and-forth turns before the AI moves to the next topic. |
-| End condition | A rule that ends the topic early if the AI determines sufficient detail has been gathered. |
+1. In the questionnaire builder, select **Add questions**.
+2. Choose **Interview topic**.
+3. Enter a clear topic title.
+4. Add the goals the AI should cover during the conversation.
+5. Configure the tone and time limit.
+6. Save the question.
 
 <Note>
-  **Needs product verification:** Confirm whether "Fallback question" and "Language restriction" settings exist for this question type.
+  Add another Interview topic whenever you want the AI to explore a separate subject. Keep each topic focused so the conversation remains natural and useful.
 </Note>
+
+## Set interview goals
+
+Goals tell the AI what it should learn during the interview. Add between three and ten goals for each topic.
+
+Select **Add goal** to write them manually.
+
+You can also use **Goals helper**:
+
+1. Describe what you want to learn in a few sentences.
+2. Select **AI generate goals**.
+3. Review and edit the suggested goals before saving.
+
+Write specific, open-ended goals. For example:
+
+- Understand what respondents liked most about the new service.
+- Explore the reasons behind any frustration or confusion.
+- Identify improvements that would make the experience more useful.
+
+## Configure the interview
+
+In **Settings**, choose how the AI conducts the conversation:
+
+<table>
+  <colgroup>
+    <col width="139" />
+    <col width="455" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Tone**</td>
+      <td>Sets the AI’s interview style: **Professional** or **Casual**.</td>
+    </tr>
+    <tr>
+      <td>**Time limit**</td>
+      <td>Limits how long the AI can spend on the topic. Turn it on, then enter the number of minutes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<Tip>
+  Use a time limit to keep the overall survey length manageable, especially when you include several Interview topics.
+</Tip>
+
+## Conditions and piping
+
+You can add a condition to an Interview topic to control whether it is shown, based on an earlier answer.
+
+Use **Add conditional rule** to define the condition. If it is not met, the topic is skipped.
+
+Each Interview topic can have its own condition. This lets you run different follow-up conversations for different respondent groups.
+
+You can also select **Pipe answers** to give the AI context from earlier survey responses, so it can ask more relevant follow-up questions.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
 
 ## What respondents see
 
-Respondents see a chat interface where the AI introduces the topic and asks an opening question. The conversation proceeds naturally, with the AI probing based on the respondent's answers and the configured sub-topics. The experience feels like a text-based interview rather than a traditional survey.
+Respondents take part in a natural conversation with the AI. The AI adapts its follow-up questions to the respondent’s answers while working through the goals you set.
 
-<Warning>
-  This question type is only available in Interview mode. Interview mode uses "Discussion guide" instead of "Questionnaire" and "Chat with Data" instead of "AI Analysis".
-</Warning>
-
-<Warning>
-  Interview Topic questions involve complex AI behaviour that can vary by response. Always preview and test with a range of sample answers before launching to ensure the conversation stays on topic and produces useful data.
-</Warning>
-
-## Logic and piping
-
-You can use the presence or content of the AI conversation in logic to show or hide later topics or questions. For example, if the AI tags a response as "highly satisfied", you can skip a follow-up satisfaction question. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+Each topic starts a focused discussion. If your survey has multiple Interview topics, respondents complete each topic in turn.
 
 ## Results in reporting
 
-Results appear as a transcript of each respondent's conversation for this topic. AI-generated summaries and themes are available in the dashboard under "Chat with Data". You can also export full transcripts for manual qualitative analysis or further coding.
+Results include an **AI generated summary** for every respondent’s interview.
+
+The summary gives a quick overview of what the respondent discussed. Select the response icon beside a summary to open the full interview response.
+
+You can also use AI auto-coding in the same way as for other open-ended responses to group answers into themes and analyse them at scale.
 
 ## Example use case
 
-A luxury travel agency creates an Interview Topic titled "Premium travel preferences". The AI asks about recent trips, budget, destination types, and booking behaviour. Key sub-topics include "Sustainability concerns" and "Loyalty programme usage". The conversation adapts based on whether the respondent mentions eco-friendly hotels or frequent flyer programmes.
+A transport provider first asks respondents to rate a recent journey. It then adds two Interview topics:
+
+1. **Journey experience** — to understand what worked well and what caused frustration.
+2. **Future improvements** — to explore which changes would make respondents more likely to use the service again.
+
+The first topic can use the rating as context, while the second focuses on practical suggestions.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
-- [Logic and branching](/questionnaire/logic-and-branching)
+- [Open-end question](/questionnaire/open-end)
 - [Conversational AI question](/questionnaire/conversational-ai)
-- [Open End question](/questionnaire/open-end)
+- [Logic and branching](/questionnaire/logic-and-branching)
+- [AI auto-coding](/ai-analysis/auto-coding)

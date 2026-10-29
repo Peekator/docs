@@ -1,68 +1,97 @@
 ---
-title: "Click Test question in Peekator"
+title: "Click test question"
 sidebarTitle: "Click Test"
-description: "Learn how to add a Click Test or Heatmap question to track where respondents click on an image in Peekator surveys."
+description: "Use a Click test to show an image and ask respondents to select an area on it. It is useful for testing where attention goes, whether an important element is easy to find and whether respondents click the intended area."
 ---
-
-A Click Test question shows respondents an image and asks them to click on specific areas. The results are aggregated into a heatmap showing where respondents clicked most often. This is a core UX research method for testing navigation, visual hierarchy, and the findability of elements.
 
 ## When to use this question type
 
-- You want to see where respondents naturally click on a design, screenshot, or mock-up.
-- You need to test whether important buttons, links, or messages are found quickly.
-- You want visual evidence of confusion or misclicks to guide design improvements.
+Use a Click test when you want to:
 
-## How to add it
+- Test attention on an advert, package, design or image.
+- Check whether respondents can find a button, product or message.
+- Compare which areas of an image attract clicks.
+- Measure how quickly respondents find the intended area.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Click Test** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and upload the image and set the task instruction.
-  </Step>
-</Steps>
+## Add a Click test question
 
-## Settings
+1. In the questionnaire builder, select **Add questions**.
+2. Select **Click test**.
+3. Enter your question text.
+4. Edit the **Instruction note** if needed.
+5. Upload the image respondents will click on.
+6. Select **Save question**.
 
-| Setting | Description |
-| --- | --- |
-| Image | The image, screenshot, or design respondents will click on. |
-| Task instruction | The prompt telling respondents what to do, for example, "Where would you click to buy this product?" |
-| Allow multiple clicks | Lets respondents click more than once on the image. |
-| Click limit | The maximum number of clicks allowed if multiple clicks are enabled. |
-| Show heatmap to respondent | Displays a heatmap overlay after the respondent clicks. |
+<Info>
+  You can use one image per Click test. Uploading a new image removes the previous one.
+</Info>
 
-<Note>
-  **Needs product verification:** Confirm whether "Define correct zones" and "Time limit per click" settings exist for this question type.
-</Note>
+## Configure the question
+
+Select **See more** in the settings panel to configure the test.
+
+<table>
+  <colgroup>
+    <col width="201" />
+    <col width="510" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**No. of clicks available**</td>
+      <td>Sets the minimum and maximum number of areas a respondent can select.</td>
+    </tr>
+    <tr>
+      <td>**Radius**</td>
+      <td>Sets the size of the recorded click area. A larger radius is useful when you want to capture a broader area around each click.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Mark a success area
+
+<Card title="About the success area" type="info">
+  A **success area** is the part of the image you want respondents to find or select. It gives you a clear benchmark: in reporting, clicks inside this area count as successful, while clicks outside it do not.
+
+  Use it to test whether a button, product, message or design element is easy to notice. Leave it unset if you only want to explore where attention goes naturally.
+</Card>
+
+Select **Mark success area** below the image to define the part of the image respondents should find or select.
+
+Drag and resize the highlighted area to cover the relevant element. You can remove it at any time by selecting **Remove success area**.
+
+Use a success area when you need to measure how many respondents clicked the intended part of the image.
+
+## Conditions
+
+Use **Add conditional rule** under **Ask only if** to control whether the Click test is shown, based on an earlier answer.
+
+For more information, see [Logic and branching](/questionnaire/logic-and-branching).
 
 ## What respondents see
 
-Respondents see an image with a task instruction above or below it. They click on the image where they think the answer lies. If multiple clicks are allowed, they can click several times. A counter may show remaining clicks if a limit is set. After clicking, they proceed to the next question.
-
-<Warning>
-  Click Test questions involve image rendering and coordinate capture. Always preview and test the full questionnaire before launching to ensure clicks register correctly across devices and screen sizes.
-</Warning>
-
-## Logic and piping
-
-You can use the click coordinates or whether a click fell within a defined zone in logic to show or hide later questions. For example, if a respondent clicks outside the correct zone, you can ask a follow-up about what they were looking for. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+Respondents see the image and select the area or areas that answer the question. They must make the number of clicks you set in the settings.
 
 ## Results in reporting
 
-Results appear as a heatmap overlay on the image, with darker or warmer colours indicating areas of high click density. Individual click coordinates are also available in exports. If correct zones were defined, accuracy rates are shown.
+Results show the tested image with the success area, where one has been set. You can see:
+
+- The percentage of respondents who clicked within the success area.
+- The median time respondents took to click.
+- The overall pattern of clicks across the image.
 
 ## Example use case
 
-An e-commerce retailer tests a new product page. Respondents are asked, "Where would you click to add this item to your basket?" The heatmap reveals that many respondents click on the product image instead of the "Add to basket" button, indicating a need for clearer visual hierarchy.
+A detergent brand shows a shelf image and asks, “Imagine you are shopping for laundry detergent. Click on the packaging part that first catches your attention.”
+
+The brand marks its product label as the success area to see how many respondents noticed it first and how quickly they found it.
 
 ## Related guides
 
-- [Questionnaire overview](/questionnaire/overview)
-- [Logic and branching](/questionnaire/logic-and-branching)
 - [5 Second Test question](/questionnaire/five-second-test)
-- [Website Test question](/questionnaire/website-test)
+- [Logic and branching](/questionnaire/logic-and-branching)

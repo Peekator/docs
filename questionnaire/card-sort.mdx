@@ -1,69 +1,167 @@
 ---
-title: "Card Sort question in Peekator"
+title: "Card Sort question"
 sidebarTitle: "Card Sort"
-description: "Learn how to add a Card Sort question so respondents organise items into categories in Peekator surveys."
+description: "Use a Card sort question to ask respondents to group cards into categories. It helps you understand how people organise information, prioritise benefits or group concepts together."
 ---
-
-A Card Sort question asks respondents to drag cards representing items, concepts, or content into categories. This is a foundational UX research method for understanding how people mentally organise information, which helps design navigation, menus, and information architecture.
 
 ## When to use this question type
 
-- You are designing or restructuring a website or app menu and want to understand user mental models.
-- You need to validate category labels and groupings with real users.
-- You want to discover unexpected groupings that could improve findability.
+Use a Card sort question when you want to:
 
-## How to add it
+- Understand how respondents group products, features or ideas.
+- Test whether your categories make sense to respondents.
+- Prioritise benefits or attributes.
+- Identify which items respondents see as similar.
 
-<Steps>
-  <Step>
-    In the questionnaire builder, click **Add questions**.
-  </Step>
-  <Step>
-    Select **Card Sort** from the popup.
-  </Step>
-  <Step>
-    The question appears on the canvas. Click it to open the configuration panel and add cards, define categories, and choose the sort type.
-  </Step>
-</Steps>
+## Add a Card sort question
 
-## Settings
+1. In the questionnaire builder, select **Add questions**.
+2. Select **Card sort**.
+3. Enter your question text.
+4. Edit the **Instruction note** if needed.
+5. Choose the card sort type.
+6. Add your categories and cards.
+7. Select **Save question**.
 
-| Setting | Description |
-| --- | --- |
-| Cards | The items respondents will sort, for example, product names or page titles. |
-| Categories | The groups respondents drag cards into. In an open sort, respondents create their own categories. |
-| Sort type | **Closed**: respondents sort into pre-defined categories. **Open**: respondents create and name their own categories. **Hybrid**: pre-defined categories plus the option to add new ones. |
-| Mandatory | Requires all cards to be sorted before the respondent can continue. |
-| Randomise cards | Shuffles the order of cards for each respondent. |
-| Allow multiple cards per category | Lets respondents place more than one card in the same category. |
+## Choose a card sort type
 
-<Note>
-  **Needs product verification:** Confirm whether "Maximum categories" and "Time limit" settings exist for this question type.
-</Note>
+<table>
+  <colgroup>
+    <col width="161" />
+    <col width="527" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>How it works</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Closed categories**</td>
+      <td>Respondents sort cards into the categories you create.</td>
+    </tr>
+    <tr>
+      <td>**Hybrid categories**</td>
+      <td>Respondents sort cards into your categories, but can also add their own custom categories.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Add categories and cards
+
+Categories are the groups respondents sort cards into. For example, a detergent survey might use **Essential**, **Nice to have** and **Not important to me**.
+
+Cards are the items respondents place into those categories, such as “Removes tough stains” or “Works well at low temperatures”.
+
+<table>
+  <colgroup>
+    <col width="158" />
+    <col width="554" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Category**</td>
+      <td>A group or label that respondents sort cards into.</td>
+    </tr>
+    <tr>
+      <td>**Associated card**</td>
+      <td>A card added under a category. This marks that category as its expected or correct placement.</td>
+    </tr>
+    <tr>
+      <td>**Card**</td>
+      <td>A standalone, open card. Respondents can place it in any category, and it has no expected placement.</td>
+    </tr>
+  </tbody>
+</table>
+
+To add an associated card, select **Add card to this category** beneath the relevant category.
+
+Use associated cards when you have a predefined categorisation that you want to test. This allows Peekator to report agreement between your expected placement and respondents’ placements.
+
+Add standalone cards in the **Cards** section when you want respondents to decide where they belong without a predefined answer.
+
+Select **Add category** to create another category. You can reorder or remove categories and cards at any time.
+
+## Configure the question
+
+Select **See more** in the settings panel to configure the card sort.
+
+<table>
+  <colgroup>
+    <col width="325" />
+    <col width="379" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Required**</td>
+      <td>The Card sort question is required.</td>
+    </tr>
+    <tr>
+      <td>**Randomize cards**</td>
+      <td>Shows cards in a different order for each respondent.</td>
+    </tr>
+    <tr>
+      <td>**Allow “Continue” without needing to complete**</td>
+      <td>Lets respondents continue before sorting every card.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## What respondents see
 
-Respondents see a set of cards on one side and category areas on the other. They drag each card into a category. In an open sort, they can also type a name for each new category they create. A counter may show how many cards remain unsorted. If mandatory, they must sort all cards before continuing.
-
-<Warning>
-  Card Sort questions involve drag-and-drop interaction and category validation. Always preview and test the full questionnaire before launching to ensure cards and categories behave correctly on different devices.
-</Warning>
-
-## Logic and piping
-
-You can use the final category assignments in logic to show or hide later questions. For example, if a respondent places a specific card in a particular category, you can branch to a follow-up about that grouping. For full instructions, see [Logic and branching](/questionnaire/logic-and-branching).
+Respondents drag or select each card and place it into the category that best matches their view. In a Hybrid category sort, they can also create their own categories.
 
 ## Results in reporting
 
-Results appear as a matrix showing the percentage of respondents who placed each card in each category. In open sorts, a list of user-created category names is shown with frequency counts. A similarity matrix or dendrogram may be available to visualise grouping patterns.
+Card sort results include three views:
+
+<table>
+  <colgroup>
+    <col width="150" />
+    <col width="556" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>View</th>
+      <th>What it shows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Agreement rates**</td>
+      <td>How closely respondents’ placements match the expected category for associated cards.</td>
+    </tr>
+    <tr>
+      <td>**Pick rates**</td>
+      <td>The percentage of respondents who placed each card in each category, including **Uncategorized**.</td>
+    </tr>
+    <tr>
+      <td>**Similarity matrix**</td>
+      <td>How often respondents placed pairs of cards in the same category. Higher percentages indicate cards that respondents more often see as related.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Example use case
 
-A university is redesigning its website. It runs a closed card sort with 30 cards representing academic pages and 6 pre-defined categories: "Study", "Research", "About us", "Students", "Staff", and "News". The results show that respondents frequently place "Library" under "Study" rather than "Students", leading to a menu restructure.
+A detergent brand asks respondents to sort benefits into **Essential**, **Nice to have** and **Not important to me**. Cards include stain removal, low temperature performance, recyclable packaging and fragrance.
+
+The results show which benefits matter most, which are commonly grouped together and whether respondents agree with the brand’s expected categorisation.
 
 ## Related guides
 
+- [Results and reporting](/analytics/overview)
 - [Questionnaire overview](/questionnaire/overview)
-- [Logic and branching](/questionnaire/logic-and-branching)
-- [Click Test question](/questionnaire/click-test)
-- [Website Test question](/questionnaire/website-test)

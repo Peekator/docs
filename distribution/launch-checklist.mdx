@@ -1,48 +1,92 @@
 ---
 title: "Launch checklist for your Peekator survey"
 sidebarTitle: "Launch Checklist"
-description: "Complete this pre-launch checklist to verify your questionnaire, survey settings, and distribution channel before clicking Review and launch in Peekator."
+description: "Complete this checklist before you launch your survey or start fieldwork. It helps you catch issues with the questionnaire, survey settings and distribution setup before respondents take part."
 ---
-
-Before you click **Review and launch**, run through this checklist to make sure your survey is ready for respondents. Catching issues now prevents bad data, broken logic, or a poor respondent experience later.
 
 ## Questionnaire
 
-- [ ] At least one question has been added to the questionnaire.
-- [ ] Logic and branching have been tested using the **Test Link**.
-- [ ] Screenout conditions have been tested to confirm disqualified respondents see the correct screenout message.
-- [ ] Quotas have been tested if your survey uses them.
-- [ ] Question text has been reviewed for spelling, clarity, and tone.
+- [ ] The questionnaire includes all required questions, information screens and answer options.
+- [ ] Question wording, instruction notes and answer options have been reviewed for clarity, spelling and tone.
+- [ ] The survey has been tested from a respondent’s point of view using **Preview Survey** or the **Test Link**, where available.
+- [ ] Logic, branching, piping and text substitutions work as expected.
+- [ ] Any screeners have been tested, including the screenout path.
+- [ ] Any quotas have been configured and tested.
+- [ ] Required-answer settings and validation rules work as expected.
+- [ ] Translations, if used, have been reviewed in every language.
 
 ## Survey settings
 
-- [ ] **IntroText** is set so respondents know what the survey is about.
-- [ ] **OnCompleteText** is set so respondents see a clear thank-you message.
-- [ ] **OnScreenoutText** is set if you are using screenout questions.
-- [ ] **TotalNumberOfRespondents** matches your target sample size.
-- [ ] **DateFrom** and **DateTo** are set if you want scheduled open and close times.
+- [ ] The survey’s main language is correct.
+- [ ] The welcome text and instruction text have been reviewed.
+- [ ] The completion message and any end-of-survey redirect have been checked.
+- [ ] The target number of responses is correct, where applicable.
+- [ ] Any scheduled opening or closing dates have been set.
+- [ ] Any survey messages, such as the screenout or quota-full message, have been reviewed.
 
 ## Distribution
 
-- [ ] At least one distribution channel is configured: **Link**, **Campaign**, or **Panel**.
-- [ ] For link distribution, you have copied the **Live Link** and know how you will share it.
-- [ ] For campaign distribution, your contact list and message content are ready.
-- [ ] For panel distribution, your target audience description is accurate and complete.
+- [ ] The correct distribution channel has been selected: **Link**, **Campaign** or **Panel**.
 
-## Final step
+### Link
 
-- [ ] Click **Review and launch**.
+- [ ] The survey has been tested using the **Test Link**.
+- [ ] You know how and where you will share the **Live Link**.
+- [ ] You will share the Live Link only after the survey has been launched.
 
-After you launch, the survey state changes:
+### Campaign
 
-- For **Link** and **Campaign** distribution, the survey may move directly to **Collecting**.
-- For **Panel** distribution, the survey moves to **Review** so the Peekator team can manage the launch.
+- [ ] The sending channel and branding have been agreed with the Peekator team.
+- [ ] The correct contact list has been uploaded and mapped.
+- [ ] Personalisation fields and any pre-filled survey answers have been checked.
+- [ ] A test invitation has been sent and all placeholders display correctly.
+- [ ] The campaign launch date and time are set more than 15 minutes in advance.
 
-<Warning>
-</Warning>
+### Panel
+
+- [ ] The required number of respondents is correct.
+- [ ] The market and target-audience description are complete and accurate.
+- [ ] All relevant screeners and quotas have been set up.
+- [ ] If using an external panel, the correct provider is connected and all outcome IDs have been entered.
+
+## Launch or submit for review
+
+Follow the action for your selected distribution channel:
+
+<table>
+  <colgroup>
+    <col width="173" />
+    <col width="531" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Distribution channel</th>
+      <th>What to do next</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Link**</td>
+      <td>Select **Review and Launch**, complete the final review and launch the survey. The survey then moves to **Collecting**.</td>
+    </tr>
+    <tr>
+      <td>**Campaign**</td>
+      <td>Complete the campaign setup in **Campaign Hub**, then review and launch the campaign from there.</td>
+    </tr>
+    <tr>
+      <td>**Panel**</td>
+      <td>Select **Review and Launch**. The survey moves to **In review**, and the Peekator team checks the setup before launching fieldwork.</td>
+    </tr>
+  </tbody>
+</table>
+
+For surveys using the Peekator-managed panel, fieldwork is followed by a **Data Quality** phase. The Peekator team reviews responses and replaces low-quality data where needed before the survey moves to **Done**.
 
 ## Related guides
 
 - [Distribution overview](/distribution/overview)
+- [Share survey by link](/distribution/link-sharing)
+- [Campaigns](/distribution/campaigns)
+- [Collect responses through a panel](/distribution/panel)
 - [Logic and branching](/questionnaire/logic-and-branching)
 - [Survey settings](/survey-settings/overview)
