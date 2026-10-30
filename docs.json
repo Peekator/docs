@@ -20,7 +20,7 @@
     ],
     "tabs": [
       {
-        "tab": "Start Here ✅",
+        "tab": "Start Here",
         "groups": [
           {
             "group": "Start Here",
@@ -33,7 +33,7 @@
         ]
       },
       {
-        "tab": "Projects ✅",
+        "tab": "Projects",
         "groups": [
           {
             "group": "Projects",
@@ -48,7 +48,7 @@
         ]
       },
       {
-        "tab": "Build ✅",
+        "tab": "Build",
         "groups": [
           {
             "group": "Questionnaire",
@@ -145,7 +145,7 @@
         ]
       },
       {
-        "tab": "Distribute ✅",
+        "tab": "Distribute",
         "groups": [
           {
             "group": "Distribute and Launch",
